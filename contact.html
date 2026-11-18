@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | ARCHBUILD</title>
+<meta name="description" content="Contact ARCHBUILD for architecture, interior design and construction enquiries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --bg:#111210;
+ --panel:#191a17;
+ --cream:#eee9df;
+ --muted:#a7a69e;
+ --gold:#c6a477;
+ --line:rgba(198,164,119,.23);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.navbar{height:86px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10;background:var(--bg)}
+.logo{font-family:'Playfair Display',serif;font-size:29px;letter-spacing:4px}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{font-size:12px;letter-spacing:1px;color:#d0cec5;transition:.3s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-links .nav-cta{border:1px solid var(--gold);padding:13px 20px;color:var(--gold)}
+.menu-btn{display:none;background:none;border:0;color:var(--cream);font-size:27px;cursor:pointer}
+.hero{padding:105px 7% 85px;background:linear-gradient(110deg,rgba(17,18,16,.98),rgba(17,18,16,.72)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85') center/cover}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:25px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,88px);font-weight:400;line-height:1.08;max-width:800px}
+.hero h1 em{color:var(--gold);font-weight:400}
+.hero p{max-width:520px;color:#c0beb5;line-height:1.9;margin-top:25px;font-size:14px}
+.contact-wrap{padding:90px 7%;display:grid;grid-template-columns:.85fr 1.15fr;gap:75px}
+.section-label{font-size:11px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}
+.contact-info h2,.form-heading{font-family:'Playfair Display',serif;font-size:42px;font-weight:400;line-height:1.2;margin-bottom:22px}
+.contact-info>p{color:var(--muted);font-size:14px;line-height:1.9;max-width:390px;margin-bottom:38px}
+.info-item{padding:21px 0;border-bottom:1px solid var(--line)}
+.info-item small{display:block;color:var(--gold);letter-spacing:2px;font-size:10px;margin-bottom:9px}
+.info-item a,.info-item p{font-size:14px;color:var(--cream);line-height:1.7;word-break:break-word}
+.socials{display:flex;gap:22px;margin-top:30px;color:var(--gold);font-size:12px}
+.form-card{background:var(--panel);border:1px solid var(--line);padding:45px}
+.form-heading{font-size:35px;margin-bottom:12px}
+.form-intro{color:var(--muted);font-size:13px;line-height:1.7;margin-bottom:30px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.field{display:flex;flex-direction:column;gap:10px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11px;letter-spacing:1px;color:#d5d0c6}
+.field input,.field select,.field textarea{width:100%;background:#111210;border:1px solid #37372f;padding:15px;color:var(--cream);outline:none;border-radius:0;font-size:13px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field textarea{min-height:125px;resize:vertical}
+.field select option{background:#191a17}
+.submit-btn{width:100%;margin-top:25px;padding:18px;background:var(--gold);color:#171713;border:0;font-weight:700;letter-spacing:2px;font-size:11px;cursor:pointer;transition:.3s}
+.submit-btn:hover{background:#e0c29b;transform:translateY(-2px)}
+.form-note{font-size:11px;color:var(--muted);line-height:1.7;margin-top:15px}
+.bottom-banner{margin:0 7% 90px;padding:65px 7%;background:#20211c;border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:30px}
+.bottom-banner h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,43px);font-weight:400}
+.bottom-banner p{color:var(--muted);font-size:13px;margin-top:12px}
+.banner-btn{border:1px solid var(--gold);color:var(--gold);padding:16px 25px;font-size:11px;letter-spacing:1px;white-space:nowrap}
+footer{padding:50px 7% 25px;border-top:1px solid var(--line)}
+.footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:35px}
+.footer-brand p{color:var(--muted);font-size:12px;margin-top:13px;line-height:1.8}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.footer-links a{font-size:11px;color:var(--muted)}
+.footer-bottom{border-top:1px solid var(--line);padding-top:22px;color:#77786f;font-size:10px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:850px){
+ .navbar{height:75px;padding:0 6%}
+ .menu-btn{display:block}
+ .nav-links{display:none;position:absolute;top:75px;left:0;right:0;background:#171814;padding:25px 6%;flex-direction:column;align-items:flex-start;gap:23px;border-bottom:1px solid var(--line)}
+ .nav-links.open{display:flex}
+ .contact-wrap{grid-template-columns:1fr;gap:50px;padding-top:65px}
+ .hero{padding:80px 6%}
+ .form-card{padding:30px 23px}
+ .bottom-banner{margin:0 6% 65px;flex-direction:column;align-items:flex-start;padding:40px 30px}
+}
+@media(max-width:520px){
+ .form-grid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+ .contact-info h2{font-size:36px}
+ .form-heading{font-size:30px}
+ .footer-links{gap:16px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+ <a href="index.html" class="logo">ARCH<span>BUILD</span></a>
+ <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+ <nav class="nav-links" id="navLinks">
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="services.html">SERVICES</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="contact.html" class="active">CONTACT</a>
+  <a href="https://wa.me/919471537238" class="nav-cta">LET'S TALK ↗</a>
+ </nav>
+</header>
+
+<section class="hero">
+ <div class="eyebrow">CONTACT ARCHBUILD</div>
+ <h1>Let's create<br>something <em>remarkable.</em></h1>
+ <p>Every great space begins with a conversation. Tell us about your vision, your ideas, and what you want to build. Let's make it happen.</p>
+</section>
+
+<main class="contact-wrap">
+
+ <section class="contact-info">
+  <div class="section-label">GET IN TOUCH</div>
+  <h2>We'd love to hear from you.</h2>
+  <p>Whether you're planning a new project, redesigning a space, or simply exploring possibilities, our team is ready to connect.</p>
+
+  <div class="info-item">
+   <small>EMAIL ADDRESS</small>
+   <a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a>
+  </div>
+
+  <div class="info-item">
+   <small>PHONE / WHATSAPP</small>
+   <a href="tel:+919471537238">+91 94715 37238</a>
+  </div>
+
+  <div class="info-item">
+   <small>INSTAGRAM</small>
+   <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">@archbuild2016 ↗</a>
+  </div>
+
+  <div class="info-item">
+   <small>LET'S TALK DIRECTLY</small>
+   <a href="https://wa.me/919471537238" target="_blank" rel="noopener">Start a WhatsApp conversation ↗</a>
+  </div>
+
+  <div class="socials">
+   <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
+   <a href="mailto:archbuild2016@gmail.com">EMAIL ↗</a>
+  </div>
+ </section>
+
+ <section class="form-card">
+  <div class="section-label">START A PROJECT</div>
+  <h2 class="form-heading">Tell us about your project.</h2>
+  <p class="form-intro">Fill in the details below. We'll prepare your enquiry in WhatsApp so you can send it directly to our team.</p>
+
+  <form id="contactForm">
+   <div class="form-grid">
+
+    <div class="field">
+     <label for="name">YOUR NAME *</label>
+     <input id="name" name="name" type="text" placeholder="Full name" required>
+    </div>
+
+    <div class="field">
+     <label for="phone">PHONE NUMBER *</label>
+     <input id="phone" name="phone" type="tel" placeholder="Your phone number" required>
+    </div>
+
+    <div class="field full">
+     <label for="email">EMAIL ADDRESS</label>
+     <input id="email" name="email" type="email" placeholder="your@email.com">
+    </div>
+
+    <div class="field full">
+     <label for="service">SERVICE YOU NEED *</label>
+     <select id="service" name="service" required>
+      <option value="">Select a service</option>
+      <option>Architecture & Design</option>
+      <option>Interior Design</option>
+      <option>Construction</option>
+      <option>Planning & Development</option>
+      <option>Other Enquiry</option>
+     </select>
+    </div>
+
+    <div class="field full">
+     <label for="message">TELL US ABOUT YOUR PROJECT *</label>
+     <textarea id="message" name="message" placeholder="Describe your idea, requirements, location or budget..." required></textarea>
+    </div>
+
+   </div>
+
+   <button type="submit" class="submit-btn">SEND ENQUIRY ON WHATSAPP ↗</button>
+   <p class="form-note">By submitting, WhatsApp will open with your enquiry details. Please review the message and press Send to contact ARCHBUILD.</p>
+  </form>
+ </section>
+
+</main>
+
+<section class="bottom-banner">
+ <div>
+  <h2>Your vision deserves a great beginning.</h2>
+  <p>Let's turn your ideas into spaces that inspire.</p>
+ </div>
+ <a href="https://wa.me/919471537238" class="banner-btn" target="_blank" rel="noopener">CHAT ON WHATSAPP ↗</a>
+</section>
+
+<footer>
+ <div class="footer-top">
+  <div class="footer-brand">
+   <a href="index.html" class="logo">ARCH<span>BUILD</span></a>
+   <p>Thoughtful design. Timeless spaces.<br>Building ideas into reality.</p>
+  </div>
+  <div class="footer-links">
+   <a href="index.html">HOME</a>
+   <a href="about.html">ABOUT</a>
+   <a href="services.html">SERVICES</a>
+   <a href="projects.html">PROJECTS</a>
+   <a href="contact.html">CONTACT</a>
+  </div>
+ </div>
+ <div class="footer-bottom">
+  <span>© 2026 ARCHBUILD. ALL RIGHTS RESERVED.</span>
+  <span>DESIGNED WITH PURPOSE.</span>
+ </div>
+</footer>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+
+menuBtn.addEventListener('click',()=>{
+ navLinks.classList.toggle('open');
+ menuBtn.textContent=navLinks.classList.contains('open')?'✕':'☰';
+});
+
+document.querySelectorAll('.nav-links a').forEach(link=>{
+ link.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  menuBtn.textContent='☰';
+ });
+});
+
+document.getElementById('contactForm').addEventListener('submit',function(e){
+ e.preventDefault();
+
+ const name=document.getElementById('name').value.trim();
+ const phone=document.getElementById('phone').value.trim();
+ const email=document.getElementById('email').value.trim();
+ const service=document.getElementById('service').value;
+ const message=document.getElementById('message').value.trim();
+
+ if(!name||!phone||!service||!message){
+  alert('Please fill in all required fields.');
+  return;
+ }
+
+ const text=
+ `Hello ARCHBUILD!\n\nI would like to enquire about your services.\n\n`+
+ `Name: ${name}\nPhone: ${phone}\nEmail: ${email||'Not provided'}\n`+
+ `Service: ${service}\n\nProject Details:\n${message}\n\nThank you!`;
+
+ const url='https://wa.me/919471537238?text='+encodeURIComponent(text);
+ window.open(url,'_blank');
+});
+</script>
+
+</body>
+</html>
