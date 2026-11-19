@@ -1,369 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#111210">
-<meta name="description" content="Explore architectural concepts, interiors and design inspiration from ARCHBUILD.">
-<title>Our Projects | ARCHBUILD</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171916">
+  <title>Selected Works | ARCHBUILD</title>
+  <meta name="description" content="Explore architectural, residential and interior design inspiration with ARCHBUILD.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-:root{
- --dark:#111210;
- --dark2:#1b1c19;
- --cream:#f2efe7;
- --gold:#c5a46d;
- --muted:#aaa99f;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif}
-a{text-decoration:none;color:inherit}
-.container{width:min(1180px,89%);margin:auto}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500}
+  <style>
+    :root {
+      --dark: #171916;
+      --dark2: #22251f;
+      --cream: #f3f0e8;
+      --paper: #e8e4d9;
+      --gold: #c6a779;
+      --muted: #99998f;
+      --white: #fffdf8;
+      --line: rgba(255,255,255,.14);
+      --dark-line: rgba(30,32,27,.15);
+    }
 
-/* HEADER */
-header{height:88px;border-bottom:1px solid #ffffff20}
-nav{height:100%;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Playfair Display',serif;font-size:27px;letter-spacing:3px}
-.logo span{color:var(--gold)}
-.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
-.nav-links a{font-size:11px;letter-spacing:1px;color:#d4d1c8;transition:.3s}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.contact-link{border:1px solid var(--gold);padding:13px 20px}
-.menu{display:none;background:none;border:0;color:white;font-size:26px}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--dark);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; object-fit: cover; }
+    button { font: inherit; }
 
-/* HERO */
-.hero{
- min-height:540px;
- display:flex;
- align-items:center;
- background:
- linear-gradient(90deg,#111210ee,#11121099,transparent),
- url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85') center/cover;
-}
-.eyebrow{color:var(--gold);font-size:10px;letter-spacing:4px;margin-bottom:25px}
-.hero h1{font-size:clamp(55px,8vw,95px);line-height:1.08}
-.hero h1 em{color:var(--gold)}
-.hero p{color:#c3c0b7;font-size:14px;line-height:1.9;max-width:520px;margin-top:25px}
+    .topbar {
+      height: 42px;
+      background: var(--dark);
+      color: #d4cfc3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .topbar a { color: var(--gold); }
 
-/* SECTION */
-section{padding:100px 0}
-.label{color:var(--gold);font-size:10px;letter-spacing:3px;margin-bottom:20px}
-.heading{font-size:clamp(38px,5vw,62px);line-height:1.2}
-.section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}
-.section-top p{max-width:380px;color:var(--muted);font-size:13px;line-height:1.9}
+    header {
+      height: 88px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--cream);
+      position: relative;
+      z-index: 20;
+      border-bottom: 1px solid var(--dark-line);
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 29px;
+      letter-spacing: 3px;
+      font-weight: 600;
+    }
+    .logo span { color: #a98552; }
+    .logo small {
+      display: block;
+      font: 9px 'DM Sans', sans-serif;
+      letter-spacing: 4px;
+      margin-top: 2px;
+      color: #77766d;
+    }
+    nav { display: flex; align-items: center; gap: 34px; }
+    nav a {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+    nav a:hover, nav a.active { color: #a98552; }
+    .nav-contact {
+      border: 1px solid #a98552;
+      padding: 14px 21px;
+    }
+    .nav-contact:hover { background: var(--dark); color: var(--white); }
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 27px;
+      cursor: pointer;
+      color: var(--dark);
+    }
 
-/* PROJECT INTRO */
-.project-intro{background:var(--cream);color:var(--dark)}
-.project-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.project-intro p{color:#6d6a62;font-size:14px;line-height:2;margin-top:25px}
-.intro-image{height:400px}
-.intro-image img{width:100%;height:100%;object-fit:cover}
+    /* HERO */
+    .hero {
+      min-height: 590px;
+      background: var(--dark);
+      color: var(--white);
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 90px 8%;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(23,25,22,.97) 0%, rgba(23,25,22,.83) 35%, rgba(23,25,22,.2) 100%),
+        url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90') center/cover;
+      opacity: .9;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 750px; }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 27px;
+    }
+    .eyebrow:before {
+      content: '';
+      height: 1px;
+      width: 38px;
+      background: var(--gold);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(58px, 8vw, 105px);
+      line-height: 1.02;
+      font-weight: 400;
+      letter-spacing: -2px;
+    }
+    h1 em { color: var(--gold); font-weight: 400; }
+    .hero-copy {
+      max-width: 490px;
+      color: #c5c4ba;
+      font-size: 14px;
+      line-height: 1.9;
+      margin-top: 28px;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 45px;
+      margin-top: 48px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      max-width: 500px;
+    }
+    .hero-meta strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 25px;
+      font-weight: 400;
+    }
+    .hero-meta span {
+      display: block;
+      color: #aaa99f;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 7px;
+    }
+    .hero-number {
+      position: absolute;
+      right: 6%;
+      bottom: 35px;
+      color: rgba(255,255,255,.65);
+      font-size: 10px;
+      letter-spacing: 3px;
+      z-index: 2;
+    }
 
-/* FILTERS */
-.gallery-section{background:var(--dark2)}
-.filters{display:flex;gap:12px;flex-wrap:wrap;margin:35px 0 45px}
-.filter-btn{
- background:transparent;
- color:#c4c1b8;
- border:1px solid #ffffff30;
- padding:12px 20px;
- font-size:10px;
- letter-spacing:1px;
- cursor:pointer;
- transition:.3s;
-}
-.filter-btn:hover,.filter-btn.active{background:var(--gold);color:#151510;border-color:var(--gold)}
-.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
-.project-card{position:relative;height:430px;overflow:hidden;background:#242520}
-.project-card img{width:100%;height:100%;object-fit:cover;transition:.8s}
-.project-card:hover img{transform:scale(1.07)}
-.project-overlay{
- position:absolute;inset:0;
- background:linear-gradient(0deg,#080908e8,transparent 70%);
- display:flex;flex-direction:column;justify-content:end;
- padding:30px;
-}
-.project-overlay span{font-size:10px;letter-spacing:2px;color:var(--gold);margin-bottom:12px}
-.project-overlay h3{font-size:30px}
-.project-overlay p{font-size:11px;color:#c7c4ba;margin-top:10px}
-.project-card.hidden{display:none}
+    /* INTRO */
+    .intro {
+      padding: 100px 8% 75px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .section-label {
+      color: #a17d4d;
+      font-size: 10px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .intro h2, .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4.5vw, 58px);
+      font-weight: 400;
+      line-height: 1.16;
+      margin-top: 18px;
+    }
+    .intro-copy p {
+      color: #686960;
+      font-size: 13px;
+      line-height: 2;
+      margin-bottom: 17px;
+    }
 
-/* NOTE */
-.gallery-note{
- border:1px solid #ffffff22;
- padding:22px 25px;
- margin-top:35px;
- color:var(--muted);
- font-size:12px;
- line-height:1.8;
-}
+    /* PORTFOLIO */
+    .portfolio {
+      padding: 70px 8% 110px;
+      background: var(--paper);
+    }
+    .portfolio-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 35px;
+      margin-bottom: 42px;
+    }
+    .portfolio-head > p {
+      max-width: 310px;
+      color: #6d6e65;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-bottom: 1px solid var(--dark-line);
+      padding-bottom: 22px;
+      margin-bottom: 38px;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid rgba(30,32,27,.22);
+      color: #55574f;
+      padding: 12px 20px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .3s;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--dark);
+      color: var(--white);
+      border-color: var(--dark);
+    }
 
-/* STATEMENT */
-.statement{
- background:
- linear-gradient(#111210d9,#111210d9),
- url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85') center/cover;
- text-align:center;
-}
-.statement h2{font-size:clamp(38px,6vw,74px);line-height:1.2;max-width:900px;margin:auto}
-.statement h2 em{color:var(--gold)}
-.statement p{color:var(--muted);font-size:13px;line-height:1.9;max-width:550px;margin:25px auto 0}
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px 28px;
+      align-items: start;
+    }
+    .project-card { min-width: 0; }
+    .project-card:nth-child(even) { margin-top: 85px; }
+    .project-card.hidden { display: none; }
+    .project-image {
+      height: 380px;
+      position: relative;
+      overflow: hidden;
+      background: #d2cec3;
+    }
+    .project-image img {
+      height: 100%;
+      transition: transform .8s cubic-bezier(.2,.7,.2,1);
+    }
+    .project-card:hover .project-image img { transform: scale(1.055); }
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(15,17,14,.42), transparent 50%);
+      opacity: 0;
+      transition: .4s;
+    }
+    .project-card:hover .project-overlay { opacity: 1; }
+    .project-tag {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: rgba(23,25,22,.83);
+      color: var(--gold);
+      padding: 9px 13px;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .project-info {
+      padding: 20px 0 0;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .project-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 27px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .project-info p {
+      color: #74756c;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .project-arrow {
+      width: 39px;
+      height: 39px;
+      border: 1px solid rgba(30,32,27,.25);
+      display: grid;
+      place-items: center;
+      font-size: 17px;
+      flex-shrink: 0;
+      transition: .3s;
+    }
+    .project-card:hover .project-arrow {
+      background: var(--dark);
+      color: var(--gold);
+      border-color: var(--dark);
+    }
+    .gallery-note {
+      margin-top: 55px;
+      padding: 20px 22px;
+      border-left: 2px solid var(--gold);
+      background: rgba(255,255,255,.35);
+      color: #696a62;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+    .no-results {
+      display: none;
+      text-align: center;
+      color: #77766d;
+      padding: 60px 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+    }
 
-/* CTA */
-.cta{background:var(--gold);color:#171711;padding:85px 0}
-.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
-.cta h2{font-size:clamp(38px,5vw,60px);line-height:1.15}
-.cta p{font-size:13px;margin-top:15px}
-.btn{display:inline-block;padding:17px 25px;border:1px solid #171711;font-size:11px;letter-spacing:1.5px;transition:.3s}
-.btn:hover{background:#171711;color:white}
+    /* STATEMENT */
+    .statement {
+      background: var(--dark);
+      color: var(--white);
+      padding: 110px 8%;
+      text-align: center;
+    }
+    .statement .section-heading {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: clamp(39px, 5vw, 65px);
+    }
+    .statement .section-heading em {
+      color: var(--gold);
+      font-weight: 400;
+    }
+    .statement p {
+      color: #aaa99f;
+      max-width: 510px;
+      margin: 0 auto;
+      font-size: 13px;
+      line-height: 2;
+    }
 
-/* FOOTER */
-footer{background:#0c0d0b;padding:65px 0 25px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:45px;padding-bottom:45px}
-.footer-grid h4{color:var(--gold);font-size:11px;letter-spacing:2px;margin-bottom:22px}
-.footer-grid p,.footer-grid a{display:block;color:#aaa99f;font-size:12px;line-height:2;margin-bottom:8px}
-.footer-grid a:hover{color:var(--gold)}
-.footer-bottom{border-top:1px solid #ffffff20;padding-top:23px;color:#77766e;font-size:10px;letter-spacing:1px;display:flex;justify-content:space-between;gap:15px}
+    /* CTA */
+    .cta {
+      background: #d9d0bf;
+      padding: 95px 8%;
+      text-align: center;
+    }
+    .cta .section-heading {
+      max-width: 720px;
+      margin: 18px auto;
+    }
+    .cta p {
+      color: #65645b;
+      font-size: 13px;
+      line-height: 1.9;
+      max-width: 500px;
+      margin: 0 auto 30px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 25px;
+      background: var(--dark);
+      color: var(--white);
+      border: 1px solid var(--dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+    .btn:hover { background: transparent; color: var(--dark); }
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(25px);transition:.8s}
-.reveal.show{opacity:1;transform:translateY(0)}
+    /* FOOTER */
+    footer {
+      background: #11130f;
+      color: var(--white);
+      padding: 70px 8% 25px;
+    }
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 45px;
+      padding-bottom: 55px;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 31px;
+      letter-spacing: 3px;
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-about p {
+      color: #9c9d92;
+      font-size: 12px;
+      line-height: 1.9;
+      max-width: 260px;
+      margin-top: 17px;
+    }
+    .footer-col h4 {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .footer-col a, .footer-col p {
+      display: block;
+      color: #b8b8ad;
+      font-size: 12px;
+      margin-bottom: 13px;
+      line-height: 1.6;
+      transition: .3s;
+    }
+    .footer-col a:hover { color: var(--gold); }
+    .copyright {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #77796f;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
 
-@media(max-width:750px){
- .nav-links{display:none;position:absolute;z-index:10;top:88px;left:0;width:100%;background:#191a17;padding:25px 6%;flex-direction:column;align-items:flex-start;gap:24px}
- .nav-links.open{display:flex}
- .menu{display:block}
- section{padding:75px 0}
- .hero{min-height:520px}
- .project-intro-grid{grid-template-columns:1fr;gap:35px}
- .intro-image{height:320px}
- .section-top{align-items:flex-start;flex-direction:column}
- .project-grid{grid-template-columns:1fr}
- .project-card{height:350px}
- .cta-inner{align-items:flex-start;flex-direction:column}
- .footer-grid{grid-template-columns:1fr 1fr}
- .footer-grid>div:first-child{grid-column:span 2}
- .footer-bottom{flex-direction:column;line-height:1.8}
-}
-</style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media(max-width: 900px) {
+      nav { gap: 18px; }
+      nav a { font-size: 9px; }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .project-image { height: 310px; }
+    }
+
+    @media(max-width: 650px) {
+      .topbar { padding: 0 5%; font-size: 8px; letter-spacing: 1px; }
+      header { height: 75px; padding: 0 5%; }
+      .logo { font-size: 25px; }
+      .menu-btn { display: block; }
+      nav {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        padding: 15px 6% 25px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-bottom: 1px solid var(--dark-line);
+      }
+      nav.open { display: flex; }
+      nav a {
+        padding: 15px 0;
+        border-bottom: 1px solid var(--dark-line);
+        font-size: 11px;
+      }
+      nav .nav-contact {
+        margin-top: 12px;
+        text-align: center;
+        padding: 14px;
+      }
+      .hero { min-height: 570px; padding: 80px 7%; }
+      .hero-bg {
+        background:
+          linear-gradient(90deg, rgba(23,25,22,.95), rgba(23,25,22,.5)),
+          url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85') center/cover;
+      }
+      h1 { font-size: 62px; }
+      .hero-copy { font-size: 13px; }
+      .hero-meta { gap: 28px; }
+      .hero-number { right: 7%; bottom: 22px; }
+      .intro {
+        padding: 75px 7%;
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+      .intro h2, .section-heading { font-size: 39px; }
+      .portfolio { padding: 75px 7%; }
+      .portfolio-head { display: block; }
+      .portfolio-head > p { margin-top: 20px; }
+      .filters { gap: 8px; }
+      .filter-btn { padding: 11px 13px; font-size: 8px; }
+      .project-grid { grid-template-columns: 1fr; gap: 38px; }
+      .project-card:nth-child(even) { margin-top: 0; }
+      .project-image { height: 300px; }
+      .project-info h3 { font-size: 25px; }
+      .gallery-note { margin-top: 35px; }
+      .statement { padding: 80px 7%; }
+      .statement .section-heading { font-size: 41px; }
+      .cta { padding: 75px 7%; }
+      .cta .section-heading { font-size: 39px; }
+      footer { padding: 60px 7% 22px; }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 35px 20px; }
+      .footer-about { grid-column: 1 / -1; }
+      .copyright { flex-direction: column; line-height: 1.8; }
+    }
+
+    @media(prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
 </head>
 
 <body>
-<header>
- <nav class="container">
-  <a class="logo" href="index.html">ARCH<span>BUILD</span></a>
-  <button class="menu" id="menuBtn" aria-label="Toggle navigation">☰</button>
-  <ul class="nav-links" id="navLinks">
-   <li><a href="index.html">HOME</a></li>
-   <li><a href="about.html">ABOUT</a></li>
-   <li><a href="services.html">SERVICES</a></li>
-   <li><a href="projects.html" class="active">PROJECTS</a></li>
-   <li><a href="contact.html" class="contact-link">LET'S TALK ↗</a></li>
-  </ul>
- </nav>
-</header>
 
-<main>
-<section class="hero">
- <div class="container reveal">
-  <div class="eyebrow">OUR PORTFOLIO / SELECTED WORK</div>
-  <h1>Spaces that<br>make a <em>statement.</em></h1>
-  <p>Explore architectural inspiration, contemporary spaces and design ideas that reflect our approach to purposeful design.</p>
- </div>
-</section>
-
-<section class="project-intro">
- <div class="container project-intro-grid">
-  <div class="reveal">
-   <div class="label">01 / OUR WORK</div>
-   <h2 class="heading">Every project.<br>A new possibility.</h2>
-   <p>Architecture is a journey of ideas, creativity and thoughtful decisions. Our portfolio section presents visual inspiration across residential architecture, interiors and contemporary design.</p>
-   <p>Each image below is a design reference, not a claim of a completed ARCHBUILD project. We will replace these with your actual work photographs when available.</p>
-  </div>
-  <div class="intro-image reveal">
-   <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1100&q=85" alt="Contemporary architecture inspiration">
-  </div>
- </div>
-</section>
-
-<section class="gallery-section">
- <div class="container">
-  <div class="section-top reveal">
-   <div>
-    <div class="label">02 / DESIGN COLLECTION</div>
-    <h2 class="heading">Explore our<br>design world.</h2>
-   </div>
-   <p>A curated visual collection of architectural styles, beautiful interiors and contemporary design inspiration.</p>
+  <div class="topbar">
+    <span>Architecture · Interiors · Design</span>
+    <a href="mailto:archbuild2016@gmail.com">Start a conversation ↗</a>
   </div>
 
-  <div class="filters reveal">
-   <button class="filter-btn active" data-filter="all">ALL WORK</button>
-   <button class="filter-btn" data-filter="residential">RESIDENTIAL</button>
-   <button class="filter-btn" data-filter="interior">INTERIORS</button>
-   <button class="filter-btn" data-filter="modern">MODERN DESIGN</button>
-  </div>
+  <header>
+    <a class="logo" href="index.html">ARCH<span>BUILD</span><small>DESIGN YOUR WORLD</small></a>
 
-  <div class="project-grid" id="projectGrid">
-   <article class="project-card reveal" data-category="residential">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Modern residence design">
-    <div class="project-overlay">
-     <span>RESIDENTIAL / DESIGN REFERENCE</span>
-     <h3>The Modern Residence</h3>
-     <p>Contemporary living with timeless character.</p>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav id="navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html" class="nav-contact">Contact Us ↗</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content reveal">
+        <div class="eyebrow">Selected Design Inspiration</div>
+        <h1>Ideas into<br><em>spaces.</em></h1>
+        <p class="hero-copy">
+          Explore a collection of architectural forms, interior concepts
+          and design inspirations that reflect our creative direction
+          and approach to thoughtful spaces.
+        </p>
+        <div class="hero-meta">
+          <div>
+            <strong>01</strong>
+            <span>Architecture</span>
+          </div>
+          <div>
+            <strong>02</strong>
+            <span>Interiors</span>
+          </div>
+          <div>
+            <strong>03</strong>
+            <span>Modern Spaces</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-number">03 / SELECTED WORKS</div>
+    </section>
+
+    <section class="intro reveal">
+      <div>
+        <div class="section-label">A Visual Direction</div>
+        <h2>Every detail shapes the experience.</h2>
+      </div>
+      <div class="intro-copy">
+        <p>
+          Architecture is more than creating structures. It is about
+          understanding space, light, proportion, materials and the
+          experience of the people who use it.
+        </p>
+        <p>
+          This gallery presents visual references across different design
+          styles. Use it to explore ideas, discover possibilities and
+          communicate the direction you imagine for your own project.
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio" id="gallery">
+      <div class="portfolio-head reveal">
+        <div>
+          <div class="section-label">The Collection / 01—06</div>
+          <h2 class="section-heading">Explore the<br>design gallery.</h2>
+        </div>
+        <p>
+          Browse different styles and spaces. Select a category to
+          discover the visual direction that interests you.
+        </p>
+      </div>
+
+      <div class="filters reveal" aria-label="Filter gallery">
+        <button class="filter-btn active" data-filter="all">All Concepts</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="interiors">Interiors</button>
+        <button class="filter-btn" data-filter="modern">Modern Design</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+
+        <article class="project-card reveal" data-category="residential">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+                 alt="Contemporary luxury residential architecture" loading="lazy">
+            <div class="project-overlay"></div>
+            <span class="project-tag">Residential</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>Modern Living</h3>
+              <p>Residential Design Inspiration</p>
+            </div>
+            <a class="project-arrow" href="contact.html" aria-label="Discuss residential design">↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="interiors">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+                 alt="Warm minimalist living room interior" loading="lazy">
+            <div class="project-overlay"></div>
+            <span class="project-tag">Interiors</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>Quiet Luxury</h3>
+              <p>Interior Design Inspiration</p>
+            </div>
+            <a class="project-arrow" href="contact.html" aria-label="Discuss interior design">↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="modern">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85"
+                 alt="Modern geometric architecture" loading="lazy">
+            <div class="project-overlay"></div>
+            <span class="project-tag">Modern Design</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>Pure Geometry</h3>
+              <p>Contemporary Architecture Inspiration</p>
+            </div>
+            <a class="project-arrow" href="contact.html" aria-label="Discuss modern architecture">↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="interiors">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+                 alt="Sophisticated contemporary interior" loading="lazy">
+            <div class="project-overlay"></div>
+            <span class="project-tag">Interiors</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>Natural Harmony</h3>
+              <p>Interior Space Inspiration</p>
+            </div>
+            <a class="project-arrow" href="contact.html" aria-label="Discuss interior spaces">↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="residential">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"
+                 alt="Contemporary residential house design" loading="lazy">
+            <div class="project-overlay"></div>
+            <span class="project-tag">Residential</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>Open Horizons</h3>
+              <p>Residential Design Inspiration</p>
+            </div>
+            <a class="project-arrow" href="contact.html" aria-label="Discuss residential spaces">↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="modern">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1200&q=85"
+                 alt="Modern minimalist architectural space" loading="lazy">
+            <div class="project-overlay"></div>
+            <span class="project-tag">Modern Design</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <h3>Minimal Form</h3>
+              <p>Modern Design Inspiration</p>
+            </div>
+            <a class="project-arrow" href="contact.html" aria-label="Discuss modern design">↗</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="no-results" id="noResults">
+        No concepts found in this category.
+      </div>
+
+      <div class="gallery-note">
+        <strong>Image note:</strong> The photographs displayed in this gallery
+        are illustrative design references sourced from Unsplash. They are not
+        presented as verified completed projects by ARCHBUILD. Replace them
+        with approved company project photographs when available.
+      </div>
+    </section>
+
+    <section class="statement reveal">
+      <div class="section-label">Beyond the Visual</div>
+      <h2 class="section-heading">
+        A beautiful space is only the beginning.
+        <em>It should feel right, too.</em>
+      </h2>
+      <p>
+        Our design approach considers how spaces look, function and connect
+        with the people who experience them.
+      </p>
+    </section>
+
+    <section class="cta reveal">
+      <div class="section-label">Your Vision, Our Conversation</div>
+      <h2 class="section-heading">Have an idea worth building?</h2>
+      <p>
+        Whether you are planning a home, reimagining an interior or exploring
+        a new design direction, let's talk about your project.
+      </p>
+      <a href="contact.html" class="btn">Discuss Your Project ↗</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-about">
+        <a class="footer-logo" href="index.html">ARCH<span>BUILD</span></a>
+        <p>
+          Thoughtful architecture, considered interiors and spaces
+          shaped around your vision.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <a href="services.html">Architecture & Design</a>
+        <a href="services.html">Interior Design</a>
+        <a href="services.html">Construction</a>
+        <a href="services.html">Planning & Development</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a>
+        <a href="tel:+919471537238">+91 94715 37238</a>
+        <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="https://wa.me/919471537238" target="_blank" rel="noopener">WhatsApp ↗</a>
+      </div>
     </div>
-   </article>
 
-   <article class="project-card reveal" data-category="interior">
-    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Minimal luxury interior">
-    <div class="project-overlay">
-     <span>INTERIOR / DESIGN REFERENCE</span>
-     <h3>Quiet Luxury</h3>
-     <p>Understated elegance and warm minimalism.</p>
+    <div class="copyright">
+      <span>© <span id="year"></span> ARCHBUILD. ALL RIGHTS RESERVED.</span>
+      <span>DESIGNED WITH PURPOSE.</span>
     </div>
-   </article>
+  </footer>
 
-   <article class="project-card reveal" data-category="modern">
-    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85" alt="Modern interior architecture">
-    <div class="project-overlay">
-     <span>MODERN / DESIGN REFERENCE</span>
-     <h3>Living in Light</h3>
-     <p>Natural light meets contemporary form.</p>
-    </div>
-   </article>
+  <script>
+    // Mobile navigation
+    const menuBtn = document.getElementById('menuBtn');
+    const navigation = document.getElementById('navigation');
 
-   <article class="project-card reveal" data-category="residential">
-    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1200&q=85" alt="Luxury home architecture">
-    <div class="project-overlay">
-     <span>RESIDENTIAL / DESIGN REFERENCE</span>
-     <h3>Timeless Living</h3>
-     <p>Thoughtful spaces designed for everyday life.</p>
-    </div>
-   </article>
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navigation.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
 
-   <article class="project-card reveal" data-category="interior">
-    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Luxury living room interior">
-    <div class="project-overlay">
-     <span>INTERIOR / DESIGN REFERENCE</span>
-     <h3>Warm Minimalism</h3>
-     <p>Texture, proportion and quiet sophistication.</p>
-    </div>
-   </article>
+    navigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navigation.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+      });
+    });
 
-   <article class="project-card reveal" data-category="modern">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Contemporary architectural design">
-    <div class="project-overlay">
-     <span>MODERN / DESIGN REFERENCE</span>
-     <h3>Modern Perspectives</h3>
-     <p>Clean lines and expressive architecture.</p>
-    </div>
-   </article>
-  </div>
+    // Gallery category filters
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    const noResults = document.getElementById('noResults');
 
-  <div class="gallery-note reveal">
-   NOTE: Images are illustrative design references sourced from Unsplash. They are not represented as completed or commissioned ARCHBUILD projects.
-  </div>
- </div>
-</section>
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
 
-<section class="statement">
- <div class="container reveal">
-  <div class="eyebrow">03 / OUR DESIGN BELIEF</div>
-  <h2>Great spaces are not just built. They are <em>thoughtfully imagined.</em></h2>
-  <p>We believe meaningful design begins with curiosity, careful planning and a clear understanding of the people who will experience the space.</p>
- </div>
-</section>
+        const selectedFilter = button.dataset.filter;
+        let visibleCount = 0;
 
-<section class="cta">
- <div class="container cta-inner reveal">
-  <div>
-   <h2>Have a project<br>in mind?</h2>
-   <p>Let's turn your ideas into a thoughtful design journey.</p>
-  </div>
-  <a class="btn" href="https://wa.me/919471537238?text=Hello%20ARCHBUILD%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">DISCUSS YOUR PROJECT ↗</a>
- </div>
-</section>
-</main>
+        projectCards.forEach(card => {
+          const category = card.dataset.category;
+          const shouldShow = selectedFilter === 'all' || category === selectedFilter;
 
-<footer>
- <div class="container">
-  <div class="footer-grid">
-   <div>
-    <a class="logo" href="index.html">ARCH<span>BUILD</span></a>
-    <p style="max-width:280px;margin-top:18px">Thoughtful architecture. Refined interiors. Spaces designed with purpose.</p>
-   </div>
-   <div>
-    <h4>EXPLORE</h4>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-   </div>
-   <div>
-    <h4>CONTACT</h4>
-    <a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a>
-    <a href="tel:+919471537238">+91 94715 37238</a>
-    <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">Instagram ↗</a>
-    <a href="https://wa.me/919471537238" target="_blank" rel="noopener">WhatsApp ↗</a>
-   </div>
-  </div>
-  <div class="footer-bottom">
-   <span>© 2026 ARCHBUILD. ALL RIGHTS RESERVED.</span>
-   <span>ARCHITECTURE BEYOND ORDINARY.</span>
-  </div>
- </div>
-</footer>
+          card.classList.toggle('hidden', !shouldShow);
 
-<script>
-const menuBtn=document.getElementById('menuBtn');
-const navLinks=document.getElementById('navLinks');
+          if (shouldShow) visibleCount++;
+        });
 
-menuBtn.addEventListener('click',()=>{
- navLinks.classList.toggle('open');
- menuBtn.textContent=navLinks.classList.contains('open')?'✕':'☰';
-});
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      });
+    });
 
-document.querySelectorAll('.nav-links a').forEach(link=>{
- link.addEventListener('click',()=>{
-  navLinks.classList.remove('open');
-  menuBtn.textContent='☰';
- });
-});
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
-// Portfolio filters
-const filterButtons=document.querySelectorAll('.filter-btn');
-const projectCards=document.querySelectorAll('.project-card');
+    document.querySelectorAll('.reveal').forEach(element => {
+      revealObserver.observe(element);
+    });
 
-filterButtons.forEach(button=>{
- button.addEventListener('click',()=>{
-  filterButtons.forEach(item=>item.classList.remove('active'));
-  button.classList.add('active');
+    // Copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-  const filter=button.dataset.filter;
-
-  projectCards.forEach(card=>{
-   const matches=filter==='all'||card.dataset.category===filter;
-   card.classList.toggle('hidden',!matches);
-  });
- });
-});
-
-// Scroll reveal
-const observer=new IntersectionObserver(entries=>{
- entries.forEach(entry=>{
-  if(entry.isIntersecting){
-   entry.target.classList.add('show');
-   observer.unobserve(entry.target);
-  }
- });
-},{threshold:.12});
-
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-</script>
 </body>
 </html>
