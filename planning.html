@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planning & Development | ARCHBUILD</title>
+<link rel="stylesheet" href="header.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--navy:#101b2b;
+--navy2:#1b2c40;
+--gold:#c5a36a;
+--cream:#f4f0e8;
+--muted:#737d88;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy)}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,90%);margin:auto}
+.eyebrow{font-size:11px;letter-spacing:3px;font-weight:700;color:var(--gold);margin-bottom:22px}
+.hero{
+min-height:680px;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+color:white;
+background:
+linear-gradient(90deg,rgba(10,20,34,.96) 0%,rgba(10,20,34,.85) 48%,rgba(10,20,34,.25) 100%),
+url('https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&w=2000&q=85') center/cover;
+}
+.hero-content{max-width:720px;padding:100px 0}
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:clamp(48px,7vw,86px);
+font-weight:500;
+line-height:1.08;
+margin-bottom:25px;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:15px;line-height:2;color:#c6cdd5;max-width:570px}
+.btn{
+display:inline-flex;
+padding:16px 25px;
+font-size:11px;
+font-weight:700;
+letter-spacing:1.5px;
+margin-top:32px;
+transition:.3s;
+}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#e2c58e;transform:translateY(-3px)}
+.section-label{font-size:11px;letter-spacing:3px;color:#a58248;font-weight:700;margin-bottom:20px}
+h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(35px,4.5vw,56px);
+font-weight:500;
+line-height:1.2;
+}
+.intro{padding:115px 0}
+.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+.intro p{font-size:14px;line-height:2;color:var(--muted);margin-top:22px}
+.plan-visual{
+min-height:430px;
+position:relative;
+background:#e5ded1;
+padding:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+.plan-visual img{width:100%;height:370px;object-fit:cover;filter:saturate(.65)}
+.plan-caption{
+position:absolute;
+bottom:18px;
+right:18px;
+background:var(--navy);
+color:white;
+padding:14px 20px;
+font-size:10px;
+letter-spacing:2px;
+}
+.dark-section{background:var(--navy);color:white;padding:110px 0}
+.dark-heading{max-width:700px}
+.dark-heading p{font-size:13px;line-height:2;color:#aeb8c4;max-width:540px;margin-top:22px}
+.planning-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:1px;
+background:rgba(255,255,255,.15);
+margin-top:65px;
+border:1px solid rgba(255,255,255,.15);
+}
+.planning-card{background:var(--navy);padding:35px 30px;min-height:260px}
+.planning-card .num{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold);margin-bottom:28px}
+.planning-card h3{font-size:17px;margin-bottom:15px}
+.planning-card p{font-size:12px;line-height:1.9;color:#aeb8c4}
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+min-height:550px;
+}
+.split-image img{width:100%;height:100%;min-height:550px;object-fit:cover}
+.split-content{
+padding:80px clamp(30px,7vw,100px);
+display:flex;
+flex-direction:column;
+justify-content:center;
+background:#e9e2d6;
+}
+.split-content p{font-size:13px;line-height:2;color:#69727c;margin-top:22px}
+.points{margin-top:28px;display:grid;gap:18px}
+.point{display:flex;gap:15px;align-items:flex-start;font-size:12px;font-weight:600}
+.point span{color:#a58248;font-size:16px}
+.stages{padding:110px 0;background:white}
+.stages-header{text-align:center;max-width:700px;margin:auto}
+.stages-header p{font-size:13px;line-height:1.9;color:var(--muted);margin-top:20px}
+.timeline{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+margin-top:65px;
+position:relative;
+}
+.timeline:before{
+content:'';
+position:absolute;
+height:1px;
+background:#d8c9ae;
+top:18px;
+left:10%;
+right:10%;
+}
+.phase{position:relative;padding:0 20px;text-align:center}
+.dot{
+width:37px;height:37px;border-radius:50%;
+background:var(--navy);
+border:7px solid #e9dfce;
+margin:0 auto 25px;
+position:relative;
+z-index:1;
+}
+.phase h3{font-size:14px;margin-bottom:12px}
+.phase p{font-size:11px;line-height:1.9;color:var(--muted)}
+.note{
+background:#e9e2d6;
+padding:24px 28px;
+margin-top:55px;
+font-size:11px;
+line-height:1.9;
+color:#626d78;
+}
+.cta{
+text-align:center;
+padding:105px 20px;
+background:linear-gradient(rgba(12,24,40,.9),rgba(12,24,40,.94)),url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1800&q=85') center/cover;
+color:white;
+}
+.cta h2{max-width:750px;margin:auto}
+.cta p{font-size:13px;line-height:1.9;color:#c1c9d1;margin-top:20px}
+footer{background:#091421;color:white;padding:55px 0 25px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;padding-bottom:40px}
+.brand{font-family:'Playfair Display',serif;font-size:30px;letter-spacing:3px}
+.brand span{color:var(--gold)}
+.footer-desc{font-size:12px;line-height:1.9;color:#9da8b5;max-width:350px;margin-top:15px}
+footer h4{font-size:12px;letter-spacing:2px;color:var(--gold);margin-bottom:20px}
+footer ul{list-style:none}
+footer li{font-size:12px;color:#aeb7c2;margin-bottom:13px}
+footer a:hover{color:var(--gold)}
+.copyright{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;font-size:11px;color:#8793a1;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){
+.intro-grid,.split{grid-template-columns:1fr}
+.intro-grid{gap:35px}
+.plan-visual{min-height:350px}
+.plan-visual img{height:300px}
+.planning-grid{grid-template-columns:1fr 1fr}
+.split-image img{min-height:350px;height:350px}
+.timeline{grid-template-columns:1fr 1fr;gap:35px}
+.timeline:before{display:none}
+.footer-grid{grid-template-columns:1fr 1fr}
+.footer-grid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:480px){
+.hero{min-height:590px}
+.hero h1{font-size:48px}
+.intro,.dark-section,.stages{padding:75px 0}
+.planning-grid{grid-template-columns:1fr}
+.planning-card{min-height:auto}
+.split-content{padding:65px 25px}
+.timeline{grid-template-columns:1fr;gap:35px}
+.phase{padding:0 10px}
+.footer-grid{grid-template-columns:1fr}
+.footer-grid>div:first-child{grid-column:auto}
+.copyright{display:block;line-height:2}
+}
+</style>
+</head>
+
+<body>
+
+<div id="archbuild-header"></div>
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="eyebrow">ARCHBUILD · PLANNING & DEVELOPMENT</div>
+<h1>Every great space begins with a <span>plan.</span></h1>
+<p>
+Thoughtful planning brings ideas, requirements and possibilities together. We focus on creating a clear direction before a project moves into its next stage.
+</p>
+<a href="contact.html" class="btn btn-gold">PLAN YOUR PROJECT ↗</a>
+</div>
+</div>
+</section>
+
+<section class="intro">
+<div class="container intro-grid">
+<div>
+<div class="section-label">01 — THE FOUNDATION</div>
+<h2>Better decisions begin before construction.</h2>
+<p>
+A well-considered plan helps establish the direction of a project. It brings together the intended use of a space, design priorities, site considerations and practical requirements.
+</p>
+<p>
+ARCHBUILD's planning approach focuses on understanding the bigger picture while keeping the details in view. The aim is to create a more informed starting point for design and development.
+</p>
+</div>
+<div class="plan-visual">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85" alt="Architectural planning and building design">
+<div class="plan-caption">IDEA · STRATEGY · DIRECTION</div>
+</div>
+</div>
+</section>
+
+<section class="dark-section">
+<div class="container">
+<div class="dark-heading">
+<div class="section-label">02 — WHAT WE CONSIDER</div>
+<h2>Seeing the project from every angle.</h2>
+<p>
+Each project has its own context. The planning conversation should reflect its purpose, site conditions, priorities and applicable requirements.
+</p>
+</div>
+
+<div class="planning-grid">
+<div class="planning-card">
+<div class="num">01</div>
+<h3>Space & Function</h3>
+<p>Understand how people will use the space and what the layout needs to support.</p>
+</div>
+<div class="planning-card">
+<div class="num">02</div>
+<h3>Site Context</h3>
+<p>Consider site conditions, orientation, access and surrounding context.</p>
+</div>
+<div class="planning-card">
+<div class="num">03</div>
+<h3>Design Direction</h3>
+<p>Establish a coherent design direction aligned with the project brief.</p>
+</div>
+<div class="planning-card">
+<div class="num">04</div>
+<h3>Practical Needs</h3>
+<p>Identify functional requirements, priorities and important project constraints.</p>
+</div>
+<div class="planning-card">
+<div class="num">05</div>
+<h3>Project Coordination</h3>
+<p>Consider how design decisions connect with the next stages of project delivery.</p>
+</div>
+<div class="planning-card">
+<div class="num">06</div>
+<h3>Future Potential</h3>
+<p>Think about flexibility, long-term use and the evolving needs of the space.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="split">
+<div class="split-image">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Contemporary planned interior space">
+</div>
+<div class="split-content">
+<div class="section-label">03 — A CONNECTED APPROACH</div>
+<h2>Design thinking meets practical planning.</h2>
+<p>
+Planning is not an isolated activity. It connects the initial vision with architectural design, interiors and the practical considerations of execution.
+</p>
+<div class="points">
+<div class="point"><span>✦</span> A clear understanding of the project brief</div>
+<div class="point"><span>✦</span> Considered layout and spatial decisions</div>
+<div class="point"><span>✦</span> Alignment between design and requirements</div>
+<div class="point"><span>✦</span> A more informed direction for next steps</div>
+</div>
+</div>
+</section>
+
+<section class="stages">
+<div class="container">
+<div class="stages-header">
+<div class="section-label">04 — PROJECT JOURNEY</div>
+<h2>From the first conversation to a clear direction.</h2>
+<p>A structured sequence helps organise the early stages of a project and identify what needs attention.</p>
+</div>
+
+<div class="timeline">
+<div class="phase">
+<div class="dot"></div>
+<h3>Discovery</h3>
+<p>Discuss the vision, requirements, priorities and project context.</p>
+</div>
+<div class="phase">
+<div class="dot"></div>
+<h3>Assessment</h3>
+<p>Review available information, site conditions and practical considerations.</p>
+</div>
+<div class="phase">
+<div class="dot"></div>
+<h3>Direction</h3>
+<p>Develop a considered design and planning direction for discussion.</p>
+</div>
+<div class="phase">
+<div class="dot"></div>
+<h3>Next Steps</h3>
+<p>Identify further inputs, coordination needs and possible next stages.</p>
+</div>
+</div>
+
+<div class="note">
+<strong>Project note:</strong> Planning scope, technical documentation, statutory approvals and specialist services depend on the specific project and applicable local requirements. These are confirmed separately with the client and relevant qualified professionals.
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="section-label">YOUR IDEA, OUR NEXT CONVERSATION</div>
+<h2>Let's give your next project a thoughtful beginning.</h2>
+<p>Share your vision and let's discuss the possibilities.</p>
+<a href="contact.html" class="btn btn-gold">GET IN TOUCH ↗</a>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="brand">ARCH<span>BUILD</span></div>
+<p class="footer-desc">Thoughtful spaces. Considered design. A practical approach to architecture, interiors and construction.</p>
+</div>
+<div>
+<h4>EXPLORE</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>CONTACT</h4>
+<ul>
+<li><a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a></li>
+<li><a href="tel:+919471537238">+91 94715 37238</a></li>
+<li><a href="https://www.instagram.com/archbuild2016/" target="_blank">Instagram</a></li>
+<li><a href="https://wa.me/919471537238" target="_blank">WhatsApp</a></li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<span>© 2026 ARCHBUILD. All rights reserved.</span>
+<span>DESIGN · BUILD · CREATE</span>
+</div>
+</div>
+</footer>
+
+<script src="header.js"></script>
+</body>
+</html>
