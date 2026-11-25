@@ -3,6 +3,7 @@
   if (!mount) return;
 
   const currentPage = location.pathname.split("/").pop() || "index.html";
+
   const servicePages = [
     "services.html",
     "architecture.html",
@@ -37,6 +38,7 @@
           <a class="ab-services-link ${servicesActive}" href="services.html">
             Services <span class="ab-chevron">⌄</span>
           </a>
+
           <div class="ab-dropdown-menu">
             <a href="services.html">All Services</a>
             <a href="architecture.html">Architecture & Design</a>
@@ -63,6 +65,7 @@
 
   menuButton.addEventListener("click", () => {
     const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
     menuButton.setAttribute("aria-expanded", String(!isOpen));
     navigation.classList.toggle("is-open", !isOpen);
     menuButton.classList.toggle("is-open", !isOpen);
@@ -84,4 +87,11 @@
       }
     });
   });
+
+  // Automatically load animations on every page
+  const animationScript = document.createElement("script");
+  animationScript.src = "animations.js";
+  animationScript.async = false;
+  document.body.appendChild(animationScript);
+
 })();
