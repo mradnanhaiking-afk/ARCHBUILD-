@@ -1,820 +1,878 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101C2C">
-<meta name="description" content="ARCHBUILD — Thoughtful architecture, refined interiors and timeless spaces.">
-<title>ARCHBUILD | Architecture & Design Studio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101C2C">
+  <meta name="description" content="ARCHBUILD — Architecture, interior design, construction and planning. Thoughtful spaces, timeless design.">
+  <title>ARCHBUILD | Architecture & Design</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --navy:#101C2C;
-  --navy2:#172638;
-  --navy3:#223347;
-  --gold:#C6A875;
-  --gold2:#E0C99E;
-  --ivory:#F2EEE5;
-  --stone:#E4DED2;
-  --sage:#777D78;
-  --white:#fff;
-  --muted:#AAB3BC;
-  --line:rgba(255,255,255,.13);
-  --sans:"DM Sans",sans-serif;
-  --head:"Manrope",sans-serif;
-  --serif:"Playfair Display",serif;
-}
+  <style>
+    :root {
+      --navy: #101C2C;
+      --navy2: #172638;
+      --navy3: #223347;
+      --gold: #C6A875;
+      --gold2: #E0C99E;
+      --ivory: #F2EEE5;
+      --stone: #E4DED2;
+      --white: #fff;
+      --muted: #AAB3BC;
+      --dark: #192431;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--navy);color:var(--ivory);font-family:var(--sans);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-button{font:inherit;cursor:pointer}
-img{display:block;width:100%;object-fit:cover}
-::selection{background:var(--gold);color:var(--navy)}
-.container{width:min(1200px,90%);margin:auto}
-.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700}
-.serif{font-family:var(--serif);font-style:italic;font-weight:500}
-.gold{color:var(--gold)}
-section{padding:105px 0}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ivory);
+      color: var(--navy);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
 
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:13px;
-  padding:15px 22px;border:1px solid var(--gold);color:var(--ivory);
-  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;
-  transition:.3s ease
-}
-.btn:hover{background:var(--gold);color:var(--navy);transform:translateY(-3px)}
-.btn.primary{background:var(--gold);color:var(--navy)}
-.btn.primary:hover{background:var(--gold2)}
-.btn.light{border-color:var(--navy);color:var(--navy)}
-.btn.light:hover{background:var(--navy);color:var(--ivory)}
-.arrow{font-size:17px;transition:.3s}
-.btn:hover .arrow{transform:translateX(5px)}
+    .topline {
+      background: var(--navy);
+      color: var(--muted);
+      padding: 10px 7%;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .topline strong { color: var(--gold2); font-weight: 500; }
 
-/* TOP LINE */
-.topline{height:35px;border-bottom:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:1px}
-.topline .container{height:100%;display:flex;align-items:center;justify-content:space-between}
-.topline a:hover{color:var(--gold)}
+    .navbar {
+      position: absolute;
+      z-index: 100;
+      top: 37px;
+      left: 0;
+      width: 100%;
+      padding: 24px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,.16);
+    }
+    .logo {
+      font-family: 'Manrope', sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 5px;
+    }
+    .logo span { color: var(--gold); }
+    .logo small {
+      display: block;
+      font-size: 8px;
+      letter-spacing: 4px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+    .nav-links > li > a,
+    .mega-trigger {
+      color: rgba(255,255,255,.82);
+      font-size: 11px;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      transition: .3s;
+    }
+    .nav-links > li > a:hover,
+    .mega-trigger:hover { color: var(--gold2); }
 
-/* NAVIGATION */
-.navbar{
-  height:84px;background:rgba(16,28,44,.97);position:relative;z-index:100;
-  border-bottom:1px solid var(--line)
-}
-.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
-.logo-symbol{
-  height:42px;width:42px;border:1px solid var(--gold);
-  display:grid;place-items:center;color:var(--gold);
-  font-family:var(--serif);font-size:25px
-}
-.logo-name{font-family:var(--head);font-size:19px;font-weight:800;letter-spacing:3px}
-.logo-name small{display:block;font-size:7px;color:var(--gold);letter-spacing:4px;margin-top:4px;font-weight:500}
-.nav-links{list-style:none;display:flex;align-items:center;gap:25px}
-.nav-item{position:static}
-.nav-link{
-  border:0;background:none;color:#E4E7E9;font-size:10px;
-  letter-spacing:1.3px;text-transform:uppercase;padding:34px 0;
-  display:flex;align-items:center;gap:7px;transition:.2s
-}
-.nav-link:hover,.nav-link.active{color:var(--gold)}
-.nav-link .chev{font-size:13px}
-.nav-cta{white-space:nowrap;padding:13px 17px;font-size:9px}
-.menu-toggle{
-  display:none;width:43px;height:43px;background:transparent;
-  border:1px solid var(--line);color:var(--ivory);font-size:23px
-}
+    .nav-item { position: relative; }
+    .mega-trigger { display: flex; gap: 7px; align-items: center; }
+    .mega-trigger span { font-size: 15px; }
 
-/* MEGA MENU */
-.mega-menu{
-  position:absolute;top:83px;left:0;right:0;background:#172638;
-  border-top:1px solid var(--line);border-bottom:1px solid var(--gold);
-  padding:34px 0 38px;opacity:0;visibility:hidden;
-  transform:translateY(10px);transition:.25s
-}
-.nav-item:hover .mega-menu,
-.nav-item:focus-within .mega-menu,
-.nav-item.open .mega-menu{opacity:1;visibility:visible;transform:translateY(0)}
-.mega-inner{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:35px}
-.mega-intro h3{font:500 29px var(--serif);margin:12px 0}
-.mega-intro p{font-size:12px;line-height:1.8;color:var(--muted);max-width:230px}
-.mega-col h4{font-size:10px;color:var(--gold);letter-spacing:2px;margin-bottom:15px}
-.mega-col a{display:block;color:#C8D0D8;font-size:12px;padding:8px 0;transition:.2s}
-.mega-col a:hover{color:var(--gold);padding-left:5px}
+    .mega-menu {
+      position: absolute;
+      top: 35px;
+      left: -20px;
+      width: 245px;
+      padding: 14px;
+      background: #172638;
+      border: 1px solid rgba(198,168,117,.25);
+      box-shadow: 0 20px 50px rgba(0,0,0,.3);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: .25s;
+    }
+    .nav-item:hover .mega-menu,
+    .nav-item.open .mega-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .mega-menu a {
+      display: block;
+      color: #d7dce0;
+      padding: 13px 12px;
+      font-size: 12px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      transition: .25s;
+    }
+    .mega-menu a:last-child { border: 0; }
+    .mega-menu a:hover {
+      background: rgba(198,168,117,.1);
+      color: var(--gold2);
+      padding-left: 18px;
+    }
 
-/* HERO */
-.hero{
-  min-height:710px;height:calc(100svh - 119px);max-height:850px;
-  position:relative;display:flex;align-items:center;overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(10,23,38,.95) 0%,rgba(10,23,38,.76) 43%,rgba(10,23,38,.12) 100%),
-    linear-gradient(0deg,rgba(10,23,38,.55),transparent 45%),
-    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90") center/cover;
-}
-.hero:after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 78%,var(--navy));
-  pointer-events:none
-}
-.hero-content{position:relative;z-index:2;padding:75px 0 105px}
-.hero h1{
-  font:500 clamp(48px,7vw,91px)/1.08 var(--head);
-  letter-spacing:-4px;margin:24px 0;max-width:850px
-}
-.hero h1 span{font-family:var(--serif);font-style:italic;color:var(--gold2);font-weight:500}
-.hero-copy{font-size:13px;line-height:2;color:#D0D4D8;max-width:425px;margin-bottom:30px}
-.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
-.hero-bottom{
-  position:absolute;z-index:3;bottom:43px;left:0;right:0;
-  display:flex;justify-content:space-between;align-items:center
-}
-.hero-index{font-size:10px;letter-spacing:2px;color:var(--gold)}
-.scroll-link{font-size:9px;letter-spacing:2px;text-transform:uppercase}
-.scroll-link span{color:var(--gold);font-size:17px;margin-left:10px}
+    .nav-cta {
+      border: 1px solid var(--gold);
+      padding: 13px 21px;
+      color: var(--gold2);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--navy); }
 
-/* HIGHLIGHT STRIP */
-.highlight-strip{background:var(--navy2);border-block:1px solid var(--line);padding:27px 0}
-.highlight-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.highlight{
-  display:flex;align-items:center;justify-content:center;gap:13px;
-  border-right:1px solid var(--line)
-}
-.highlight:last-child{border:0}
-.highlight-icon{color:var(--gold);font-size:23px}
-.highlight strong{font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block}
-.highlight small{font-size:10px;color:var(--muted);display:block;margin-top:4px}
+    .menu-toggle {
+      display: none;
+      background: none;
+      color: white;
+      border: 0;
+      font-size: 27px;
+      cursor: pointer;
+    }
 
-/* COMMON HEADINGS */
-.section-heading{
-  display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px
-}
-.section-heading h2{
-  font:500 clamp(35px,4.5vw,58px)/1.15 var(--head);
-  letter-spacing:-2px;margin-top:14px
-}
-.section-heading p{max-width:350px;color:var(--muted);font-size:12px;line-height:1.9}
+    .hero {
+      min-height: 850px;
+      height: 100vh;
+      max-height: 1050px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 150px 10% 90px;
+      background:
+        linear-gradient(90deg, rgba(9,20,32,.94) 0%, rgba(9,20,32,.76) 48%, rgba(9,20,32,.2) 100%),
+        linear-gradient(0deg, rgba(9,20,32,.55), transparent 55%),
+        url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90') center/cover;
+      color: white;
+    }
+    .hero-content { max-width: 760px; position: relative; z-index: 2; }
+    .eyebrow {
+      color: var(--gold2);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .eyebrow:before {
+      content: '';
+      width: 38px;
+      height: 1px;
+      background: var(--gold);
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
+    .hero h1 {
+      font-size: clamp(48px, 7vw, 91px);
+      line-height: 1.07;
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+    .hero h1 em { color: var(--gold2); font-weight: 400; }
+    .hero-description {
+      max-width: 490px;
+      color: rgba(255,255,255,.7);
+      font-size: 14px;
+      line-height: 1.9;
+      margin-bottom: 35px;
+    }
+    .hero-actions { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
+    .btn-gold {
+      display: inline-block;
+      padding: 17px 28px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+    .btn-gold:hover { background: var(--gold2); transform: translateY(-3px); }
+    .btn-text {
+      color: white;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 8px;
+    }
 
-/* INTRO */
-.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}
-.intro-visual{position:relative;padding:0 30px 30px 0}
-.intro-visual img{height:500px}
-.intro-visual:after{
-  content:"";position:absolute;right:0;bottom:0;width:75%;height:75%;
-  border:1px solid var(--gold);z-index:-1
-}
-.visual-caption{
-  position:absolute;bottom:48px;left:22px;background:var(--gold);
-  color:var(--navy);padding:13px 18px;font-size:9px;
-  letter-spacing:1.8px;text-transform:uppercase;font-weight:700
-}
-.intro-copy h2{font:500 clamp(36px,4.3vw,56px)/1.2 var(--head);margin:17px 0 23px;letter-spacing:-2px}
-.intro-copy p{font-size:13px;line-height:2;color:var(--muted);margin-bottom:15px}
-.text-link{
-  display:inline-flex;gap:14px;align-items:center;color:var(--gold);
-  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
-  padding-bottom:9px;border-bottom:1px solid var(--gold);margin-top:14px
-}
+    .hero-bottom {
+      position: absolute;
+      bottom: 35px;
+      left: 10%;
+      right: 10%;
+      display: flex;
+      justify-content: space-between;
+      color: rgba(255,255,255,.55);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-/* SERVICES */
-.services{background:var(--ivory);color:var(--navy)}
-.services .eyebrow{color:#92764B}
-.services .section-heading p{color:#77766E}
-.services-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  border-top:1px solid rgba(16,28,44,.2);
-  border-bottom:1px solid rgba(16,28,44,.2)
-}
-.service-card{
-  padding:32px 22px 35px;border-right:1px solid rgba(16,28,44,.2);
-  transition:.3s
-}
-.service-card:last-child{border:0}
-.service-card:hover{background:#E7E0D3;transform:translateY(-4px)}
-.service-no{font-size:10px;letter-spacing:2px;color:#9A8056}
-.service-card h3{font:500 25px var(--serif);margin:43px 0 14px}
-.service-card p{font-size:11px;line-height:1.9;color:#72736D;min-height:68px}
-.service-card a{
-  display:inline-block;font-size:9px;text-transform:uppercase;
-  letter-spacing:1.4px;margin-top:23px;border-bottom:1px solid #9A8056;padding-bottom:7px
-}
+    .section { padding: 115px 10%; }
+    .section-label {
+      color: #9b8053;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+    .section-title {
+      font-size: clamp(36px, 5vw, 61px);
+      line-height: 1.15;
+      max-width: 700px;
+    }
+    .section-title em { color: #a68a5b; }
+    .section-description {
+      color: #727b82;
+      line-height: 1.9;
+      font-size: 13px;
+      max-width: 520px;
+    }
 
-/* PROJECTS */
-.project-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
-.project-card{position:relative;overflow:hidden;background:var(--navy2)}
-.project-card img{height:480px;transition:transform .8s}
-.project-card:hover img{transform:scale(1.055)}
-.project-stack{display:grid;gap:24px}
-.project-card.small img{height:228px}
-.project-overlay{
-  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:end;
-  padding:27px;background:linear-gradient(0deg,rgba(8,19,31,.9),transparent 67%)
-}
-.project-overlay small{color:var(--gold2);font-size:9px;letter-spacing:1.8px;text-transform:uppercase}
-.project-overlay h3{font:500 29px var(--serif);margin-top:8px}
-.project-overlay span{font-size:10px;color:#D1D5D8;margin-top:8px}
-.project-note{font-size:10px;line-height:1.7;color:var(--muted);margin-top:19px}
+    .intro {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 90px;
+      align-items: center;
+    }
+    .intro-right { padding-top: 45px; }
+    .intro-right p { margin-bottom: 28px; }
+    .line-link {
+      color: var(--navy);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 9px;
+      font-weight: 700;
+    }
 
-/* PHILOSOPHY */
-.philosophy{background:var(--navy2);position:relative;overflow:hidden}
-.philosophy:after{
-  content:"A";position:absolute;right:5%;top:-170px;
-  font:500 500px var(--serif);color:rgba(198,168,117,.045)
-}
-.philosophy-content{max-width:850px;position:relative;z-index:1}
-.philosophy h2{font:500 clamp(38px,6vw,75px)/1.2 var(--serif);margin:23px 0}
-.philosophy p{font-size:13px;line-height:2;color:var(--muted);max-width:550px}
-.philosophy .btn{margin-top:30px}
+    .highlights {
+      background: var(--navy);
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      padding: 40px 10%;
+      gap: 25px;
+    }
+    .highlight {
+      padding: 20px;
+      border-right: 1px solid rgba(255,255,255,.12);
+    }
+    .highlight:last-child { border: 0; }
+    .highlight strong {
+      display: block;
+      color: var(--gold2);
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .highlight span {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
 
-/* PROCESS */
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
-.process-card{padding:30px 22px 10px 0;margin-right:22px;border-right:1px solid var(--line)}
-.process-card:last-child{border:0;margin:0}
-.process-number{font-size:10px;color:var(--gold);letter-spacing:2px}
-.process-card h3{font:500 24px var(--serif);margin:24px 0 12px}
-.process-card p{font-size:11px;line-height:1.9;color:var(--muted)}
+    .services-section { background: #e9e4da; }
+    .section-heading-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 55px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 15px;
+    }
+    .service-card {
+      min-height: 340px;
+      padding: 30px 24px;
+      background: var(--navy);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: .35s;
+    }
+    .service-card:hover { transform: translateY(-8px); background: #20344a; }
+    .service-number {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+    .service-card h3 { font-size: 27px; margin-bottom: 13px; }
+    .service-card p {
+      font-size: 11px;
+      color: #aab3bc;
+      line-height: 1.8;
+    }
+    .service-arrow {
+      color: var(--gold2);
+      font-size: 24px;
+      align-self: flex-end;
+    }
 
-/* CALL TO ACTION */
-.cta{
-  background:var(--stone);color:var(--navy);padding:90px 0;text-align:center
-}
-.cta .eyebrow{color:#92764B}
-.cta h2{font:500 clamp(40px,6vw,72px)/1.15 var(--serif);max-width:850px;margin:18px auto}
-.cta p{font-size:12px;color:#64645D;margin-bottom:28px}
+    .projects-section { background: var(--ivory); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      grid-template-rows: 260px 260px;
+      gap: 18px;
+      margin-top: 55px;
+    }
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+    }
+    .project-card:first-child { grid-row: span 2; }
+    .project-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .78;
+      transition: .7s;
+    }
+    .project-card:hover img { transform: scale(1.06); opacity: .55; }
+    .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px;
+      color: white;
+      background: linear-gradient(transparent,rgba(8,18,29,.9));
+    }
+    .project-overlay span {
+      color: var(--gold2);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .project-overlay h3 { font-size: 27px; margin-top: 8px; }
+    .project-note {
+      font-size: 10px;
+      color: #777;
+      margin-top: 22px;
+      line-height: 1.7;
+    }
 
-/* FOOTER */
-footer{background:#0C1725;padding:72px 0 25px}
-.footer-grid{
-  display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;
-  gap:40px;padding-bottom:50px
-}
-.footer-about p{font-size:11px;line-height:1.9;color:var(--muted);max-width:260px;margin-top:20px}
-.footer-col h4{font-size:10px;letter-spacing:2px;color:var(--gold);margin-bottom:19px}
-.footer-col a,.footer-col p{
-  display:block;color:#B4BEC7;font-size:11px;line-height:1.7;margin:12px 0
-}
-.footer-col a:hover{color:var(--gold)}
-.footer-bottom{
-  border-top:1px solid var(--line);padding-top:22px;
-  display:flex;justify-content:space-between;gap:20px;
-  font-size:10px;color:#87929D
-}
-.footer-social{display:flex;gap:17px}
-.footer-social a{color:var(--gold)}
+    .philosophy {
+      background: var(--navy);
+      color: white;
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 90px;
+      align-items: center;
+    }
+    .philosophy h2 { font-size: clamp(38px,5vw,62px); line-height: 1.2; }
+    .philosophy h2 em { color: var(--gold2); }
+    .philosophy-text p {
+      color: var(--muted);
+      line-height: 2;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
 
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;right:22px;bottom:22px;width:54px;height:54px;
-  border-radius:50%;background:#20A66A;color:white;z-index:90;
-  display:grid;place-items:center;font-size:23px;
-  box-shadow:0 8px 25px rgba(0,0,0,.3);transition:.3s
-}
-.whatsapp:hover{transform:translateY(-5px)}
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 25px;
+      margin-top: 55px;
+    }
+    .process-item { border-top: 1px solid #c9b99d; padding-top: 22px; }
+    .process-item span {
+      color: #a68a5b;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+    .process-item h3 { font-size: 24px; margin: 18px 0 12px; }
+    .process-item p { color: #77818a; font-size: 11px; line-height: 1.8; }
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(25px);transition:.8s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
+    .cta {
+      background:
+        linear-gradient(rgba(16,28,44,.88),rgba(16,28,44,.88)),
+        url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85') center/cover;
+      text-align: center;
+      color: white;
+      padding: 105px 10%;
+    }
+    .cta h2 { font-size: clamp(40px,6vw,68px); margin-bottom: 20px; }
+    .cta h2 em { color: var(--gold2); }
+    .cta p { color: #b8c0c7; font-size: 13px; margin-bottom: 32px; }
 
-/* RESPONSIVE */
-@media(max-width:1050px){
-  .nav-links{gap:14px}
-  .nav-cta{display:none}
-  .intro-grid{gap:45px}
-  .services-grid{grid-template-columns:repeat(2,1fr)}
-  .service-card:nth-child(2){border-right:0}
-  .service-card:nth-child(-n+2){border-bottom:1px solid rgba(16,28,44,.2)}
-  .footer-grid{grid-template-columns:repeat(2,1fr)}
-}
+    footer {
+      background: #0b1522;
+      color: white;
+      padding: 75px 10% 25px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 55px;
+    }
+    .footer-brand p {
+      color: #89939e;
+      font-size: 11px;
+      line-height: 1.9;
+      max-width: 270px;
+      margin-top: 20px;
+    }
+    .footer-col h4 {
+      color: var(--gold2);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .footer-col a, .footer-col p {
+      display: block;
+      color: #9ba5af;
+      font-size: 11px;
+      margin-bottom: 13px;
+      line-height: 1.7;
+      transition: .3s;
+    }
+    .footer-col a:hover { color: var(--gold2); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #6f7b87;
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+    .whatsapp {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      z-index: 90;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #1eaa68;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    }
 
-@media(max-width:760px){
-  .topline{display:none}
-  .navbar{height:74px}
-  .logo-name{font-size:17px}
-  .menu-toggle{display:block}
-  .nav-links{
-    display:none;position:absolute;top:73px;left:0;right:0;
-    background:var(--navy);padding:12px 5% 25px;
-    flex-direction:column;align-items:stretch;gap:0;
-    border-bottom:1px solid var(--gold);
-    max-height:calc(100svh - 74px);overflow-y:auto
-  }
-  .nav-links.active{display:flex}
-  .nav-item{border-bottom:1px solid var(--line)}
-  .nav-link{width:100%;padding:16px 0;justify-content:space-between}
-  .mega-menu{
-    display:none;position:static;opacity:1;visibility:visible;
-    transform:none;padding:17px 12px;background:var(--navy2);border:0
-  }
-  .nav-item.open .mega-menu{display:block}
-  .mega-inner{grid-template-columns:1fr 1fr;gap:20px}
-  .mega-intro{grid-column:1/-1}
-  .mega-intro h3{font-size:23px}
-  .hero{height:calc(100svh - 74px);min-height:650px;background-position:60% center}
-  .hero h1{font-size:clamp(46px,11vw,70px);letter-spacing:-2.5px}
-  .hero-content{padding:55px 0 100px}
-  .hero-bottom{bottom:30px}
-  section{padding:75px 0}
-  .highlight-grid{grid-template-columns:repeat(2,1fr);gap:23px}
-  .highlight:nth-child(2){border:0}
-  .highlight{justify-content:flex-start}
-  .section-heading{display:block}
-  .section-heading p{margin-top:18px}
-  .intro-grid{grid-template-columns:1fr;gap:45px}
-  .intro-visual img{height:360px}
-  .intro-copy h2{font-size:40px}
-  .services-grid{grid-template-columns:1fr 1fr}
-  .service-card{padding:24px 14px}
-  .service-card h3{font-size:21px;margin-top:30px}
-  .service-card p{min-height:100px}
-  .project-grid{grid-template-columns:1fr}
-  .project-card img{height:350px}
-  .project-card.small img{height:290px}
-  .process-grid{grid-template-columns:1fr 1fr;row-gap:28px}
-  .process-card:nth-child(2){border:0}
-  .process-card{margin-right:13px}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:35px 20px}
-  .footer-about{grid-column:1/-1}
-  .footer-bottom{flex-direction:column}
-}
+    .reveal { opacity: 0; transform: translateY(25px); transition: .8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-@media(max-width:420px){
-  .hero-actions{flex-direction:column;max-width:245px}
-  .hero-actions .btn{width:100%}
-  .services-grid{grid-template-columns:1fr}
-  .service-card{border-right:0;border-bottom:1px solid rgba(16,28,44,.2)}
-  .service-card p{min-height:auto}
-  .process-grid{grid-template-columns:1fr}
-  .process-card{border-right:0;border-bottom:1px solid var(--line);padding-bottom:25px}
-  .footer-grid{grid-template-columns:1fr}
-  .footer-about{grid-column:auto}
-}
-
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
-}
-</style>
+    @media(max-width:1050px) {
+      .nav-links { gap: 16px; }
+      .nav-links > li > a, .mega-trigger { font-size: 9px; }
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media(max-width:800px) {
+      .topline { font-size: 8px; padding: 9px 5%; }
+      .navbar { top: 32px; padding: 20px 6%; }
+      .menu-toggle { display: block; }
+      .nav-cta { display: none; }
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px 6% 28px;
+        background: var(--navy);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      .nav-links.active { display: flex; }
+      .nav-links li { padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+      .nav-links > li > a, .mega-trigger { font-size: 11px; }
+      .mega-menu {
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        width: 100%;
+        margin-top: 12px;
+        box-shadow: none;
+      }
+      .nav-item.open .mega-menu { display: block; }
+      .hero { min-height: 760px; padding: 170px 7% 100px; }
+      .hero-bottom { left: 7%; right: 7%; font-size: 7px; }
+      .section { padding: 80px 7%; }
+      .intro, .philosophy { grid-template-columns: 1fr; gap: 25px; }
+      .intro-right { padding-top: 0; }
+      .section-heading-row { display: block; }
+      .section-heading-row .section-description { margin-top: 20px; }
+      .highlights { padding: 30px 6%; }
+      .projects-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 230px 230px; }
+      .project-card:first-child { grid-row: span 2; }
+      .process-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width:520px) {
+      .topline { justify-content: center; text-align: center; }
+      .topline span:last-child { display: none; }
+      .logo { font-size: 21px; }
+      .hero { min-height: 720px; }
+      .hero h1 { font-size: 53px; }
+      .hero-description { font-size: 12px; }
+      .hero-bottom span:last-child { display: none; }
+      .highlights { grid-template-columns: 1fr; gap: 0; }
+      .highlight { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 270px; }
+      .projects-grid { display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(3,260px); }
+      .project-card:first-child { grid-row: auto; }
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 30px 18px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .footer-bottom { flex-direction: column; }
+      .cta { padding: 80px 7%; }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="topline">
-  <div class="container">
-    <span>ARCHITECTURE · INTERIORS · CONSTRUCTION</span>
-    <a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a>
+  <div class="topline">
+    <span><strong>ARCHBUILD</strong> &nbsp; Architecture · Design · Construction</span>
+    <span>Creating spaces with purpose</span>
   </div>
-</div>
 
-<!-- NAVIGATION -->
-<header class="navbar">
-  <div class="container nav-inner">
+  <nav class="navbar">
+    <a href="index.html" class="logo">ARCH<span>BUILD</span><small>DESIGN · BUILD · INSPIRE</small></a>
 
-    <a href="index.html" class="logo">
-      <div class="logo-symbol">A</div>
-      <div class="logo-name">ARCHBUILD<small>DESIGN YOUR LEGACY</small></div>
-    </a>
-
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
 
     <ul class="nav-links" id="navLinks">
-
+      <li><a href="index.html">Home</a></li>
       <li class="nav-item">
-        <a class="nav-link active" href="index.html">Home</a>
-      </li>
-
-      <li class="nav-item has-mega">
-        <button class="nav-link mega-trigger" aria-expanded="false">About <span class="chev">⌄</span></button>
+        <button class="mega-trigger">About <span>⌄</span></button>
         <div class="mega-menu">
-          <div class="container mega-inner">
-            <div class="mega-intro">
-              <span class="eyebrow">DISCOVER ARCHBUILD</span>
-              <h3>Spaces with a story.</h3>
-              <p>Explore our philosophy, vision and approach to thoughtful spaces.</p>
-            </div>
-            <div class="mega-col">
-              <h4>Company</h4>
-              <a href="about.html">About Us</a>
-              <a href="about.html#vision">Our Vision</a>
-              <a href="about.html#mission">Our Mission</a>
-            </div>
-            <div class="mega-col">
-              <h4>Our Identity</h4>
-              <a href="about.html#values">Our Values</a>
-              <a href="about.html#approach">Our Approach</a>
-              <a href="about.html#story">Our Story</a>
-            </div>
-            <div class="mega-col">
-              <h4>Explore</h4>
-              <a href="projects.html">Our Projects</a>
-              <a href="services.html">Our Services</a>
-              <a href="contact.html">Contact Us</a>
-            </div>
-          </div>
+          <a href="about.html">About ARCHBUILD</a>
+          <a href="about.html#story">Our Story</a>
+          <a href="about.html#values">Our Values</a>
         </div>
       </li>
-
-      <li class="nav-item has-mega">
-        <button class="nav-link mega-trigger" aria-expanded="false">Services <span class="chev">⌄</span></button>
+      <li class="nav-item">
+        <button class="mega-trigger">Services <span>⌄</span></button>
         <div class="mega-menu">
-          <div class="container mega-inner">
-            <div class="mega-intro">
-              <span class="eyebrow">WHAT WE CREATE</span>
-              <h3>Designed around you.</h3>
-              <p>Explore the different ways we can help shape your space.</p>
-            </div>
-            <div class="mega-col">
-              <h4>Design</h4>
-              <a href="services.html#architecture">Architecture & Design</a>
-              <a href="services.html#interior">Interior Design</a>
-              <a href="services.html#planning">Space Planning</a>
-            </div>
-            <div class="mega-col">
-              <h4>Build</h4>
-              <a href="services.html#construction">Construction</a>
-              <a href="services.html#renovation">Renovation</a>
-              <a href="services.html#development">Development</a>
-            </div>
-            <div class="mega-col">
-              <h4>Start Here</h4>
-              <a href="contact.html">Request a Quote</a>
-              <a href="contact.html">Book a Consultation</a>
-              <a href="contact.html">Discuss Your Project</a>
-            </div>
-          </div>
+          <a href="services.html">All Services</a>
+          <a href="architecture.html">Architecture</a>
+          <a href="interior.html">Interior Design</a>
+          <a href="construction.html">Construction</a>
+          <a href="planning.html">Planning</a>
         </div>
       </li>
-
-      <li class="nav-item has-mega">
-        <button class="nav-link mega-trigger" aria-expanded="false">Explore <span class="chev">⌄</span></button>
-        <div class="mega-menu">
-          <div class="container mega-inner">
-            <div class="mega-intro">
-              <span class="eyebrow">DESIGN INSPIRATION</span>
-              <h3>Ideas into spaces.</h3>
-              <p>Discover architectural inspiration and design concepts.</p>
-            </div>
-            <div class="mega-col">
-              <h4>Portfolio</h4>
-              <a href="projects.html">All Projects</a>
-              <a href="projects.html">Residential Concepts</a>
-              <a href="projects.html">Interior Concepts</a>
-            </div>
-            <div class="mega-col">
-              <h4>Discover</h4>
-              <a href="services.html">Our Services</a>
-              <a href="about.html">Our Philosophy</a>
-              <a href="projects.html">Modern Design</a>
-            </div>
-            <div class="mega-col">
-              <h4>Connect</h4>
-              <a href="contact.html">Start a Project</a>
-              <a href="contact.html">Get in Touch</a>
-              <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">Instagram ↗</a>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
 
-    <a href="contact.html" class="btn nav-cta">Let's Talk <span class="arrow">↗</span></a>
-  </div>
-</header>
+    <a href="contact.html" class="nav-cta">Let's Talk ↗</a>
+  </nav>
 
-<main>
-
-<!-- HERO -->
-<section class="hero" style="padding:0">
-  <div class="container hero-content">
-    <div class="eyebrow">ARCHITECTURE · DESIGN · LIVING</div>
-    <h1>Building your vision.<br>Creating your <span>legacy.</span></h1>
-    <p class="hero-copy">
-      Thoughtful architecture. Refined interiors. Spaces designed to inspire
-      the way you live, work and experience the world.
-    </p>
-    <div class="hero-actions">
-      <a href="projects.html" class="btn primary">Explore Projects <span class="arrow">↗</span></a>
-      <a href="services.html" class="btn">Discover Services <span class="arrow">→</span></a>
-    </div>
-  </div>
-  <div class="container hero-bottom">
-    <span class="hero-index">01 / ARCHBUILD STUDIO</span>
-    <a href="#intro" class="scroll-link">Scroll to explore <span>↓</span></a>
-  </div>
-</section>
-
-<!-- HIGHLIGHTS -->
-<div class="highlight-strip">
-  <div class="container highlight-grid">
-    <div class="highlight">
-      <span class="highlight-icon">⌂</span>
-      <div><strong>Architecture</strong><small>Thoughtful spaces</small></div>
-    </div>
-    <div class="highlight">
-      <span class="highlight-icon">◇</span>
-      <div><strong>Interiors</strong><small>Refined details</small></div>
-    </div>
-    <div class="highlight">
-      <span class="highlight-icon">▧</span>
-      <div><strong>Construction</strong><small>From plan to build</small></div>
-    </div>
-    <div class="highlight">
-      <span class="highlight-icon">✳</span>
-      <div><strong>Planning</strong><small>Purposeful design</small></div>
-    </div>
-  </div>
-</div>
-
-<!-- INTRO -->
-<section id="intro">
-  <div class="container intro-grid">
-    <div class="intro-visual reveal">
-      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85" alt="Elegant contemporary interior">
-      <div class="visual-caption">Designed with purpose</div>
-    </div>
-    <div class="intro-copy reveal">
-      <div class="eyebrow">WELCOME TO ARCHBUILD</div>
-      <h2>More than spaces.<br><span class="serif gold">A way of living.</span></h2>
-      <p>
-        At ARCHBUILD, we believe great spaces begin with great ideas.
-        Every project deserves thoughtful planning, a clear design vision
-        and attention to the details that make a place feel special.
-      </p>
-      <p>
-        From architectural concepts to interiors and construction,
-        our approach puts functionality, aesthetics and your vision
-        at the heart of every decision.
-      </p>
-      <a href="about.html" class="text-link">Discover our story ↗</a>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-heading reveal">
-      <div>
-        <div class="eyebrow">WHAT WE DO</div>
-        <h2>Spaces shaped by<br><span class="serif">imagination.</span></h2>
-      </div>
-      <p>A considered approach to every stage of creating a space. Explore the services that can bring your ideas to life.</p>
-    </div>
-
-    <div class="services-grid">
-      <article class="service-card reveal">
-        <span class="service-no">01 / DESIGN</span>
-        <h3>Architecture & Design</h3>
-        <p>Thoughtful concepts that balance form, function and the character of a place.</p>
-        <a href="services.html#architecture">Explore Service ↗</a>
-      </article>
-      <article class="service-card reveal">
-        <span class="service-no">02 / INTERIORS</span>
-        <h3>Interior Design</h3>
-        <p>Considered interiors with a focus on comfort, materials and detail.</p>
-        <a href="services.html#interior">Explore Service ↗</a>
-      </article>
-      <article class="service-card reveal">
-        <span class="service-no">03 / BUILD</span>
-        <h3>Construction</h3>
-        <p>Bringing design concepts towards reality through planned execution.</p>
-        <a href="services.html#construction">Explore Service ↗</a>
-      </article>
-      <article class="service-card reveal">
-        <span class="service-no">04 / PLAN</span>
-        <h3>Planning & Development</h3>
-        <p>Organised planning to help make better use of every available space.</p>
-        <a href="services.html#planning">Explore Service ↗</a>
-      </article>
-    </div>
-
-    <div style="text-align:center;margin-top:35px">
-      <a href="services.html" class="btn light">View All Services <span class="arrow">↗</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <div class="section-heading reveal">
-      <div>
-        <div class="eyebrow">SELECTED INSPIRATION</div>
-        <h2>Design that makes<br><span class="serif gold">a statement.</span></h2>
-      </div>
-      <a href="projects.html" class="btn">Explore Portfolio <span class="arrow">↗</span></a>
-    </div>
-
-    <div class="project-grid">
-      <a href="projects.html" class="project-card reveal">
-        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1300&q=85" alt="Modern home architecture">
-        <div class="project-overlay">
-          <small>Residential · Design Inspiration</small>
-          <h3>The Modern Residence</h3>
-          <span>Explore concept ↗</span>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Architecture · Interior · Construction</div>
+        <h1>Spaces that<br>inspire. <em>Designs</em><br>that endure.</h1>
+        <p class="hero-description">
+          We believe great spaces begin with thoughtful ideas. Discover a considered approach to architecture, interior design and building.
+        </p>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn-gold">Explore Our Work ↗</a>
+          <a href="about.html" class="btn-text">Discover ARCHBUILD</a>
         </div>
-      </a>
-
-      <div class="project-stack">
-        <a href="projects.html" class="project-card small reveal">
-          <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1000&q=85" alt="Contemporary interior">
-          <div class="project-overlay">
-            <small>Interiors · Design Inspiration</small>
-            <h3>Quiet Elegance</h3>
-            <span>Explore concept ↗</span>
-          </div>
-        </a>
-        <a href="projects.html" class="project-card small reveal">
-          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Modern architectural design">
-          <div class="project-overlay">
-            <small>Architecture · Design Inspiration</small>
-            <h3>Modern Geometry</h3>
-            <span>Explore concept ↗</span>
-          </div>
-        </a>
       </div>
-    </div>
 
-    <p class="project-note">Note: Images shown are illustrative design references, not verified completed ARCHBUILD projects.</p>
-  </div>
-</section>
+      <div class="hero-bottom">
+        <span>Thoughtful design · Timeless spaces</span>
+        <span>Scroll to explore ↓</span>
+      </div>
+    </section>
 
-<!-- PHILOSOPHY -->
-<section class="philosophy">
-  <div class="container philosophy-content reveal">
-    <div class="eyebrow">OUR DESIGN PHILOSOPHY</div>
-    <h2>“Good design is not just what you see. It's how a space makes you <span class="gold">feel.”</span></h2>
-    <p>
-      We believe meaningful spaces are created through a balance of
-      thoughtful design, practical planning and an understanding of
-      the people who will experience them.
-    </p>
-    <a href="about.html" class="btn">Discover Our Approach <span class="arrow">↗</span></a>
-  </div>
-</section>
+    <section class="highlights">
+      <div class="highlight">
+        <strong>Architecture</strong>
+        <span>Designed around people</span>
+      </div>
+      <div class="highlight">
+        <strong>Interiors</strong>
+        <span>Details with intention</span>
+      </div>
+      <div class="highlight">
+        <strong>Construction</strong>
+        <span>Ideas into reality</span>
+      </div>
+    </section>
 
-<!-- PROCESS -->
-<section id="process">
-  <div class="container">
-    <div class="section-heading reveal">
+    <section class="section intro reveal">
       <div>
-        <div class="eyebrow">HOW WE WORK</div>
-        <h2>From first idea<br>to <span class="serif gold">final detail.</span></h2>
+        <div class="section-label">01 — Who We Are</div>
+        <h2 class="section-title">Designing beyond the <em>ordinary.</em></h2>
       </div>
-      <p>A clear process helps turn an initial conversation into a well-considered project plan.</p>
-    </div>
-
-    <div class="process-grid">
-      <div class="process-card reveal">
-        <span class="process-number">01 / DISCOVER</span>
-        <h3>Understanding</h3>
-        <p>We begin by discussing your ideas, requirements, priorities and project goals.</p>
+      <div class="intro-right">
+        <p class="section-description">
+          ARCHBUILD brings together thoughtful planning, architectural vision and a detail-focused approach to the built environment. Every space deserves a design that feels purposeful, balanced and enduring.
+        </p>
+        <a href="about.html" class="line-link">Discover Our Story ↗</a>
       </div>
-      <div class="process-card reveal">
-        <span class="process-number">02 / DESIGN</span>
-        <h3>Concept & Planning</h3>
-        <p>Ideas take shape through design direction, planning and thoughtful decisions.</p>
+    </section>
+
+    <section class="section services-section">
+      <div class="section-heading-row reveal">
+        <div>
+          <div class="section-label">02 — What We Do</div>
+          <h2 class="section-title">Our areas of <em>expertise.</em></h2>
+        </div>
+        <p class="section-description">
+          From the first idea to the finer details, explore the different ways we approach spaces and the built environment.
+        </p>
       </div>
-      <div class="process-card reveal">
-        <span class="process-number">03 / DEVELOP</span>
-        <h3>Refinement</h3>
-        <p>We refine the details and discuss the next steps based on the project scope.</p>
-      </div>
-      <div class="process-card reveal">
-        <span class="process-number">04 / DELIVER</span>
-        <h3>Execution</h3>
-        <p>The agreed project moves forward according to its scope and execution plan.</p>
-      </div>
-    </div>
 
-    <a href="contact.html" class="text-link">Discuss your project ↗</a>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="container reveal">
-    <div class="eyebrow">YOUR IDEA. OUR NEXT CONVERSATION.</div>
-    <h2>Let's create something <span class="serif">extraordinary.</span></h2>
-    <p>Have a project in mind? Start with a conversation.</p>
-    <a href="contact.html" class="btn light">Start Your Project <span class="arrow">↗</span></a>
-    <a href="https://wa.me/919471537238?text=Hello%20ARCHBUILD%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="btn light">WhatsApp Us ↗</a>
-  </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-
-      <div class="footer-about">
-        <a href="index.html" class="logo">
-          <div class="logo-symbol">A</div>
-          <div class="logo-name">ARCHBUILD<small>DESIGN YOUR LEGACY</small></div>
+      <div class="services-grid">
+        <a href="architecture.html" class="service-card reveal">
+          <span class="service-number">01 / ARCHITECTURE</span>
+          <div>
+            <h3>Architecture</h3>
+            <p>Thoughtful architectural concepts shaped around function, context and visual clarity.</p>
+          </div>
+          <span class="service-arrow">↗</span>
         </a>
-        <p>Thoughtful architecture, refined interiors and considered spaces designed around your vision.</p>
+        <a href="interior.html" class="service-card reveal">
+          <span class="service-number">02 / INTERIORS</span>
+          <div>
+            <h3>Interior Design</h3>
+            <p>Considered interiors where materials, light and spatial details work together.</p>
+          </div>
+          <span class="service-arrow">↗</span>
+        </a>
+        <a href="construction.html" class="service-card reveal">
+          <span class="service-number">03 / CONSTRUCTION</span>
+          <div>
+            <h3>Construction</h3>
+            <p>A practical approach to bringing design ideas into the built environment.</p>
+          </div>
+          <span class="service-arrow">↗</span>
+        </a>
+        <a href="planning.html" class="service-card reveal">
+          <span class="service-number">04 / PLANNING</span>
+          <div>
+            <h3>Planning</h3>
+            <p>Organised spatial thinking that helps establish a clear direction for every project.</p>
+          </div>
+          <span class="service-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section projects-section">
+      <div class="section-heading-row reveal">
+        <div>
+          <div class="section-label">03 — Visual Inspiration</div>
+          <h2 class="section-title">A world of <em>possibilities.</em></h2>
+        </div>
+        <a href="projects.html" class="line-link">Explore Projects ↗</a>
+      </div>
+
+      <div class="projects-grid">
+        <a href="projects.html" class="project-card reveal">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Contemporary architectural residence">
+          <div class="project-overlay">
+            <span>Architectural Inspiration</span>
+            <h3>Modern Living</h3>
+          </div>
+        </a>
+        <a href="projects.html" class="project-card reveal">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Contemporary interior design">
+          <div class="project-overlay">
+            <span>Interior Inspiration</span>
+            <h3>Quiet Luxury</h3>
+          </div>
+        </a>
+        <a href="projects.html" class="project-card reveal">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Modern home exterior">
+          <div class="project-overlay">
+            <span>Design Inspiration</span>
+            <h3>Modern Forms</h3>
+          </div>
+        </a>
+      </div>
+
+      <p class="project-note">
+        The images shown above are illustrative design references, not a representation of completed ARCHBUILD projects.
+      </p>
+    </section>
+
+    <section class="section philosophy">
+      <div class="reveal">
+        <div class="section-label">04 — Our Philosophy</div>
+        <h2>Good design is felt, <em>not just seen.</em></h2>
+      </div>
+      <div class="philosophy-text reveal">
+        <p>
+          A meaningful space is more than its appearance. It is the way light enters, how people move through it, and how every detail contributes to a larger experience.
+        </p>
+        <p>
+          At ARCHBUILD, we value clarity, thoughtful decisions and a balance between aesthetics and everyday functionality.
+        </p>
+        <a href="about.html" class="btn-gold">Know Our Approach ↗</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="reveal">
+        <div class="section-label">05 — How We Work</div>
+        <h2 class="section-title">From vision to <em>space.</em></h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-item reveal">
+          <span>01 — DISCOVER</span>
+          <h3>Understand</h3>
+          <p>We begin by understanding your requirements, aspirations and project context.</p>
+        </div>
+        <div class="process-item reveal">
+          <span>02 — ENVISION</span>
+          <h3>Concept</h3>
+          <p>Ideas take shape through creative thinking and considered design direction.</p>
+        </div>
+        <div class="process-item reveal">
+          <span>03 — DEVELOP</span>
+          <h3>Refine</h3>
+          <p>Plans and details are developed with attention to function and visual balance.</p>
+        </div>
+        <div class="process-item reveal">
+          <span>04 — REALISE</span>
+          <h3>Deliver</h3>
+          <p>The process moves towards translating the design vision into a real space.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div class="section-label">06 — Start a Conversation</div>
+      <h2>Let's shape something <em>meaningful.</em></h2>
+      <p>Have an idea in mind? Let's discuss what we can create together.</p>
+      <a href="contact.html" class="btn-gold">Get in Touch ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">ARCH<span>BUILD</span><small>DESIGN · BUILD · INSPIRE</small></a>
+        <p>Thoughtful spaces. Timeless design. A considered approach to architecture, interiors and construction.</p>
       </div>
 
       <div class="footer-col">
         <h4>Explore</h4>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
-        <a href="services.html">Our Services</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="services.html#architecture">Architecture</a>
-        <a href="services.html#interior">Interior Design</a>
-        <a href="services.html#construction">Construction</a>
-        <a href="services.html#planning">Planning</a>
-        <a href="contact.html">Request a Quote</a>
+        <h4>Services</h4>
+        <a href="architecture.html">Architecture</a>
+        <a href="interior.html">Interior Design</a>
+        <a href="construction.html">Construction</a>
+        <a href="planning.html">Planning</a>
       </div>
 
       <div class="footer-col">
-        <h4>Get in Touch</h4>
+        <h4>Contact</h4>
         <a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a>
         <a href="tel:+919471537238">+91 94715 37238</a>
-        <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">@archbuild2016 ↗</a>
+        <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">Instagram ↗</a>
         <a href="https://wa.me/919471537238" target="_blank" rel="noopener">WhatsApp ↗</a>
       </div>
-
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="year"></span> ARCHBUILD. All rights reserved.</span>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
-        <a href="mailto:archbuild2016@gmail.com">EMAIL ↗</a>
-      </div>
-      <span>Designed with intention.</span>
+      <span>© <span id="year"></span> ARCHBUILD. ALL RIGHTS RESERVED.</span>
+      <span>DESIGNED WITH PURPOSE.</span>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<a class="whatsapp" href="https://wa.me/919471537238?text=Hello%20ARCHBUILD%2C%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">✆</a>
+  <a class="whatsapp" href="https://wa.me/919471537238" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">◉</a>
 
-<script>
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
 
-menuToggle.addEventListener("click", () => {
-  const opened = navLinks.classList.toggle("active");
-  menuToggle.setAttribute("aria-expanded", opened);
-  menuToggle.textContent = opened ? "×" : "☰";
-});
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.textContent = navLinks.classList.contains('active') ? '×' : '☰';
+    });
 
-document.querySelectorAll(".mega-trigger").forEach(trigger => {
-  trigger.addEventListener("click", () => {
-    if (window.innerWidth <= 760) {
-      const parent = trigger.closest(".nav-item");
-      const opened = parent.classList.toggle("open");
-      trigger.setAttribute("aria-expanded", opened);
-    }
-  });
-});
+    document.querySelectorAll('.mega-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const parent = trigger.closest('.nav-item');
+        parent.classList.toggle('open');
+      });
+    });
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.textContent = "☰";
-  });
-});
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.textContent = '☰';
+      });
+    });
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 760) {
-    navLinks.classList.remove("active");
-    document.querySelectorAll(".nav-item.open").forEach(item => item.classList.remove("open"));
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.textContent = "☰";
-  }
-});
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  <script src="leadership.js"></script>
 </body>
 </html>
