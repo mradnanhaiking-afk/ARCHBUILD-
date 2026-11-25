@@ -3,87 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | ARCHBUILD</title>
-<meta name="description" content="Contact ARCHBUILD for architecture, interior design and construction enquiries.">
+<meta name="theme-color" content="#101a25">
+<title>Contact | ARCHBUILD — Architecture & Design</title>
+<meta name="description" content="Connect with ARCHBUILD for architecture, interior design, construction and planning enquiries.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
- --bg:#111210;
- --panel:#191a17;
- --cream:#eee9df;
- --muted:#a7a69e;
- --gold:#c6a477;
- --line:rgba(198,164,119,.23);
+  --navy:#101a25;
+  --navy2:#172635;
+  --gold:#c6a66b;
+  --gold2:#e2c995;
+  --cream:#f5f1e9;
+  --white:#fff;
+  --muted:#aeb7bd;
+  --line:rgba(198,166,107,.25);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy)}
 a{text-decoration:none;color:inherit}
-button,input,select,textarea{font:inherit}
-.navbar{height:86px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10;background:var(--bg)}
-.logo{font-family:'Playfair Display',serif;font-size:29px;letter-spacing:4px}
-.logo span{color:var(--gold)}
-.nav-links{display:flex;align-items:center;gap:34px}
-.nav-links a{font-size:12px;letter-spacing:1px;color:#d0cec5;transition:.3s}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-links .nav-cta{border:1px solid var(--gold);padding:13px 20px;color:var(--gold)}
-.menu-btn{display:none;background:none;border:0;color:var(--cream);font-size:27px;cursor:pointer}
-.hero{padding:105px 7% 85px;background:linear-gradient(110deg,rgba(17,18,16,.98),rgba(17,18,16,.72)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85') center/cover}
-.eyebrow{color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:25px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,88px);font-weight:400;line-height:1.08;max-width:800px}
-.hero h1 em{color:var(--gold);font-weight:400}
-.hero p{max-width:520px;color:#c0beb5;line-height:1.9;margin-top:25px;font-size:14px}
-.contact-wrap{padding:90px 7%;display:grid;grid-template-columns:.85fr 1.15fr;gap:75px}
-.section-label{font-size:11px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}
-.contact-info h2,.form-heading{font-family:'Playfair Display',serif;font-size:42px;font-weight:400;line-height:1.2;margin-bottom:22px}
-.contact-info>p{color:var(--muted);font-size:14px;line-height:1.9;max-width:390px;margin-bottom:38px}
-.info-item{padding:21px 0;border-bottom:1px solid var(--line)}
-.info-item small{display:block;color:var(--gold);letter-spacing:2px;font-size:10px;margin-bottom:9px}
-.info-item a,.info-item p{font-size:14px;color:var(--cream);line-height:1.7;word-break:break-word}
-.socials{display:flex;gap:22px;margin-top:30px;color:var(--gold);font-size:12px}
-.form-card{background:var(--panel);border:1px solid var(--line);padding:45px}
-.form-heading{font-size:35px;margin-bottom:12px}
-.form-intro{color:var(--muted);font-size:13px;line-height:1.7;margin-bottom:30px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.field{display:flex;flex-direction:column;gap:10px}
-.field.full{grid-column:1/-1}
-.field label{font-size:11px;letter-spacing:1px;color:#d5d0c6}
-.field input,.field select,.field textarea{width:100%;background:#111210;border:1px solid #37372f;padding:15px;color:var(--cream);outline:none;border-radius:0;font-size:13px}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
-.field textarea{min-height:125px;resize:vertical}
-.field select option{background:#191a17}
-.submit-btn{width:100%;margin-top:25px;padding:18px;background:var(--gold);color:#171713;border:0;font-weight:700;letter-spacing:2px;font-size:11px;cursor:pointer;transition:.3s}
-.submit-btn:hover{background:#e0c29b;transform:translateY(-2px)}
-.form-note{font-size:11px;color:var(--muted);line-height:1.7;margin-top:15px}
-.bottom-banner{margin:0 7% 90px;padding:65px 7%;background:#20211c;border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:30px}
-.bottom-banner h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,43px);font-weight:400}
-.bottom-banner p{color:var(--muted);font-size:13px;margin-top:12px}
-.banner-btn{border:1px solid var(--gold);color:var(--gold);padding:16px 25px;font-size:11px;letter-spacing:1px;white-space:nowrap}
-footer{padding:50px 7% 25px;border-top:1px solid var(--line)}
-.footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:35px}
-.footer-brand p{color:var(--muted);font-size:12px;margin-top:13px;line-height:1.8}
-.footer-links{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
-.footer-links a{font-size:11px;color:var(--muted)}
-.footer-bottom{border-top:1px solid var(--line);padding-top:22px;color:#77786f;font-size:10px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:850px){
- .navbar{height:75px;padding:0 6%}
- .menu-btn{display:block}
- .nav-links{display:none;position:absolute;top:75px;left:0;right:0;background:#171814;padding:25px 6%;flex-direction:column;align-items:flex-start;gap:23px;border-bottom:1px solid var(--line)}
- .nav-links.open{display:flex}
- .contact-wrap{grid-template-columns:1fr;gap:50px;padding-top:65px}
- .hero{padding:80px 6%}
- .form-card{padding:30px 23px}
- .bottom-banner{margin:0 6% 65px;flex-direction:column;align-items:flex-start;padding:40px 30px}
+button,input,textarea,select{font:inherit}
+.navbar{
+ position:absolute;top:0;left:0;width:100%;z-index:20;
+ display:flex;align-items:center;justify-content:space-between;
+ padding:25px 7%;border-bottom:1px solid rgba(255,255,255,.13);
+ color:white
 }
-@media(max-width:520px){
- .form-grid{grid-template-columns:1fr}
+.logo{font-family:'Playfair Display',serif;font-size:27px;letter-spacing:3px}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#e5e5e5;transition:.3s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold2)}
+.nav-cta{border:1px solid var(--gold)!important;padding:12px 18px;color:var(--gold2)!important}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:27px;cursor:pointer}
+.hero{
+ min-height:570px;position:relative;display:flex;align-items:center;
+ padding:150px 8% 85px;color:white;overflow:hidden;
+ background:linear-gradient(90deg,rgba(9,17,25,.94),rgba(9,17,25,.65),rgba(9,17,25,.25)),
+ url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85') center/cover
+}
+.hero-content{max-width:760px;position:relative;z-index:2}
+.eyebrow{color:var(--gold2);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,86px);font-weight:400;line-height:1.06;margin-bottom:24px}
+.hero h1 em{color:var(--gold2);font-weight:400}
+.hero p{max-width:520px;color:#d4d8db;line-height:1.9;font-size:14px}
+.hero-bottom{position:absolute;bottom:35px;right:8%;color:#e6d5b3;font-size:10px;letter-spacing:3px;text-transform:uppercase}
+.contact-section{padding:110px 8% 120px}
+.section-top{margin-bottom:55px;max-width:650px}
+.section-label{color:#9b7943;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:17px}
+.section-top h2{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,57px);font-weight:400;line-height:1.15}
+.section-top p{color:#69747b;line-height:1.8;margin-top:18px;font-size:14px}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:start}
+.info-panel{background:var(--navy);color:white;padding:42px 38px;position:relative;overflow:hidden}
+.info-panel:after{content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(198,166,107,.18);border-radius:50%;right:-100px;bottom:-110px;box-shadow:0 0 0 25px rgba(198,166,107,.035),0 0 0 50px rgba(198,166,107,.025)}
+.info-panel h3{font-family:'Playfair Display',serif;font-size:30px;font-weight:400;margin-bottom:14px}
+.info-intro{font-size:13px;color:#b8c0c5;line-height:1.8;margin-bottom:38px}
+.info-item{display:flex;gap:17px;margin:28px 0;position:relative;z-index:2}
+.info-icon{width:42px;height:42px;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold2);font-size:17px;flex-shrink:0}
+.info-item small{display:block;color:var(--gold2);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.info-item a,.info-item p{font-size:13px;color:#e3e6e8;line-height:1.7;overflow-wrap:anywhere}
+.social-row{display:flex;gap:12px;margin-top:38px;position:relative;z-index:2}
+.social-row a{font-size:11px;color:var(--gold2);border:1px solid var(--line);padding:11px 15px;transition:.3s}
+.social-row a:hover{background:var(--gold);color:var(--navy)}
+.form-panel{padding:8px 0}
+.form-panel h3{font-family:'Playfair Display',serif;font-size:34px;font-weight:400;margin-bottom:12px}
+.form-panel>p{font-size:13px;color:#738087;line-height:1.8;margin-bottom:35px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.field{display:flex;flex-direction:column;gap:10px;margin-bottom:23px}
+.field.full{grid-column:1/-1}
+.field label{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:#59656c}
+.field input,.field textarea,.field select{
+ border:0;border-bottom:1px solid #cbd0cd;background:transparent;
+ padding:12px 0;color:var(--navy);outline:none;width:100%;border-radius:0
+}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:#a98750}
+.field textarea{min-height:110px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#a0a8a8}
+.field select{color:#737e83}
+.submit-btn{
+ display:inline-flex;align-items:center;justify-content:center;gap:22px;
+ background:var(--navy);color:var(--gold2);border:1px solid var(--navy);
+ padding:18px 27px;cursor:pointer;letter-spacing:1.5px;text-transform:uppercase;
+ font-size:11px;transition:.3s;margin-top:5px
+}
+.submit-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.form-note{font-size:11px;color:#849097;margin-top:17px;line-height:1.7}
+.quote-band{background:#e9e2d5;padding:75px 8%;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.quote-band h2{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(28px,4vw,45px);max-width:650px;line-height:1.25}
+.quote-band h2 em{color:#9b7943}
+.quote-band a{white-space:nowrap;border-bottom:1px solid #9b7943;padding:12px 0;color:#755a31;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+.footer{background:#0b131c;color:white;padding:65px 8% 25px}
+.footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:55px;padding-bottom:55px}
+.footer-brand .logo{display:inline-block;margin-bottom:20px}
+.footer-brand p{font-size:12px;color:#9ba5ac;line-height:1.9;max-width:310px}
+.footer h4{font-size:11px;color:var(--gold2);letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
+.footer-col a{display:block;color:#aeb7bd;font-size:12px;margin:13px 0;transition:.3s}
+.footer-col a:hover{color:var(--gold2)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;gap:20px;color:#818d94;font-size:10px;letter-spacing:1px}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+@media(max-width:850px){
+ .navbar{padding:20px 6%}.menu-btn{display:block}
+ .nav-links{display:none;position:absolute;top:75px;left:0;width:100%;background:var(--navy);padding:25px 7%;flex-direction:column;align-items:flex-start;gap:23px}
+ .nav-links.open{display:flex}
+ .contact-grid{grid-template-columns:1fr;gap:45px}
+ .footer-main{grid-template-columns:1fr 1fr}
+ .footer-brand{grid-column:1/-1}
+}
+@media(max-width:560px){
+ .hero{min-height:520px;padding:135px 7% 80px}
+ .hero-bottom{right:7%;font-size:8px}
+ .contact-section{padding:75px 7%}
+ .info-panel{padding:32px 25px}
+ .form-grid{grid-template-columns:1fr;gap:0}
  .field.full{grid-column:auto}
- .contact-info h2{font-size:36px}
- .form-heading{font-size:30px}
- .footer-links{gap:16px}
+ .quote-band{padding:55px 7%;align-items:flex-start;flex-direction:column}
+ .footer{padding:55px 7% 22px}
+ .footer-main{grid-template-columns:1fr;gap:35px}
+ .footer-brand{grid-column:auto}
+ .footer-bottom{flex-direction:column;line-height:1.7}
 }
 </style>
 </head>
@@ -94,128 +135,138 @@ footer{padding:50px 7% 25px;border-top:1px solid var(--line)}
  <a href="index.html" class="logo">ARCH<span>BUILD</span></a>
  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
  <nav class="nav-links" id="navLinks">
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="services.html">SERVICES</a>
-  <a href="projects.html">PROJECTS</a>
-  <a href="contact.html" class="active">CONTACT</a>
-  <a href="https://wa.me/919471537238" class="nav-cta">LET'S TALK ↗</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html" class="active">Contact</a>
+  <a href="contact.html#inquiry" class="nav-cta">Start a Project ↗</a>
  </nav>
 </header>
 
 <section class="hero">
- <div class="eyebrow">CONTACT ARCHBUILD</div>
- <h1>Let's create<br>something <em>remarkable.</em></h1>
- <p>Every great space begins with a conversation. Tell us about your vision, your ideas, and what you want to build. Let's make it happen.</p>
+ <div class="hero-content">
+  <div class="eyebrow">Let's create something meaningful</div>
+  <h1>Every great space<br>starts with a <em>conversation.</em></h1>
+  <p>Tell us what you envision. From the first idea to the final detail, let's explore how we can bring your vision to life.</p>
+ </div>
+ <div class="hero-bottom">ARCHBUILD · Ranchi, India</div>
 </section>
 
-<main class="contact-wrap">
+<section class="contact-section" id="inquiry">
+ <div class="section-top reveal">
+  <div class="section-label">Get in touch</div>
+  <h2>Let's discuss<br>your next project.</h2>
+  <p>Whether you're planning a new home, reimagining an interior or exploring a construction project, we'd love to hear from you.</p>
+ </div>
 
- <section class="contact-info">
-  <div class="section-label">GET IN TOUCH</div>
-  <h2>We'd love to hear from you.</h2>
-  <p>Whether you're planning a new project, redesigning a space, or simply exploring possibilities, our team is ready to connect.</p>
+ <div class="contact-grid">
+  <aside class="info-panel reveal">
+   <h3>Contact details</h3>
+   <p class="info-intro">Connect with our team and take the first step towards a thoughtfully designed space.</p>
 
-  <div class="info-item">
-   <small>EMAIL ADDRESS</small>
-   <a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a>
-  </div>
-
-  <div class="info-item">
-   <small>PHONE / WHATSAPP</small>
-   <a href="tel:+919471537238">+91 94715 37238</a>
-  </div>
-
-  <div class="info-item">
-   <small>INSTAGRAM</small>
-   <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">@archbuild2016 ↗</a>
-  </div>
-
-  <div class="info-item">
-   <small>LET'S TALK DIRECTLY</small>
-   <a href="https://wa.me/919471537238" target="_blank" rel="noopener">Start a WhatsApp conversation ↗</a>
-  </div>
-
-  <div class="socials">
-   <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
-   <a href="mailto:archbuild2016@gmail.com">EMAIL ↗</a>
-  </div>
- </section>
-
- <section class="form-card">
-  <div class="section-label">START A PROJECT</div>
-  <h2 class="form-heading">Tell us about your project.</h2>
-  <p class="form-intro">Fill in the details below. We'll prepare your enquiry in WhatsApp so you can send it directly to our team.</p>
-
-  <form id="contactForm">
-   <div class="form-grid">
-
-    <div class="field">
-     <label for="name">YOUR NAME *</label>
-     <input id="name" name="name" type="text" placeholder="Full name" required>
-    </div>
-
-    <div class="field">
-     <label for="phone">PHONE NUMBER *</label>
-     <input id="phone" name="phone" type="tel" placeholder="Your phone number" required>
-    </div>
-
-    <div class="field full">
-     <label for="email">EMAIL ADDRESS</label>
-     <input id="email" name="email" type="email" placeholder="your@email.com">
-    </div>
-
-    <div class="field full">
-     <label for="service">SERVICE YOU NEED *</label>
-     <select id="service" name="service" required>
-      <option value="">Select a service</option>
-      <option>Architecture & Design</option>
-      <option>Interior Design</option>
-      <option>Construction</option>
-      <option>Planning & Development</option>
-      <option>Other Enquiry</option>
-     </select>
-    </div>
-
-    <div class="field full">
-     <label for="message">TELL US ABOUT YOUR PROJECT *</label>
-     <textarea id="message" name="message" placeholder="Describe your idea, requirements, location or budget..." required></textarea>
-    </div>
-
+   <div class="info-item">
+    <div class="info-icon">✉</div>
+    <div><small>Email us</small><a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a></div>
    </div>
 
-   <button type="submit" class="submit-btn">SEND ENQUIRY ON WHATSAPP ↗</button>
-   <p class="form-note">By submitting, WhatsApp will open with your enquiry details. Please review the message and press Send to contact ARCHBUILD.</p>
-  </form>
- </section>
+   <div class="info-item">
+    <div class="info-icon">☎</div>
+    <div><small>Call us</small><a href="tel:+919471537238">+91 94715 37238</a></div>
+   </div>
 
-</main>
+   <div class="info-item">
+    <div class="info-icon">◎</div>
+    <div><small>Instagram</small><a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">@archbuild2016</a></div>
+   </div>
 
-<section class="bottom-banner">
- <div>
-  <h2>Your vision deserves a great beginning.</h2>
-  <p>Let's turn your ideas into spaces that inspire.</p>
+   <div class="info-item">
+    <div class="info-icon">⌖</div>
+    <div><small>Location</small><p>Ranchi, Jharkhand, India</p></div>
+   </div>
+
+   <div class="social-row">
+    <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
+    <a href="https://wa.me/919471537238" target="_blank" rel="noopener">WHATSAPP ↗</a>
+   </div>
+  </aside>
+
+  <div class="form-panel reveal">
+   <h3>Tell us about it.</h3>
+   <p>Share a few details and we'll help you take the next step.</p>
+
+   <form id="contactForm">
+    <div class="form-grid">
+     <div class="field">
+      <label for="name">Your name *</label>
+      <input id="name" name="name" type="text" placeholder="Full name" required>
+     </div>
+
+     <div class="field">
+      <label for="phone">Phone number *</label>
+      <input id="phone" name="phone" type="tel" placeholder="+91" required>
+     </div>
+
+     <div class="field">
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com">
+     </div>
+
+     <div class="field">
+      <label for="service">Service required *</label>
+      <select id="service" name="service" required>
+       <option value="">Choose a service</option>
+       <option>Architecture & Design</option>
+       <option>Interior Design</option>
+       <option>Construction & Execution</option>
+       <option>Planning & Development</option>
+       <option>Other Enquiry</option>
+      </select>
+     </div>
+
+     <div class="field full">
+      <label for="message">Project details *</label>
+      <textarea id="message" name="message" placeholder="Tell us a little about your idea, requirements or project..." required></textarea>
+     </div>
+    </div>
+
+    <button class="submit-btn" type="submit">Send Enquiry <span>↗</span></button>
+    <p class="form-note">Your enquiry will open in WhatsApp with your details filled in. Review the message and press Send in WhatsApp to submit it.</p>
+   </form>
+  </div>
  </div>
- <a href="https://wa.me/919471537238" class="banner-btn" target="_blank" rel="noopener">CHAT ON WHATSAPP ↗</a>
 </section>
 
-<footer>
- <div class="footer-top">
+<section class="quote-band">
+ <h2>Good design begins with listening. <em>Let's begin.</em></h2>
+ <a href="https://wa.me/919471537238" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+</section>
+
+<footer class="footer">
+ <div class="footer-main">
   <div class="footer-brand">
    <a href="index.html" class="logo">ARCH<span>BUILD</span></a>
-   <p>Thoughtful design. Timeless spaces.<br>Building ideas into reality.</p>
+   <p>Thoughtful spaces. Timeless design. A considered approach to architecture, interiors and construction.</p>
   </div>
-  <div class="footer-links">
-   <a href="index.html">HOME</a>
-   <a href="about.html">ABOUT</a>
-   <a href="services.html">SERVICES</a>
-   <a href="projects.html">PROJECTS</a>
-   <a href="contact.html">CONTACT</a>
+  <div class="footer-col">
+   <h4>Explore</h4>
+   <a href="index.html">Home</a>
+   <a href="about.html">About Us</a>
+   <a href="services.html">Our Services</a>
+   <a href="projects.html">Projects</a>
+   <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-col">
+   <h4>Our Services</h4>
+   <a href="architecture.html">Architecture & Design</a>
+   <a href="interior.html">Interior Design</a>
+   <a href="construction.html">Construction & Execution</a>
+   <a href="planning.html">Planning & Development</a>
   </div>
  </div>
  <div class="footer-bottom">
-  <span>© 2026 ARCHBUILD. ALL RIGHTS RESERVED.</span>
-  <span>DESIGNED WITH PURPOSE.</span>
+  <span>© <span id="year"></span> ARCHBUILD. All rights reserved.</span>
+  <span>DESIGNED WITH INTENTION · BUILT FOR TOMORROW</span>
  </div>
 </footer>
 
@@ -228,15 +279,30 @@ menuBtn.addEventListener('click',()=>{
  menuBtn.textContent=navLinks.classList.contains('open')?'✕':'☰';
 });
 
-document.querySelectorAll('.nav-links a').forEach(link=>{
+navLinks.querySelectorAll('a').forEach(link=>{
  link.addEventListener('click',()=>{
   navLinks.classList.remove('open');
   menuBtn.textContent='☰';
  });
 });
 
+document.getElementById('year').textContent=new Date().getFullYear();
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add('show');
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:.12});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
 document.getElementById('contactForm').addEventListener('submit',function(e){
  e.preventDefault();
+
+ if(!this.reportValidity())return;
 
  const name=document.getElementById('name').value.trim();
  const phone=document.getElementById('phone').value.trim();
@@ -244,20 +310,17 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
  const service=document.getElementById('service').value;
  const message=document.getElementById('message').value.trim();
 
- if(!name||!phone||!service||!message){
-  alert('Please fill in all required fields.');
-  return;
- }
-
  const text=
- `Hello ARCHBUILD!\n\nI would like to enquire about your services.\n\n`+
- `Name: ${name}\nPhone: ${phone}\nEmail: ${email||'Not provided'}\n`+
- `Service: ${service}\n\nProject Details:\n${message}\n\nThank you!`;
+ `Hello ARCHBUILD,%0A%0AI would like to make an enquiry.%0A%0A`+
+ `Name: ${encodeURIComponent(name)}%0A`+
+ `Phone: ${encodeURIComponent(phone)}%0A`+
+ `Email: ${encodeURIComponent(email||'Not provided')}%0A`+
+ `Service: ${encodeURIComponent(service)}%0A`+
+ `Project Details: ${encodeURIComponent(message)}%0A%0A`+
+ `Please contact me regarding this enquiry.`;
 
- const url='https://wa.me/919471537238?text='+encodeURIComponent(text);
- window.open(url,'_blank');
+ window.open('https://wa.me/919471537238?text='+text,'_blank','noopener');
 });
 </script>
-
 </body>
 </html>
