@@ -1,0 +1,241 @@
+/* ARCHBUILD GLOBAL HEADER */
+
+.ab-header,
+.ab-header * {
+  box-sizing: border-box;
+}
+
+.ab-header {
+  width: 100%;
+  min-height: 88px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  position: relative;
+  z-index: 9999;
+  background: #101a25;
+  border-bottom: 1px solid rgba(205, 170, 110, 0.25);
+  font-family: Arial, sans-serif;
+}
+
+.ab-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f5f0e7;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.ab-brand-mark {
+  font-family: Georgia, serif;
+  font-size: 43px;
+  color: #d4b47a;
+  line-height: 1;
+}
+
+.ab-brand-mark span {
+  color: #f5f0e7;
+}
+
+.ab-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ab-brand-text strong {
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+
+.ab-brand-text small {
+  color: #c5ae86;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.ab-navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.ab-navigation > a,
+.ab-services-link {
+  color: #e9e5dc;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 34px 0;
+  display: inline-block;
+  transition: color .25s ease;
+}
+
+.ab-navigation > a:hover,
+.ab-services-link:hover,
+.ab-navigation a.active {
+  color: #d4b47a;
+}
+
+.ab-dropdown {
+  position: relative;
+}
+
+.ab-chevron {
+  color: #d4b47a;
+  margin-left: 5px;
+}
+
+.ab-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  width: 245px;
+  padding: 12px;
+  background: #172533;
+  border: 1px solid rgba(212, 180, 122, .3);
+  box-shadow: 0 18px 35px rgba(0,0,0,.25);
+}
+
+.ab-dropdown:hover .ab-dropdown-menu,
+.ab-dropdown:focus-within .ab-dropdown-menu {
+  display: block;
+}
+
+.ab-dropdown-menu a {
+  display: block;
+  padding: 13px 12px;
+  color: #e9e5dc;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.5;
+  transition: .2s ease;
+}
+
+.ab-dropdown-menu a:hover {
+  background: rgba(212,180,122,.12);
+  color: #d4b47a;
+}
+
+.ab-header-cta {
+  color: #101a25;
+  background: #d4b47a;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  transition: .25s ease;
+}
+
+.ab-header-cta:hover {
+  background: #f0dfbd;
+  transform: translateY(-2px);
+}
+
+.ab-header-cta span {
+  margin-left: 8px;
+}
+
+.ab-menu-toggle {
+  display: none;
+  border: 1px solid rgba(212,180,122,.5);
+  background: transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ab-menu-toggle span {
+  display: block;
+  width: 23px;
+  height: 2px;
+  margin: 5px 0;
+  background: #d4b47a;
+  transition: .25s ease;
+}
+
+@media (max-width: 1100px) {
+  .ab-header {
+    padding: 0 3%;
+    gap: 15px;
+  }
+
+  .ab-navigation {
+    gap: 18px;
+  }
+
+  .ab-navigation > a,
+  .ab-services-link {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ab-header {
+    min-height: 76px;
+    padding: 0 5%;
+    flex-wrap: wrap;
+  }
+
+  .ab-menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .ab-header-cta {
+    display: none;
+  }
+
+  .ab-navigation {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 0 20px;
+    border-top: 1px solid rgba(212,180,122,.2);
+  }
+
+  .ab-navigation.is-open {
+    display: flex;
+  }
+
+  .ab-navigation > a,
+  .ab-services-link {
+    display: block;
+    padding: 15px 5px;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+
+  .ab-dropdown-menu {
+    display: none;
+    position: static;
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    padding: 0 0 5px 12px;
+    background: rgba(255,255,255,.025);
+  }
+
+  .ab-dropdown.dropdown-open .ab-dropdown-menu {
+    display: block;
+  }
+
+  .ab-dropdown:hover .ab-dropdown-menu {
+    display: none;
+  }
+
+  .ab-dropdown.dropdown-open:hover .ab-dropdown-menu {
+    display: block;
+  }
+
+  .ab-dropdown-menu a {
+    padding: 12px;
+  }
+}
