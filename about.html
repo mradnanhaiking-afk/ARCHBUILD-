@@ -3,411 +3,419 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101C2C">
 <title>About Us | ARCHBUILD</title>
-<meta name="description" content="Discover ARCHBUILD — our philosophy, vision and approach to architecture, interiors and construction.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
 <style>
 :root{
- --bg:#111210;
- --panel:#191a17;
- --cream:#eee9df;
- --muted:#aaa99f;
- --gold:#c6a477;
- --line:rgba(198,164,119,.23);
+--navy:#101C2C;--navy2:#172638;--gold:#C6A875;--gold2:#E0C99E;
+--ivory:#F2EEE5;--stone:#E4DED2;--muted:#AAB3BC;
+--line:rgba(255,255,255,.13);
+--sans:"DM Sans",sans-serif;--head:"Manrope",sans-serif;
+--serif:"Playfair Display",serif
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif}
+body{background:var(--navy);color:var(--ivory);font-family:var(--sans);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
 img{display:block;width:100%;object-fit:cover}
-.navbar{
- height:82px;padding:0 7%;display:flex;align-items:center;
- justify-content:space-between;border-bottom:1px solid var(--line);
- position:relative;z-index:20;background:var(--bg)
+.container{width:min(1200px,90%);margin:auto}
+.eyebrow{font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:700}
+.serif{font-family:var(--serif);font-style:italic;font-weight:500}
+.gold{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 22px;border:1px solid var(--gold);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;transition:.3s}
+.btn:hover,.btn.primary{background:var(--gold);color:var(--navy)}
+.btn:hover{transform:translateY(-3px)}
+.btn.primary:hover{background:var(--gold2)}
+section{padding:100px 0}
+
+/* TOP AND NAV */
+.topline{height:35px;border-bottom:1px solid var(--line);font-size:10px;color:var(--muted)}
+.topline .container{height:100%;display:flex;justify-content:space-between;align-items:center}
+.topline a:hover{color:var(--gold)}
+.navbar{height:84px;background:var(--navy);position:relative;z-index:100;border-bottom:1px solid var(--line)}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-symbol{height:42px;width:42px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font:25px var(--serif)}
+.logo-name{font:800 19px var(--head);letter-spacing:3px}
+.logo-name small{display:block;font:500 7px var(--sans);color:var(--gold);letter-spacing:4px;margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:25px;list-style:none}
+.nav-item{position:static}
+.nav-link{background:none;border:0;color:#E4E7E9;font-size:10px;letter-spacing:1.3px;text-transform:uppercase;padding:34px 0;display:flex;gap:7px;align-items:center}
+.nav-link:hover,.nav-link.active{color:var(--gold)}
+.nav-cta{font-size:9px;padding:13px 17px;white-space:nowrap}
+.menu-toggle{display:none;background:none;color:var(--ivory);border:1px solid var(--line);width:43px;height:43px;font-size:22px}
+.mega-menu{position:absolute;top:83px;left:0;right:0;background:var(--navy2);padding:35px 0;border-block:1px solid var(--gold);opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s}
+.nav-item:hover .mega-menu,.nav-item:focus-within .mega-menu,.nav-item.open .mega-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.mega-inner{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:30px}
+.mega-intro h3{font:27px var(--serif);margin:12px 0}
+.mega-intro p{font-size:12px;color:var(--muted);line-height:1.8}
+.mega-col h4{font-size:10px;color:var(--gold);letter-spacing:2px;margin-bottom:14px}
+.mega-col a{display:block;color:#C8D0D8;font-size:12px;padding:8px 0}
+.mega-col a:hover{color:var(--gold)}
+
+/* PAGE HERO */
+.page-hero{
+min-height:570px;display:flex;align-items:center;position:relative;
+background:linear-gradient(90deg,rgba(10,23,38,.94),rgba(10,23,38,.53),rgba(10,23,38,.2)),
+url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90") center/cover
 }
-.logo{font-family:'Playfair Display',serif;font-size:28px;letter-spacing:4px}
-.logo span{color:var(--gold)}
-.nav-links{display:flex;align-items:center;gap:30px}
-.nav-links a{font-size:11px;letter-spacing:1px;color:#d0cec5;transition:.3s}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-cta{border:1px solid var(--gold);padding:13px 20px;color:var(--gold)!important}
-.menu-btn{display:none;background:none;border:0;color:var(--cream);font-size:27px;cursor:pointer}
+.page-hero h1{font:500 clamp(55px,8vw,100px)/1.05 var(--head);letter-spacing:-4px;margin:25px 0}
+.page-hero h1 span{font-family:var(--serif);font-style:italic;color:var(--gold2)}
+.page-hero p{font-size:13px;color:#D0D4D8;line-height:2;max-width:440px}
+.breadcrumb{margin-top:30px;font-size:10px;letter-spacing:1px;color:var(--muted)}
+.breadcrumb a{color:var(--gold)}
 
-.hero{
- min-height:660px;padding:100px 7% 75px;position:relative;
- display:flex;align-items:flex-end;overflow:hidden;
- background:
- linear-gradient(90deg,rgba(12,13,11,.89),rgba(12,13,11,.30)),
- linear-gradient(0deg,rgba(12,13,11,.85),transparent 70%),
- url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90') center/cover;
-}
-.hero-content{position:relative;z-index:2;max-width:900px}
-.eyebrow{font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:28px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(55px,8vw,112px);font-weight:400;line-height:1.03}
-.hero h1 em{color:var(--gold);font-weight:400}
-.hero p{max-width:470px;font-size:14px;line-height:1.9;color:#d1cec5;margin-top:28px}
-.hero-index{position:absolute;right:7%;bottom:80px;color:#d2c7b7;font-size:11px;letter-spacing:3px}
+/* STORY */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}
+.story-image{position:relative;padding:0 30px 30px 0}
+.story-image img{height:540px}
+.story-image:after{content:"";position:absolute;right:0;bottom:0;width:75%;height:75%;border:1px solid var(--gold);z-index:-1}
+.story-copy h2{font:500 clamp(36px,4.5vw,58px)/1.2 var(--head);letter-spacing:-2px;margin:18px 0 25px}
+.story-copy p{color:var(--muted);font-size:13px;line-height:2;margin-bottom:16px}
+.story-quote{margin-top:30px;padding:20px 0 20px 22px;border-left:2px solid var(--gold);font:italic 21px var(--serif);color:var(--gold2)}
 
-.intro{padding:115px 10%;display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}
-.side-label{font-size:10px;letter-spacing:3px;color:var(--gold)}
-.intro h2{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(36px,5vw,65px);line-height:1.2}
-.intro h2 em{color:var(--gold);font-weight:400}
-.intro-copy p{font-size:14px;line-height:2;color:var(--muted);margin-top:20px;max-width:680px}
-.intro-copy p:first-child{margin-top:0}
-.intro-bottom{display:flex;align-items:center;gap:18px;margin-top:35px}
-.line{width:55px;height:1px;background:var(--gold)}
-.intro-bottom span{font-size:10px;letter-spacing:2px;color:var(--gold)}
+/* STATEMENT */
+.statement{background:var(--ivory);color:var(--navy);text-align:center}
+.statement .eyebrow{color:#94794F}
+.statement h2{font:500 clamp(37px,6vw,73px)/1.2 var(--serif);max-width:900px;margin:22px auto}
+.statement p{font-size:12px;color:#77766E;line-height:1.9;max-width:570px;margin:auto}
 
-.story{padding:40px 7% 110px}
-.story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:25px;align-items:stretch}
-.story-main{height:590px;position:relative;overflow:hidden}
-.story-main img{height:100%;transition:.8s}
-.story-main:hover img{transform:scale(1.04)}
-.story-side{display:flex;flex-direction:column;gap:25px}
-.story-side img{height:285px}
-.story-caption{padding:25px;background:var(--panel);border:1px solid var(--line);flex:1}
-.story-caption span{color:var(--gold);font-size:10px;letter-spacing:3px}
-.story-caption h3{font-family:'Playfair Display',serif;font-weight:400;font-size:30px;margin:18px 0}
-.story-caption p{font-size:13px;line-height:1.9;color:var(--muted)}
+/* VISION CARDS */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:45px}
+.value-card{padding:36px 28px;border:1px solid var(--line);background:var(--navy2);transition:.3s}
+.value-card:hover{border-color:var(--gold);transform:translateY(-5px)}
+.value-card .number{font-size:10px;letter-spacing:2px;color:var(--gold)}
+.value-card h3{font:500 27px var(--serif);margin:38px 0 14px}
+.value-card p{font-size:12px;line-height:1.9;color:var(--muted)}
 
-.statement{padding:115px 12%;background:#1a1b17;text-align:center}
-.statement .eyebrow{margin-bottom:28px}
-.statement h2{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,76px);line-height:1.25;font-weight:400}
-.statement h2 em{color:var(--gold)}
-.statement p{font-size:12px;letter-spacing:2px;color:var(--muted);margin-top:30px}
+/* IMAGE BREAK */
+.image-break{height:470px;background:linear-gradient(90deg,rgba(16,28,44,.35),rgba(16,28,44,.1)),url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=85") center/cover}
+.image-break-inner{height:100%;display:flex;align-items:end;padding-bottom:45px}
+.image-break h2{font:500 clamp(35px,5vw,62px) var(--serif);text-shadow:0 3px 20px rgba(0,0,0,.4)}
 
-.vision{padding:115px 7%}
-.vision-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:60px}
-.vision-head h2{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,62px);font-weight:400}
-.vision-head h2 em{color:var(--gold)}
-.vision-head p{max-width:350px;font-size:13px;line-height:1.9;color:var(--muted)}
-.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
-.vision-card{background:var(--bg);padding:45px;min-height:270px;transition:.3s}
-.vision-card:hover{background:#1b1c18}
-.vision-card .number{font-family:'Playfair Display',serif;color:var(--gold);font-size:18px}
-.vision-card h3{font-family:'Playfair Display',serif;font-size:30px;font-weight:400;margin:35px 0 15px}
-.vision-card p{font-size:13px;color:var(--muted);line-height:1.9;max-width:420px}
+/* PRINCIPLES */
+.principles-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.principles-image img{height:500px}
+.principles-copy h2{font:500 48px var(--head);margin:15px 0 25px}
+.principle{padding:19px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:42px 1fr;gap:12px}
+.principle span{color:var(--gold);font-size:11px}
+.principle h3{font:500 20px var(--serif);margin-bottom:6px}
+.principle p{font-size:11px;color:var(--muted);line-height:1.8}
 
-.values{padding:105px 7%;background:#1a1b17}
-.values-heading{text-align:center;margin-bottom:55px}
-.values-heading h2{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,60px);font-weight:400}
-.values-heading h2 em{color:var(--gold)}
-.values-heading p{font-size:13px;color:var(--muted);margin-top:15px}
-.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.value-card{padding:30px 22px;border-top:1px solid var(--gold)}
-.value-card span{font-size:11px;color:var(--gold);letter-spacing:2px}
-.value-card h3{font-family:'Playfair Display',serif;font-size:23px;font-weight:400;margin:27px 0 12px}
-.value-card p{font-size:12px;color:var(--muted);line-height:1.8}
+/* CTA */
+.cta{background:var(--stone);color:var(--navy);text-align:center;padding:85px 0}
+.cta .eyebrow{color:#94794F}
+.cta h2{font:500 clamp(39px,6vw,70px) var(--serif);margin:18px auto}
+.cta p{font-size:12px;color:#68685F;margin-bottom:27px}
 
-.approach{padding:115px 7%;display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
-.approach-image{height:570px}
-.approach-image img{height:100%}
-.approach-copy h2{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,60px);font-weight:400;line-height:1.2}
-.approach-copy h2 em{color:var(--gold)}
-.approach-copy>p{font-size:13px;line-height:2;color:var(--muted);margin-top:25px}
-.approach-list{margin-top:35px}
-.approach-item{padding:18px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px}
-.approach-item span:first-child{font-family:'Playfair Display',serif;font-size:18px}
-.approach-item span:last-child{color:var(--gold);font-size:12px}
+/* FOOTER */
+footer{background:#0C1725;padding:70px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:35px;padding-bottom:45px}
+.footer-about p{font-size:11px;color:var(--muted);line-height:1.9;margin-top:20px;max-width:260px}
+.footer-col h4{font-size:10px;letter-spacing:2px;color:var(--gold);margin-bottom:18px}
+.footer-col a{display:block;color:#B4BEC7;font-size:11px;margin:12px 0}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:15px;color:#87929D;font-size:10px}
+.social{display:flex;gap:18px}.social a{color:var(--gold)}
+.whatsapp{position:fixed;right:22px;bottom:22px;width:54px;height:54px;border-radius:50%;background:#20A66A;color:white;z-index:90;display:grid;place-items:center;font-size:22px}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s}
+.reveal.visible{opacity:1;transform:none}
 
-.final-cta{
- margin:0 7% 100px;padding:75px 8%;text-align:center;
- border:1px solid var(--line);
- background:linear-gradient(rgba(15,16,14,.85),rgba(15,16,14,.90)),
- url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85') center/cover;
-}
-.final-cta h2{font-family:'Playfair Display',serif;font-size:clamp(35px,5vw,60px);font-weight:400}
-.final-cta h2 em{color:var(--gold)}
-.final-cta p{font-size:13px;color:var(--muted);margin:20px 0 30px}
-.btn{display:inline-block;padding:17px 26px;background:var(--gold);color:#171713;font-size:10px;letter-spacing:2px;font-weight:700;transition:.3s}
-.btn:hover{background:#e2c39c;transform:translateY(-3px)}
-
-footer{padding:50px 7% 25px;border-top:1px solid var(--line)}
-.footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:35px}
-.footer-brand p{color:var(--muted);font-size:12px;margin-top:13px;line-height:1.8}
-.footer-links{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
-.footer-links a{font-size:10px;color:var(--muted);letter-spacing:1px}
-.footer-links a:hover{color:var(--gold)}
-.footer-bottom{border-top:1px solid var(--line);padding-top:22px;color:#77786f;font-size:10px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-
-.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s,transform .8s}
-.reveal.show{opacity:1;transform:translateY(0)}
-
-@media(max-width:1000px){
- .nav-links{gap:16px}
- .nav-links a{font-size:10px}
- .value-grid{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1050px){
+.nav-links{gap:14px}.nav-cta{display:none}
+.story-grid{gap:40px}.footer-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:760px){
- .navbar{height:75px;padding:0 6%}
- .menu-btn{display:block}
- .nav-links{display:none;position:absolute;top:75px;left:0;right:0;background:#171814;padding:25px 6%;flex-direction:column;align-items:flex-start;gap:22px;border-bottom:1px solid var(--line)}
- .nav-links.open{display:flex}
- .hero{min-height:570px;padding:80px 6%}
- .hero-index{display:none}
- .intro{padding:75px 6%;grid-template-columns:1fr;gap:30px}
- .story{padding:15px 6% 75px}
- .story-grid{grid-template-columns:1fr}
- .story-main{height:400px}
- .story-side img{height:280px}
- .statement{padding:80px 7%}
- .vision{padding:80px 6%}
- .vision-head{flex-direction:column;align-items:flex-start}
- .vision-grid{grid-template-columns:1fr}
- .vision-card{min-height:220px;padding:32px}
- .values{padding:80px 6%}
- .approach{padding:80px 6%;grid-template-columns:1fr;gap:35px}
- .approach-image{height:400px}
- .final-cta{margin:0 6% 70px;padding:55px 25px}
+.topline{display:none}.navbar{height:74px}
+.logo-name{font-size:17px}.menu-toggle{display:block}
+.nav-links{display:none;position:absolute;top:73px;left:0;right:0;background:var(--navy);padding:12px 5% 25px;flex-direction:column;align-items:stretch;gap:0;max-height:calc(100svh - 74px);overflow:auto}
+.nav-links.active{display:flex}
+.nav-item{border-bottom:1px solid var(--line)}
+.nav-link{width:100%;justify-content:space-between;padding:16px 0}
+.mega-menu{display:none;position:static;opacity:1;visibility:visible;transform:none;padding:18px;background:var(--navy2);border:0}
+.nav-item.open .mega-menu{display:block}
+.mega-inner{grid-template-columns:1fr 1fr;gap:20px}.mega-intro{grid-column:1/-1}
+.page-hero{min-height:530px;background-position:60% center}
+.page-hero h1{font-size:57px;letter-spacing:-2px}
+section{padding:75px 0}
+.story-grid,.principles-grid{grid-template-columns:1fr;gap:45px}
+.story-image img,.principles-image img{height:360px}
+.story-copy h2{font-size:42px}
+.values-grid{grid-template-columns:1fr}
+.image-break{height:350px}
+.footer-grid{grid-template-columns:1fr 1fr;gap:30px 18px}
+.footer-about{grid-column:1/-1}
+.footer-bottom{flex-direction:column}
 }
-@media(max-width:480px){
- .value-grid{grid-template-columns:1fr}
- .value-card{padding:25px 10px}
- .hero h1{font-size:53px}
- .story-main{height:320px}
- .approach-image{height:340px}
- .footer-links{gap:15px}
+@media(max-width:420px){
+.page-hero h1{font-size:49px}
+.footer-grid{grid-template-columns:1fr}
+.footer-about{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
+.reveal{opacity:1;transform:none}
 }
 </style>
 </head>
 
 <body>
 
+<div class="topline">
+<div class="container">
+<span>ARCHITECTURE · INTERIORS · CONSTRUCTION</span>
+<a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a>
+</div>
+</div>
+
 <header class="navbar">
- <a href="index.html" class="logo">ARCH<span>BUILD</span></a>
- <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
- <nav class="nav-links" id="navLinks">
-  <a href="index.html">HOME</a>
-  <a href="about.html" class="active">ABOUT</a>
-  <a href="services.html">SERVICES</a>
-  <a href="projects.html">PROJECTS</a>
-  <a href="contact.html">CONTACT</a>
-  <a href="contact.html" class="nav-cta">LET'S TALK ↗</a>
- </nav>
+<div class="container nav-inner">
+<a href="index.html" class="logo">
+<div class="logo-symbol">A</div>
+<div class="logo-name">ARCHBUILD<small>DESIGN YOUR LEGACY</small></div>
+</a>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+<ul class="nav-links" id="navLinks">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+<li class="nav-item has-mega">
+<button class="nav-link active mega-trigger" aria-expanded="false">About ⌄</button>
+<div class="mega-menu"><div class="container mega-inner">
+<div class="mega-intro"><span class="eyebrow">OUR IDENTITY</span><h3>Spaces with a story.</h3><p>Discover what inspires our approach to thoughtful spaces.</p></div>
+<div class="mega-col"><h4>Company</h4><a href="about.html">About Us</a><a href="#vision">Our Vision</a><a href="#mission">Our Mission</a></div>
+<div class="mega-col"><h4>Our Values</h4><a href="#values">Our Values</a><a href="#approach">Our Approach</a><a href="#story">Our Story</a></div>
+<div class="mega-col"><h4>Explore</h4><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+</div></div>
+</li>
+
+<li class="nav-item has-mega">
+<button class="nav-link mega-trigger" aria-expanded="false">Services ⌄</button>
+<div class="mega-menu"><div class="container mega-inner">
+<div class="mega-intro"><span class="eyebrow">WHAT WE DO</span><h3>Designed around you.</h3><p>Explore our design and construction services.</p></div>
+<div class="mega-col"><h4>Design</h4><a href="services.html#architecture">Architecture</a><a href="services.html#interior">Interiors</a><a href="services.html#planning">Planning</a></div>
+<div class="mega-col"><h4>Build</h4><a href="services.html#construction">Construction</a><a href="services.html#renovation">Renovation</a><a href="services.html#development">Development</a></div>
+<div class="mega-col"><h4>Connect</h4><a href="contact.html">Request a Quote</a><a href="contact.html">Consultation</a><a href="contact.html">Contact Us</a></div>
+</div></div>
+</li>
+
+<li class="nav-item has-mega">
+<button class="nav-link mega-trigger" aria-expanded="false">Explore ⌄</button>
+<div class="mega-menu"><div class="container mega-inner">
+<div class="mega-intro"><span class="eyebrow">DISCOVER</span><h3>Ideas into spaces.</h3><p>Find inspiration for your next project.</p></div>
+<div class="mega-col"><h4>Portfolio</h4><a href="projects.html">All Projects</a><a href="projects.html">Residential</a><a href="projects.html">Interiors</a></div>
+<div class="mega-col"><h4>Information</h4><a href="services.html">Services</a><a href="about.html">Our Story</a><a href="contact.html">Enquiries</a></div>
+<div class="mega-col"><h4>Social</h4><a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">Instagram ↗</a><a href="mailto:archbuild2016@gmail.com">Email Us</a></div>
+</div></div>
+</li>
+
+<li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+
+<a href="contact.html" class="btn nav-cta">Let's Talk ↗</a>
+</div>
 </header>
 
+<main>
+
 <!-- HERO -->
-<section class="hero">
- <div class="hero-content">
-  <div class="eyebrow">THE STORY BEHIND ARCHBUILD</div>
-  <h1>Designed with<br>purpose.<br><em>Built to inspire.</em></h1>
-  <p>We believe meaningful spaces begin with meaningful ideas. Discover the philosophy and approach that shape ARCHBUILD.</p>
- </div>
- <div class="hero-index">01 — OUR STORY</div>
+<section class="page-hero" style="padding:0">
+<div class="container">
+<div class="eyebrow">THE PEOPLE · THE PURPOSE · THE VISION</div>
+<h1>We design<br>with <span>intention.</span></h1>
+<p>Discover the thinking behind ARCHBUILD — a considered approach to architecture, interiors and the spaces we experience every day.</p>
+<div class="breadcrumb"><a href="index.html">HOME</a> &nbsp; / &nbsp; ABOUT US</div>
+</div>
 </section>
 
-<!-- INTRODUCTION -->
-<section class="intro reveal">
- <div>
-  <div class="side-label">01 / INTRODUCTION</div>
- </div>
- <div class="intro-copy">
-  <h2>Architecture is more than construction. It is the art of <em>creating possibilities.</em></h2>
-  <p>ARCHBUILD is built around a simple idea: every space should have a purpose, a personality and a story worth experiencing.</p>
-  <p>We bring together architectural thinking, interior design and practical planning to approach every project with creativity, clarity and attention to detail.</p>
-  <p>Our focus is to understand what matters to the people behind each project and translate those ideas into thoughtful spaces.</p>
-  <div class="intro-bottom">
-   <div class="line"></div>
-   <span>THOUGHTFUL BY DESIGN</span>
-  </div>
- </div>
-</section>
-
-<!-- VISUAL STORY -->
-<section class="story reveal">
- <div class="story-grid">
-  <div class="story-main">
-   <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Contemporary residential architecture">
-  </div>
-  <div class="story-side">
-   <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Elegant contemporary interior">
-   <div class="story-caption">
-    <span>OUR PERSPECTIVE</span>
-    <h3>Spaces that feel as good as they look.</h3>
-    <p>We value the relationship between aesthetics, functionality and the everyday experience of a space.</p>
-   </div>
-  </div>
- </div>
+<!-- STORY -->
+<section id="story">
+<div class="container story-grid">
+<div class="story-image reveal">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85" alt="Modern architectural design">
+</div>
+<div class="story-copy reveal">
+<div class="eyebrow">OUR STORY</div>
+<h2>Every space begins with <span class="serif gold">an idea.</span></h2>
+<p>ARCHBUILD is driven by the belief that thoughtful design can make everyday spaces more meaningful. We approach architecture and interiors with an appreciation for proportion, materials, functionality and the character of each place.</p>
+<p>Our focus is on understanding the requirements behind every project and shaping a design direction that reflects the people and purpose it serves.</p>
+<div class="story-quote">“A space should feel as considered as it looks.”</div>
+</div>
+</div>
 </section>
 
 <!-- STATEMENT -->
 <section class="statement">
- <div class="eyebrow">WHAT WE BELIEVE</div>
- <h2>Great spaces don't happen by accident. They are shaped by <em>intention.</em></h2>
- <p>IDEAS · DESIGN · DETAIL · EXECUTION</p>
+<div class="container reveal">
+<div class="eyebrow">OUR BELIEF</div>
+<h2>Great architecture is a balance of <span class="serif">beauty, purpose and experience.</span></h2>
+<p>We value design that looks considered, works practically and creates an experience that feels personal.</p>
+</div>
 </section>
 
-<!-- VISION AND MISSION -->
-<section class="vision reveal">
- <div class="vision-head">
-  <div>
-   <div class="eyebrow">02 / OUR DIRECTION</div>
-   <h2>What drives <em>us.</em></h2>
-  </div>
-  <p>Our direction is guided by a belief in thoughtful design, purposeful planning and lasting value.</p>
- </div>
+<!-- VISION MISSION VALUES -->
+<section id="vision">
+<div class="container">
+<div class="eyebrow">WHAT GUIDES US</div>
+<h2 style="font:500 clamp(37px,5vw,60px) var(--head);margin-top:17px">Our direction. <span class="serif gold">Our principles.</span></h2>
 
- <div class="vision-grid">
-  <div class="vision-card">
-   <span class="number">01 / VISION</span>
-   <h3>Think beyond today.</h3>
-   <p>To create spaces that remain relevant, functional and inspiring through changing needs and generations.</p>
-  </div>
-
-  <div class="vision-card">
-   <span class="number">02 / MISSION</span>
-   <h3>Turn ideas into reality.</h3>
-   <p>To approach every project with creativity, clear communication and a commitment to thoughtful execution.</p>
-  </div>
-
-  <div class="vision-card">
-   <span class="number">03 / PURPOSE</span>
-   <h3>Design with meaning.</h3>
-   <p>To make every design decision contribute to the purpose, character and experience of a space.</p>
-  </div>
-
-  <div class="vision-card">
-   <span class="number">04 / PROMISE</span>
-   <h3>Details matter.</h3>
-   <p>To value quality, transparency and careful attention throughout the design and project journey.</p>
-  </div>
- </div>
+<div class="values-grid">
+<article class="value-card reveal">
+<span class="number">01 / VISION</span>
+<h3>A meaningful built environment.</h3>
+<p>To create thoughtful spaces that balance visual character, functionality and lasting relevance.</p>
+</article>
+<article class="value-card reveal" id="mission">
+<span class="number">02 / MISSION</span>
+<h3>Design with purpose.</h3>
+<p>To understand each project's needs and develop considered design solutions around them.</p>
+</article>
+<article class="value-card reveal" id="values">
+<span class="number">03 / VALUES</span>
+<h3>Details matter.</h3>
+<p>We value clarity, creativity, practicality, responsible planning and attention to detail.</p>
+</article>
+</div>
+</div>
 </section>
 
-<!-- VALUES -->
-<section class="values reveal">
- <div class="values-heading">
-  <div class="eyebrow">03 / OUR PRINCIPLES</div>
-  <h2>The values behind <em>every detail.</em></h2>
-  <p>The principles that guide how we think, design and approach our work.</p>
- </div>
-
- <div class="value-grid">
-  <div class="value-card">
-   <span>01 / CREATIVITY</span>
-   <h3>Original Thinking</h3>
-   <p>We explore ideas with an open mind and seek thoughtful solutions to design challenges.</p>
-  </div>
-
-  <div class="value-card">
-   <span>02 / QUALITY</span>
-   <h3>Attention to Detail</h3>
-   <p>We believe the smallest decisions can make a meaningful difference to the final experience.</p>
-  </div>
-
-  <div class="value-card">
-   <span>03 / PURPOSE</span>
-   <h3>Functional Design</h3>
-   <p>Beauty and usability should work together, not compete with each other.</p>
-  </div>
-
-  <div class="value-card">
-   <span>04 / TRUST</span>
-   <h3>Clear Communication</h3>
-   <p>Good collaboration begins with listening, understanding and keeping expectations clear.</p>
-  </div>
- </div>
-</section>
+<!-- IMAGE BREAK -->
+<div class="image-break">
+<div class="container image-break-inner">
+<h2>Form follows feeling.</h2>
+</div>
+</div>
 
 <!-- APPROACH -->
-<section class="approach reveal">
- <div class="approach-image">
-  <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85" alt="Modern architecture and interior design">
- </div>
+<section id="approach">
+<div class="container principles-grid">
+<div class="principles-image reveal">
+<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85" alt="Warm contemporary interior">
+</div>
+<div class="principles-copy reveal">
+<div class="eyebrow">OUR APPROACH</div>
+<h2>Thoughtful by design.</h2>
 
- <div class="approach-copy">
-  <div class="eyebrow">04 / OUR APPROACH</div>
-  <h2>Every project deserves a <em>thoughtful beginning.</em></h2>
-  <p>We start by understanding the project, the people involved and the goals that matter. From there, we shape ideas into a clear direction.</p>
-
-  <div class="approach-list">
-   <div class="approach-item">
-    <span>Understanding</span>
-    <span>01 ↗</span>
-   </div>
-   <div class="approach-item">
-    <span>Concept & Design</span>
-    <span>02 ↗</span>
-   </div>
-   <div class="approach-item">
-    <span>Planning & Coordination</span>
-    <span>03 ↗</span>
-   </div>
-   <div class="approach-item">
-    <span>Execution & Delivery</span>
-    <span>04 ↗</span>
-   </div>
-  </div>
-
-  <a href="services.html" class="btn" style="margin-top:30px">EXPLORE OUR SERVICES ↗</a>
- </div>
+<div class="principle">
+<span>01</span>
+<div><h3>Understand the space</h3><p>Begin with the needs, site context and purpose of the project.</p></div>
+</div>
+<div class="principle">
+<span>02</span>
+<div><h3>Think creatively</h3><p>Explore ideas, forms, materials and practical possibilities.</p></div>
+</div>
+<div class="principle">
+<span>03</span>
+<div><h3>Refine the details</h3><p>Consider the elements that bring clarity and consistency to a design.</p></div>
+</div>
+<div class="principle">
+<span>04</span>
+<div><h3>Move forward together</h3><p>Discuss the agreed scope, priorities and next steps for each project.</p></div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
- <div class="eyebrow">LET'S CREATE SOMETHING MEANINGFUL</div>
- <h2>Your idea could be<br>our next <em>story.</em></h2>
- <p>Have a project in mind? Let's start with a conversation.</p>
- <a href="contact.html" class="btn">START A CONVERSATION ↗</a>
+<!-- CTA -->
+<section class="cta">
+<div class="container reveal">
+<div class="eyebrow">LET'S CREATE SOMETHING MEANINGFUL</div>
+<h2>Have an idea in mind?</h2>
+<p>Let's start a conversation about your space and your vision.</p>
+<a href="contact.html" class="btn primary">Start a Conversation ↗</a>
+<a href="services.html" class="btn" style="color:var(--navy);border-color:var(--navy)">Explore Services →</a>
+</div>
 </section>
 
-<!-- FOOTER -->
+</main>
+
 <footer>
- <div class="footer-top">
-  <div class="footer-brand">
-   <a href="index.html" class="logo">ARCH<span>BUILD</span></a>
-   <p>Thoughtful design. Timeless spaces.<br>Building ideas into reality.</p>
-  </div>
-
-  <div class="footer-links">
-   <a href="index.html">HOME</a>
-   <a href="about.html">ABOUT</a>
-   <a href="services.html">SERVICES</a>
-   <a href="projects.html">PROJECTS</a>
-   <a href="contact.html">CONTACT</a>
-   <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
-  </div>
- </div>
-
- <div class="footer-bottom">
-  <span>© 2026 ARCHBUILD. ALL RIGHTS RESERVED.</span>
-  <span>archbuild2016@gmail.com · +91 94715 37238</span>
- </div>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-about">
+<a href="index.html" class="logo"><div class="logo-symbol">A</div><div class="logo-name">ARCHBUILD<small>DESIGN YOUR LEGACY</small></div></a>
+<p>Thoughtful architecture, refined interiors and considered spaces designed around your vision.</p>
+</div>
+<div class="footer-col">
+<h4>Explore</h4>
+<a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Discover</h4>
+<a href="#vision">Our Vision</a><a href="#mission">Our Mission</a><a href="#values">Our Values</a><a href="#approach">Our Approach</a>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<a href="mailto:archbuild2016@gmail.com">archbuild2016@gmail.com</a>
+<a href="tel:+919471537238">+91 94715 37238</a>
+<a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">@archbuild2016 ↗</a>
+<a href="https://wa.me/919471537238" target="_blank" rel="noopener">WhatsApp ↗</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© <span id="year"></span> ARCHBUILD. All rights reserved.</span>
+<div class="social"><a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">INSTAGRAM ↗</a><a href="mailto:archbuild2016@gmail.com">EMAIL ↗</a></div>
+<span>Designed with intention.</span>
+</div>
+</div>
 </footer>
 
-<script>
-const menuBtn=document.getElementById('menuBtn');
-const navLinks=document.getElementById('navLinks');
+<a class="whatsapp" href="https://wa.me/919471537238" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
 
-menuBtn.addEventListener('click',()=>{
- navLinks.classList.toggle('open');
- menuBtn.textContent=navLinks.classList.contains('open')?'✕':'☰';
+<script>
+const toggle=document.getElementById("menuToggle");
+const links=document.getElementById("navLinks");
+
+toggle.addEventListener("click",()=>{
+const open=links.classList.toggle("active");
+toggle.textContent=open?"×":"☰";
+toggle.setAttribute("aria-expanded",open);
 });
 
-document.querySelectorAll('.nav-links a').forEach(link=>{
- link.addEventListener('click',()=>{
-  navLinks.classList.remove('open');
-  menuBtn.textContent='☰';
- });
+document.querySelectorAll(".mega-trigger").forEach(btn=>{
+btn.addEventListener("click",()=>{
+if(innerWidth<=760){
+const parent=btn.closest(".nav-item");
+const open=parent.classList.toggle("open");
+btn.setAttribute("aria-expanded",open);
+}
+});
+});
+
+document.querySelectorAll(".nav-links a").forEach(a=>{
+a.addEventListener("click",()=>{
+links.classList.remove("active");
+toggle.textContent="☰";
+toggle.setAttribute("aria-expanded","false");
+});
+});
+
+window.addEventListener("resize",()=>{
+if(innerWidth>760){
+links.classList.remove("active");
+document.querySelectorAll(".nav-item.open").forEach(x=>x.classList.remove("open"));
+toggle.textContent="☰";
+}
 });
 
 const observer=new IntersectionObserver(entries=>{
- entries.forEach(entry=>{
-  if(entry.isIntersecting){
-   entry.target.classList.add('show');
-   observer.unobserve(entry.target);
-  }
- });
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+observer.unobserve(entry.target);
+}
+});
 },{threshold:.12});
 
-document.querySelectorAll('.reveal').forEach(el=>{
- observer.observe(el);
-});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
-
 </body>
 </html>
