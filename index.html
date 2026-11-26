@@ -26,45 +26,14 @@
   --heading:'Manrope',sans-serif;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:var(--sans);
-  background:var(--cream);
-  color:var(--dark);
-  overflow-x:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-button{
-  font-family:inherit;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-.container{
-  width:min(1180px,90%);
-  margin:auto;
-}
-
-.section{
-  padding:105px 0;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--dark);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,90%);margin:auto}
+.section{padding:105px 0}
 
 .section-label{
   color:var(--gold);
@@ -74,7 +43,6 @@ img{
   font-weight:700;
   margin-bottom:17px;
 }
-
 .section-title{
   font-family:var(--serif);
   font-size:clamp(36px,5vw,58px);
@@ -82,7 +50,6 @@ img{
   line-height:1.15;
   color:var(--navy);
 }
-
 .section-description{
   color:#727b85;
   line-height:1.9;
@@ -90,15 +57,7 @@ img{
   max-width:570px;
   margin-top:18px;
 }
-
-.gold-line{
-  width:55px;
-  height:2px;
-  background:var(--gold);
-  margin:23px 0;
-}
-
-/* BUTTONS */
+.gold-line{width:55px;height:2px;background:var(--gold);margin:23px 0}
 
 .btn{
   display:inline-flex;
@@ -113,50 +72,17 @@ img{
   transition:.3s;
   border:1px solid transparent;
 }
-
-.btn-gold{
-  background:var(--gold);
-  color:var(--navy);
-}
-
-.btn-gold:hover{
-  background:var(--gold-light);
-  transform:translateY(-3px);
-}
-
-.btn-outline{
-  border-color:rgba(255,255,255,.5);
-  color:white;
-}
-
-.btn-outline:hover{
-  background:white;
-  color:var(--navy);
-}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-3px)}
+.btn-outline{border-color:rgba(255,255,255,.5);color:white}
+.btn-outline:hover{background:white;color:var(--navy)}
 
 /* TOPBAR */
-
-.topbar{
-  background:#0a1421;
-  color:#c5ccd3;
-  padding:10px 0;
-  font-size:11px;
-}
-
-.topbar-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-}
-
-.topbar-right{
-  display:flex;
-  gap:25px;
-}
+.topbar{background:#0a1421;color:#c5ccd3;padding:10px 0;font-size:11px}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.topbar-right{display:flex;gap:25px}
 
 /* NAVIGATION */
-
 .navbar{
   background:rgba(16,28,44,.98);
   color:white;
@@ -165,64 +91,21 @@ img{
   z-index:1000;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
-
-.nav-inner{
-  height:82px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  display:flex;
-  flex-direction:column;
-  line-height:1;
-}
-
-.logo strong{
-  font-family:var(--heading);
-  font-size:26px;
-  letter-spacing:5px;
-  color:white;
-}
-
-.logo span{
-  font-size:8px;
-  letter-spacing:3px;
-  color:var(--gold);
-  margin-top:8px;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:31px;
-}
-
-.nav-links>a,
-.nav-dropdown-trigger{
+.nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo strong{font-family:var(--heading);font-size:26px;letter-spacing:5px;color:white}
+.logo span{font-size:8px;letter-spacing:3px;color:var(--gold);margin-top:8px}
+.nav-links{display:flex;align-items:center;gap:31px}
+.nav-links>a,.nav-dropdown-trigger{
   font-size:11px;
   letter-spacing:1.1px;
   text-transform:uppercase;
   color:#dce1e6;
   transition:.3s;
 }
-
-.nav-links>a:hover,
-.nav-dropdown-trigger:hover{
-  color:var(--gold);
-}
-
-.nav-dropdown{
-  position:relative;
-}
-
-.nav-dropdown-trigger{
-  background:none;
-  border:0;
-  cursor:pointer;
-}
-
+.nav-links>a:hover,.nav-dropdown-trigger:hover{color:var(--gold)}
+.nav-dropdown{position:relative}
+.nav-dropdown-trigger{background:none;border:0;cursor:pointer}
 .mega-menu{
   position:absolute;
   top:35px;
@@ -234,12 +117,7 @@ img{
   box-shadow:0 15px 35px rgba(0,0,0,.25);
   display:none;
 }
-
-.nav-dropdown:hover .mega-menu,
-.nav-dropdown.open .mega-menu{
-  display:block;
-}
-
+.nav-dropdown:hover .mega-menu,.nav-dropdown.open .mega-menu{display:block}
 .mega-menu a{
   display:block;
   padding:13px;
@@ -248,23 +126,10 @@ img{
   border-bottom:1px solid rgba(255,255,255,.07);
   transition:.3s;
 }
-
-.mega-menu a:hover{
-  color:var(--gold);
-  padding-left:18px;
-}
-
-.menu-toggle{
-  display:none;
-  background:none;
-  color:white;
-  border:0;
-  font-size:25px;
-  cursor:pointer;
-}
+.mega-menu a:hover{color:var(--gold);padding-left:18px}
+.menu-toggle{display:none;background:none;color:white;border:0;font-size:25px;cursor:pointer}
 
 /* HERO */
-
 .hero{
   min-height:690px;
   position:relative;
@@ -276,165 +141,36 @@ img{
     url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90")
     center/cover no-repeat;
 }
-
-.hero-content{
-  max-width:750px;
-  padding:100px 0;
-}
-
-.hero-label{
-  color:var(--gold-light);
-  font-size:11px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  margin-bottom:25px;
-}
-
-.hero h1{
-  font-family:var(--serif);
-  font-size:clamp(52px,8vw,94px);
-  font-weight:500;
-  line-height:1.05;
-  max-width:780px;
-}
-
-.hero h1 span{
-  color:var(--gold-light);
-  font-style:italic;
-}
-
-.hero-description{
-  color:#d0d6dc;
-  font-size:14px;
-  line-height:1.9;
-  max-width:500px;
-  margin:27px 0 32px;
-}
-
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:13px;
-}
-
-.hero-bottom{
-  position:absolute;
-  bottom:30px;
-  right:5%;
-  color:rgba(255,255,255,.7);
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
+.hero-content{max-width:750px;padding:100px 0}
+.hero-label{color:var(--gold-light);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:25px}
+.hero h1{font-family:var(--serif);font-size:clamp(52px,8vw,94px);font-weight:500;line-height:1.05;max-width:780px}
+.hero h1 span{color:var(--gold-light);font-style:italic}
+.hero-description{color:#d0d6dc;font-size:14px;line-height:1.9;max-width:500px;margin:27px 0 32px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:13px}
+.hero-bottom{position:absolute;bottom:30px;right:5%;color:rgba(255,255,255,.7);font-size:10px;letter-spacing:2px;text-transform:uppercase}
 
 /* CREDENTIAL STRIP */
-
-.credential-strip{
-  background:var(--navy2);
-  color:white;
-  padding:30px 0;
-}
-
-.credential-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-}
-
-.credential-item{
-  padding:10px 30px;
-  border-right:1px solid rgba(255,255,255,.13);
-}
-
-.credential-item:first-child{
-  padding-left:0;
-}
-
-.credential-item:last-child{
-  border:0;
-}
-
-.credential-item strong{
-  display:block;
-  color:var(--gold-light);
-  font-family:var(--heading);
-  font-size:14px;
-  margin-bottom:8px;
-}
-
-.credential-item span{
-  font-size:11px;
-  color:#b6c0ca;
-  letter-spacing:.5px;
-}
+.credential-strip{background:var(--navy2);color:white;padding:30px 0}
+.credential-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.credential-item{padding:10px 30px;border-right:1px solid rgba(255,255,255,.13)}
+.credential-item:first-child{padding-left:0}
+.credential-item:last-child{border:0}
+.credential-item strong{display:block;color:var(--gold-light);font-family:var(--heading);font-size:14px;margin-bottom:8px}
+.credential-item span{font-size:11px;color:#b6c0ca;letter-spacing:.5px}
 
 /* INTRO */
-
-.intro-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:80px;
-  align-items:center;
-}
-
-.intro-image{
-  position:relative;
-}
-
-.intro-image img{
-  width:100%;
-  height:520px;
-  object-fit:cover;
-}
-
-.intro-stamp{
-  position:absolute;
-  right:-25px;
-  bottom:30px;
-  background:var(--gold);
-  color:var(--navy);
-  padding:28px;
-  text-align:center;
-  font-family:var(--serif);
-  font-size:20px;
-}
-
-.intro-stamp small{
-  display:block;
-  font-family:var(--sans);
-  font-size:9px;
-  letter-spacing:2px;
-  margin-top:7px;
-}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.intro-image{position:relative}
+.intro-image img{width:100%;height:520px;object-fit:cover}
+.intro-stamp{position:absolute;right:-25px;bottom:30px;background:var(--gold);color:var(--navy);padding:28px;text-align:center;font-family:var(--serif);font-size:20px}
+.intro-stamp small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:2px;margin-top:7px}
 
 /* SERVICES */
-
-.services-section{
-  background:#101c2c;
-  color:white;
-}
-
-.services-section .section-title{
-  color:white;
-}
-
-.services-section .section-description{
-  color:#aeb9c4;
-}
-
-.services-heading{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:30px;
-  margin-bottom:48px;
-}
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
+.services-section{background:#101c2c;color:white}
+.services-section .section-title{color:white}
+.services-section .section-description{color:#aeb9c4}
+.services-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .service-card{
   position:relative;
   min-height:390px;
@@ -447,7 +183,6 @@ img{
   overflow:hidden;
   transition:.35s;
 }
-
 .service-card:before{
   content:"";
   position:absolute;
@@ -459,535 +194,147 @@ img{
   background:rgba(199,166,106,.08);
   transition:.4s;
 }
+.service-card:hover{transform:translateY(-7px);border-color:var(--gold);background:#1c3047}
+.service-card:hover:before{transform:scale(1.6)}
+.service-top,.service-content,.service-arrow{position:relative;z-index:1}
+.service-number{color:var(--gold);font-size:11px;letter-spacing:2px;margin-bottom:24px}
+.service-icon{width:43px;height:43px;border:1px solid rgba(199,166,106,.55);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:20px;margin-bottom:22px}
+.service-content h3{color:white;font-family:var(--serif);font-size:23px;font-weight:500;line-height:1.3;margin-bottom:12px}
+.service-content p{color:#b6c0ca;font-size:12px;line-height:1.8;margin-bottom:18px}
+.service-includes{border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+.service-includes span{color:var(--gold-light);font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.service-includes ul{list-style:none;margin-top:12px;display:grid;gap:9px}
+.service-includes li{color:#d0d6dc;font-size:11px;line-height:1.5;padding-left:15px;position:relative}
+.service-includes li:before{content:"";position:absolute;width:5px;height:5px;background:var(--gold);left:0;top:5px;transform:rotate(45deg)}
+.service-arrow{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:15px;border-top:1px solid rgba(255,255,255,.1);color:var(--gold-light);font-size:10px;letter-spacing:1.5px;text-transform:uppercase}
+.service-arrow b{font-size:19px;font-weight:400;transition:.3s}
+.service-card:hover .service-arrow b{transform:translateX(7px)}
 
-.service-card:hover{
-  transform:translateY(-7px);
-  border-color:var(--gold);
-  background:#1c3047;
-}
-
-.service-card:hover:before{
-  transform:scale(1.6);
-}
-
-.service-top{
+/* FOUNDER - NO PHOTO */
+.founder-section{background:#eae6de}
+.founder-wrap{max-width:900px;margin:auto}
+.founder-panel{
   position:relative;
-  z-index:1;
+  padding:65px 70px;
+  background:#f6f3ed;
+  border:1px solid #ded5c5;
+  box-shadow:0 20px 55px rgba(16,28,44,.06);
 }
-
-.service-number{
-  color:var(--gold);
-  font-size:11px;
-  letter-spacing:2px;
-  margin-bottom:24px;
-}
-
-.service-icon{
-  width:43px;
-  height:43px;
-  border:1px solid rgba(199,166,106,.55);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--gold-light);
-  font-size:20px;
-  margin-bottom:22px;
-}
-
-.service-content{
-  position:relative;
-  z-index:1;
-}
-
-.service-content h3{
-  color:white;
-  font-family:var(--serif);
-  font-size:23px;
-  font-weight:500;
-  line-height:1.3;
-  margin-bottom:12px;
-}
-
-.service-content p{
-  color:#b6c0ca;
-  font-size:12px;
-  line-height:1.8;
-  margin-bottom:18px;
-}
-
-.service-includes{
-  border-top:1px solid rgba(255,255,255,.1);
-  padding-top:16px;
-}
-
-.service-includes span{
-  color:var(--gold-light);
-  font-size:9px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  font-weight:700;
-}
-
-.service-includes ul{
-  list-style:none;
-  margin-top:12px;
-  display:grid;
-  gap:9px;
-}
-
-.service-includes li{
-  color:#d0d6dc;
-  font-size:11px;
-  line-height:1.5;
-  padding-left:15px;
-  position:relative;
-}
-
-.service-includes li:before{
+.founder-panel:before{
   content:"";
   position:absolute;
-  width:5px;
-  height:5px;
-  background:var(--gold);
   left:0;
-  top:5px;
-  transform:rotate(45deg);
+  top:0;
+  width:4px;
+  height:100%;
+  background:var(--gold);
 }
-
-.service-arrow{
-  position:relative;
-  z-index:1;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-top:24px;
-  padding-top:15px;
-  border-top:1px solid rgba(255,255,255,.1);
-  color:var(--gold-light);
+.founder-overline{
+  color:#a27c3f;
   font-size:10px;
-  letter-spacing:1.5px;
+  letter-spacing:3px;
   text-transform:uppercase;
+  font-weight:700;
+  margin-bottom:25px;
 }
-
-.service-arrow b{
-  font-size:19px;
-  font-weight:400;
-  transition:.3s;
-}
-
-.service-card:hover .service-arrow b{
-  transform:translateX(7px);
-}
-
-/* FOUNDER */
-
-.founder-section{
-  background:#eae6de;
-}
-
-.founder-grid{
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:85px;
-  align-items:center;
-}
-
-.founder-image{
-  position:relative;
-}
-
-.founder-image img{
-  width:100%;
-  height:570px;
-  object-fit:cover;
-  object-position:center;
-}
-
-.founder-tag{
-  position:absolute;
-  bottom:25px;
-  left:25px;
-  background:var(--navy);
-  color:white;
-  padding:18px 22px;
-}
-
-.founder-tag strong{
-  display:block;
-  font-family:var(--serif);
-  font-size:19px;
-  font-weight:500;
-}
-
-.founder-tag span{
-  display:block;
-  color:var(--gold-light);
-  font-size:9px;
-  letter-spacing:2px;
-  margin-top:7px;
-  text-transform:uppercase;
-}
-
-.founder-copy{
-  color:#65717d;
-  font-size:14px;
-  line-height:2;
-  margin-top:20px;
-}
-
-.founder-name{
-  font-family:var(--serif);
-  font-size:29px;
-  color:var(--navy);
-  margin-top:30px;
-}
-
-.founder-role{
-  font-size:10px;
-  letter-spacing:2px;
-  color:#9a7b48;
-  text-transform:uppercase;
-  margin-top:7px;
-}
+.founder-panel .section-title{font-size:clamp(40px,6vw,65px)}
+.founder-copy{color:#65717d;font-size:14px;line-height:2;margin-top:20px;max-width:700px}
+.founder-name{font-family:var(--serif);font-size:30px;color:var(--navy);margin-top:35px}
+.founder-role{font-size:10px;letter-spacing:2px;color:#9a7b48;text-transform:uppercase;margin-top:8px}
+.founder-signature{margin-top:35px;padding-top:20px;border-top:1px solid #ded5c5;color:#8b9298;font-size:10px;letter-spacing:2px;text-transform:uppercase}
 
 /* DETAILS */
-
-.details-section{
-  background:white;
-}
-
-.details-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  margin-top:45px;
-}
-
-.detail-card{
-  padding:32px;
-  background:#f7f5f0;
-  border:1px solid #ebe6dc;
-}
-
-.detail-card .detail-icon{
-  font-size:24px;
-  color:var(--gold);
-  margin-bottom:20px;
-}
-
-.detail-card h3{
-  color:var(--navy);
-  font-family:var(--serif);
-  font-size:21px;
-  font-weight:500;
-  margin-bottom:13px;
-}
-
-.detail-card p,
-.detail-card a{
-  color:#6e7882;
-  font-size:12px;
-  line-height:1.9;
-  overflow-wrap:anywhere;
-}
-
-.detail-card a:hover{
-  color:#a27c3f;
-}
+.details-section{background:white}
+.details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:45px}
+.detail-card{padding:32px;background:#f7f5f0;border:1px solid #ebe6dc}
+.detail-card .detail-icon{font-size:24px;color:var(--gold);margin-bottom:20px}
+.detail-card h3{color:var(--navy);font-family:var(--serif);font-size:21px;font-weight:500;margin-bottom:13px}
+.detail-card p,.detail-card a{color:#6e7882;font-size:12px;line-height:1.9;overflow-wrap:anywhere}
+.detail-card a:hover{color:#a27c3f}
 
 /* MAP */
-
-.map-section{
-  background:var(--navy);
-  color:white;
-}
-
-.map-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:55px;
-  align-items:center;
-}
-
-.map-section .section-title{
-  color:white;
-}
-
-.map-section .section-description{
-  color:#b6c0ca;
-}
-
-.map-frame{
-  width:100%;
-  height:390px;
-  border:0;
-  filter:grayscale(35%);
-}
+.map-section{background:var(--navy);color:white}
+.map-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}
+.map-section .section-title{color:white}
+.map-section .section-description{color:#b6c0ca}
+.map-frame{width:100%;height:390px;border:0;filter:grayscale(35%)}
 
 /* INSPIRATION */
-
-.inspiration-section{
-  background:#f6f3ed;
-}
-
-.inspiration-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:42px;
-}
-
-.inspiration-card{
-  position:relative;
-  overflow:hidden;
-}
-
-.inspiration-card img{
-  width:100%;
-  height:330px;
-  object-fit:cover;
-  transition:.6s;
-}
-
-.inspiration-card:hover img{
-  transform:scale(1.06);
-}
-
-.inspiration-caption{
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  padding:25px;
-  color:white;
-  background:linear-gradient(transparent,rgba(0,0,0,.8));
-}
-
-.inspiration-caption h3{
-  font-family:var(--serif);
-  font-size:22px;
-  font-weight:500;
-}
-
-.inspiration-caption span{
-  font-size:9px;
-  color:var(--gold-light);
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-.inspiration-note{
-  font-size:11px;
-  color:#7b838a;
-  margin-top:20px;
-  line-height:1.8;
-}
+.inspiration-section{background:#f6f3ed}
+.inspiration-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.inspiration-card{position:relative;overflow:hidden}
+.inspiration-card img{width:100%;height:330px;object-fit:cover;transition:.6s}
+.inspiration-card:hover img{transform:scale(1.06)}
+.inspiration-caption{position:absolute;bottom:0;left:0;width:100%;padding:25px;color:white;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+.inspiration-caption h3{font-family:var(--serif);font-size:22px;font-weight:500}
+.inspiration-caption span{font-size:9px;color:var(--gold-light);letter-spacing:2px;text-transform:uppercase}
+.inspiration-note{font-size:11px;color:#7b838a;margin-top:20px;line-height:1.8}
 
 /* PROCESS */
-
-.process-section{
-  background:#eae6de;
-}
-
-.process-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:25px;
-  margin-top:50px;
-}
-
-.process-item{
-  border-top:1px solid #c8bda9;
-  padding-top:22px;
-}
-
-.process-item span{
-  color:#b28d52;
-  font-size:11px;
-  letter-spacing:2px;
-}
-
-.process-item h3{
-  color:var(--navy);
-  font-family:var(--serif);
-  font-size:23px;
-  font-weight:500;
-  margin:20px 0 12px;
-}
-
-.process-item p{
-  color:#77818b;
-  font-size:12px;
-  line-height:1.9;
-}
+.process-section{background:#eae6de}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;margin-top:50px}
+.process-item{border-top:1px solid #c8bda9;padding-top:22px}
+.process-item span{color:#b28d52;font-size:11px;letter-spacing:2px}
+.process-item h3{color:var(--navy);font-family:var(--serif);font-size:23px;font-weight:500;margin:20px 0 12px}
+.process-item p{color:#77818b;font-size:12px;line-height:1.9}
 
 /* CTA */
-
 .cta-section{
-  background:
-    linear-gradient(rgba(10,20,33,.88),rgba(10,20,33,.88)),
-    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
+  background:linear-gradient(rgba(10,20,33,.88),rgba(10,20,33,.88)),url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85") center/cover;
   text-align:center;
   color:white;
   padding:110px 0;
 }
-
-.cta-section .section-title{
-  color:white;
-  max-width:750px;
-  margin:auto;
-}
-
-.cta-section p{
-  color:#c1c9d1;
-  font-size:13px;
-  line-height:1.9;
-  max-width:540px;
-  margin:22px auto 30px;
-}
+.cta-section .section-title{color:white;max-width:750px;margin:auto}
+.cta-section p{color:#c1c9d1;font-size:13px;line-height:1.9;max-width:540px;margin:22px auto 30px}
 
 /* FOOTER */
+.footer{background:#091321;color:#b4bdc7;padding:70px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px;padding-bottom:50px}
+.footer-logo{font-family:var(--heading);font-size:26px;letter-spacing:5px;color:white}
+.footer-brand p{font-size:12px;line-height:1.9;margin-top:18px;max-width:270px}
+.footer-column h4{color:var(--gold-light);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:23px}
+.footer-column a,.footer-column p{display:block;color:#aab4bf;font-size:11px;line-height:2.2;margin-bottom:7px;overflow-wrap:anywhere}
+.footer-column a:hover{color:var(--gold-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;gap:15px;font-size:10px;color:#8793a0}
 
-.footer{
-  background:#091321;
-  color:#b4bdc7;
-  padding:70px 0 25px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr 1fr;
-  gap:45px;
-  padding-bottom:50px;
-}
-
-.footer-logo{
-  font-family:var(--heading);
-  font-size:26px;
-  letter-spacing:5px;
-  color:white;
-}
-
-.footer-brand p{
-  font-size:12px;
-  line-height:1.9;
-  margin-top:18px;
-  max-width:270px;
-}
-
-.footer-column h4{
-  color:var(--gold-light);
-  font-size:11px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:23px;
-}
-
-.footer-column a,
-.footer-column p{
-  display:block;
-  color:#aab4bf;
-  font-size:11px;
-  line-height:2.2;
-  margin-bottom:7px;
-  overflow-wrap:anywhere;
-}
-
-.footer-column a:hover{
-  color:var(--gold-light);
-}
-
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.1);
-  padding-top:22px;
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  font-size:10px;
-  color:#8793a0;
-}
-
-/* WHATSAPP */
-
+/* WHATSAPP - OFFICIAL LOGO */
 .whatsapp-float{
   position:fixed;
   right:24px;
   bottom:24px;
-  width:55px;
-  height:55px;
+  width:58px;
+  height:58px;
   border-radius:50%;
-  background:#20b86a;
+  background:#25D366;
   color:white;
   display:flex;
   justify-content:center;
   align-items:center;
-  font-size:25px;
   z-index:999;
   box-shadow:0 8px 25px rgba(0,0,0,.25);
   transition:.3s;
 }
-
-.whatsapp-float:hover{
-  transform:translateY(-5px);
-}
+.whatsapp-float:hover{transform:translateY(-5px) scale(1.04);background:#20bd5a}
+.whatsapp-float svg{width:32px;height:32px;display:block;fill:white}
 
 /* REVEAL */
-
-.reveal{
-  opacity:0;
-  transform:translateY(25px);
-  transition:opacity .7s ease,transform .7s ease;
-}
-
-.reveal.visible{
-  opacity:1;
-  transform:translateY(0);
-}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
-
 @media(max-width:900px){
-  .nav-links{
-    gap:17px;
-  }
-
-  .intro-grid,
-  .founder-grid,
-  .map-grid{
-    gap:40px;
-  }
-
-  .services-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .process-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .nav-links{gap:17px}
+  .intro-grid,.map-grid{gap:40px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
 }
-
 @media(max-width:700px){
-  .topbar-inner{
-    justify-content:center;
-  }
-
-  .topbar-right{
-    display:none;
-  }
-
-  .nav-inner{
-    height:72px;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
+  .topbar-inner{justify-content:center}
+  .topbar-right{display:none}
+  .nav-inner{height:72px}
+  .menu-toggle{display:block}
   .nav-links{
     display:none;
     position:absolute;
@@ -1001,154 +348,45 @@ img{
     gap:23px;
     border-top:1px solid rgba(255,255,255,.1);
   }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .nav-dropdown{
-    width:100%;
-  }
-
-  .mega-menu{
-    position:static;
-    width:100%;
-    margin-top:12px;
-    display:none;
-    box-shadow:none;
-  }
-
-  .nav-dropdown.open .mega-menu{
-    display:block;
-  }
-
-  .hero{
-    min-height:620px;
-    background-position:60% center;
-  }
-
-  .hero-content{
-    padding:85px 0;
-  }
-
-  .hero h1{
-    font-size:53px;
-  }
-
-  .hero-bottom{
-    display:none;
-  }
-
-  .credential-grid{
-    grid-template-columns:1fr;
-  }
-
-  .credential-item,
-  .credential-item:first-child{
-    padding:17px 0;
-    border-right:0;
-    border-bottom:1px solid rgba(255,255,255,.12);
-  }
-
-  .credential-item:last-child{
-    border-bottom:0;
-  }
-
-  .section{
-    padding:75px 0;
-  }
-
-  .intro-grid,
-  .founder-grid,
-  .map-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .intro-image img{
-    height:390px;
-  }
-
-  .intro-stamp{
-    right:10px;
-  }
-
-  .services-heading{
-    display:block;
-  }
-
-  .services-heading .btn{
-    margin-top:25px;
-  }
-
-  .services-grid{
-    grid-template-columns:1fr;
-  }
-
-  .service-card{
-    min-height:350px;
-  }
-
-  .founder-image img{
-    height:430px;
-  }
-
-  .details-grid{
-    grid-template-columns:1fr;
-  }
-
-  .map-frame{
-    height:330px;
-  }
-
-  .inspiration-grid{
-    grid-template-columns:1fr;
-  }
-
-  .inspiration-card img{
-    height:300px;
-  }
-
-  .process-grid{
-    grid-template-columns:1fr 1fr;
-    gap:30px 20px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-    gap:35px 20px;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-  }
+  .nav-links.active{display:flex}
+  .nav-dropdown{width:100%}
+  .mega-menu{position:static;width:100%;margin-top:12px;display:none;box-shadow:none}
+  .nav-dropdown.open .mega-menu{display:block}
+  .hero{min-height:620px;background-position:60% center}
+  .hero-content{padding:85px 0}
+  .hero h1{font-size:53px}
+  .hero-bottom{display:none}
+  .credential-grid{grid-template-columns:1fr}
+  .credential-item,.credential-item:first-child{padding:17px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .credential-item:last-child{border-bottom:0}
+  .section{padding:75px 0}
+  .intro-grid,.map-grid{grid-template-columns:1fr;gap:40px}
+  .intro-image img{height:390px}
+  .intro-stamp{right:10px}
+  .services-heading{display:block}
+  .services-heading .btn{margin-top:25px}
+  .services-grid{grid-template-columns:1fr}
+  .service-card{min-height:350px}
+  .founder-panel{padding:45px 28px}
+  .details-grid{grid-template-columns:1fr}
+  .map-frame{height:330px}
+  .inspiration-grid{grid-template-columns:1fr}
+  .inspiration-card img{height:300px}
+  .process-grid{grid-template-columns:1fr 1fr;gap:30px 20px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:35px 20px}
+  .footer-bottom{flex-direction:column}
 }
-
 @media(max-width:420px){
-  .hero h1{
-    font-size:45px;
-  }
-
-  .hero-buttons{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .process-grid,
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .section-title{
-    font-size:36px;
-  }
+  .hero h1{font-size:45px}
+  .hero-buttons{flex-direction:column;align-items:flex-start}
+  .process-grid,.footer-grid{grid-template-columns:1fr}
+  .section-title{font-size:36px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOPBAR -->
 <div class="topbar">
   <div class="container topbar-inner">
     <div>Architecture · Planning · Construction · Interiors</div>
@@ -1159,10 +397,8 @@ img{
   </div>
 </div>
 
-<!-- NAVIGATION -->
 <nav class="navbar">
   <div class="container nav-inner">
-
     <a href="index.html" class="logo">
       <strong>ARCHBUILD</strong>
       <span>BY FAIZ & ASSOCIATES</span>
@@ -1188,7 +424,6 @@ img{
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </div>
-
   </div>
 </nav>
 
@@ -1197,100 +432,70 @@ img{
   <div class="container">
     <div class="hero-content reveal">
       <div class="hero-label">Faiz & Associates · Ranchi</div>
-
-      <h1>
-        Turning Dreams<br>
-        into <span>Reality.</span>
-      </h1>
-
+      <h1>Turning Dreams<br>into <span>Reality.</span></h1>
       <p class="hero-description">
         Thoughtful architecture, refined spaces and carefully planned
         construction solutions — bringing your vision to life with
         creativity, clarity and attention to detail.
       </p>
-
       <div class="hero-buttons">
         <a href="services.html" class="btn btn-gold">Explore Our Services ↗</a>
         <a href="contact.html" class="btn btn-outline">Discuss Your Project</a>
       </div>
     </div>
   </div>
-
   <div class="hero-bottom">Design · Plan · Build</div>
 </section>
 
 <!-- CREDENTIAL STRIP -->
 <section class="credential-strip">
   <div class="container credential-grid">
-
     <div class="credential-item">
       <strong>RMC & RRDA Map Services</strong>
       <span>Map Preparation · Documentation Support</span>
     </div>
-
     <div class="credential-item">
       <strong>Architecture & Design</strong>
       <span>2D Planning · 3D Views · Space Design</span>
     </div>
-
     <div class="credential-item">
       <strong>Building & Construction</strong>
       <span>Execution Planning · Site Coordination</span>
     </div>
-
   </div>
 </section>
 
 <!-- INTRO -->
 <section class="section">
   <div class="container intro-grid">
-
     <div class="intro-image reveal">
-      <img
-        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85"
-        alt="Contemporary architectural interior"
-      >
-      <div class="intro-stamp">
-        F&A
-        <small>EST. WITH VISION</small>
-      </div>
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85" alt="Contemporary architectural interior">
+      <div class="intro-stamp">F&A<small>EST. WITH VISION</small></div>
     </div>
 
     <div class="reveal">
       <div class="section-label">Welcome to ARCHBUILD</div>
-
-      <h2 class="section-title">
-        Spaces Designed<br>
-        with Purpose.
-      </h2>
-
+      <h2 class="section-title">Spaces Designed<br>with Purpose.</h2>
       <div class="gold-line"></div>
-
       <p class="section-description">
         ARCHBUILD by Faiz & Associates brings together architectural
         thinking, practical planning and design-focused solutions.
         Every project begins with understanding the client's vision
         and translating it into a thoughtful plan.
       </p>
-
       <p class="section-description">
         From initial drawings and visual concepts to construction
         coordination, our approach focuses on functionality,
         aesthetics and attention to detail.
       </p>
-
-      <a href="about.html" class="btn btn-gold" style="margin-top:28px;">
-        Discover Our Story ↗
-      </a>
+      <a href="about.html" class="btn btn-gold" style="margin-top:28px;">Discover Our Story ↗</a>
     </div>
-
   </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section services-section">
   <div class="container">
-
     <div class="services-heading reveal">
       <div>
         <div class="section-label">What We Do</div>
@@ -1300,29 +505,19 @@ img{
           and construction-related services.
         </p>
       </div>
-
-      <a href="services.html" class="btn btn-outline">
-        View All Services ↗
-      </a>
+      <a href="services.html" class="btn btn-outline">View All Services ↗</a>
     </div>
 
     <div class="services-grid">
 
-      <!-- SERVICE 01 -->
       <a href="planning.html" class="service-card reveal">
         <div class="service-top">
           <div class="service-number">01 / PLANNING</div>
           <div class="service-icon">⌂</div>
         </div>
-
         <div class="service-content">
           <h3>RMC & RRDA Map Passing</h3>
-
-          <p>
-            Building plan preparation and documentation support for
-            applicable RMC and RRDA map approval processes.
-          </p>
-
+          <p>Building plan preparation and documentation support for applicable RMC and RRDA map approval processes.</p>
           <div class="service-includes">
             <span>Scope May Include</span>
             <ul>
@@ -1333,27 +528,17 @@ img{
             </ul>
           </div>
         </div>
-
-        <div class="service-arrow">
-          Explore Service <b>↗</b>
-        </div>
+        <div class="service-arrow">Explore Service <b>↗</b></div>
       </a>
 
-      <!-- SERVICE 02 -->
       <a href="architecture.html" class="service-card reveal">
         <div class="service-top">
           <div class="service-number">02 / ARCHITECTURE</div>
           <div class="service-icon">⌘</div>
         </div>
-
         <div class="service-content">
           <h3>Architecture & Design</h3>
-
-          <p>
-            Architectural planning that brings together functionality,
-            aesthetics and individual project requirements.
-          </p>
-
+          <p>Architectural planning that brings together functionality, aesthetics and individual project requirements.</p>
           <div class="service-includes">
             <span>Scope May Include</span>
             <ul>
@@ -1364,27 +549,17 @@ img{
             </ul>
           </div>
         </div>
-
-        <div class="service-arrow">
-          Explore Service <b>↗</b>
-        </div>
+        <div class="service-arrow">Explore Service <b>↗</b></div>
       </a>
 
-      <!-- SERVICE 03 -->
       <a href="architecture.html" class="service-card reveal">
         <div class="service-top">
           <div class="service-number">03 / VISUALIZATION</div>
           <div class="service-icon">◇</div>
         </div>
-
         <div class="service-content">
           <h3>3D View & Visualization</h3>
-
-          <p>
-            Explore a proposed space before execution through detailed
-            3D visual presentations and design concepts.
-          </p>
-
+          <p>Explore a proposed space before execution through detailed 3D visual presentations and design concepts.</p>
           <div class="service-includes">
             <span>Scope May Include</span>
             <ul>
@@ -1395,27 +570,17 @@ img{
             </ul>
           </div>
         </div>
-
-        <div class="service-arrow">
-          Explore Service <b>↗</b>
-        </div>
+        <div class="service-arrow">Explore Service <b>↗</b></div>
       </a>
 
-      <!-- SERVICE 04 -->
       <a href="construction.html" class="service-card reveal">
         <div class="service-top">
           <div class="service-number">04 / EXECUTION</div>
           <div class="service-icon">▦</div>
         </div>
-
         <div class="service-content">
           <h3>Building Execution</h3>
-
-          <p>
-            Coordinated execution planning to translate approved
-            designs and project requirements into on-site work.
-          </p>
-
+          <p>Coordinated execution planning to translate approved designs and project requirements into on-site work.</p>
           <div class="service-includes">
             <span>Scope May Include</span>
             <ul>
@@ -1426,27 +591,17 @@ img{
             </ul>
           </div>
         </div>
-
-        <div class="service-arrow">
-          Explore Service <b>↗</b>
-        </div>
+        <div class="service-arrow">Explore Service <b>↗</b></div>
       </a>
 
-      <!-- SERVICE 05 -->
       <a href="construction.html" class="service-card reveal">
         <div class="service-top">
           <div class="service-number">05 / CONSTRUCTION</div>
           <div class="service-icon">▤</div>
         </div>
-
         <div class="service-content">
           <h3>Construction</h3>
-
-          <p>
-            Construction services planned around project requirements,
-            specifications and the agreed scope of work.
-          </p>
-
+          <p>Construction services planned around project requirements, specifications and the agreed scope of work.</p>
           <div class="service-includes">
             <span>Scope May Include</span>
             <ul>
@@ -1457,27 +612,17 @@ img{
             </ul>
           </div>
         </div>
-
-        <div class="service-arrow">
-          Explore Service <b>↗</b>
-        </div>
+        <div class="service-arrow">Explore Service <b>↗</b></div>
       </a>
 
-      <!-- SERVICE 06 -->
       <a href="interior.html" class="service-card reveal">
         <div class="service-top">
           <div class="service-number">06 / INTERIORS</div>
           <div class="service-icon">✧</div>
         </div>
-
         <div class="service-content">
           <h3>Interior Design</h3>
-
-          <p>
-            Functional and visually balanced interiors, with attention
-            to layouts, materials and finishing details.
-          </p>
-
+          <p>Functional and visually balanced interiors, with attention to layouts, materials and finishing details.</p>
           <div class="service-includes">
             <span>Scope May Include</span>
             <ul>
@@ -1488,38 +633,22 @@ img{
             </ul>
           </div>
         </div>
-
-        <div class="service-arrow">
-          Explore Service <b>↗</b>
-        </div>
+        <div class="service-arrow">Explore Service <b>↗</b></div>
       </a>
 
     </div>
   </div>
 </section>
 
-<!-- FOUNDER -->
+<!-- FOUNDER - PHOTO REMOVED -->
 <section class="section founder-section">
-  <div class="container founder-grid">
-
-    <div class="founder-image reveal">
-      <img
-        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=85"
-        alt="Founder portrait placeholder"
-      >
-
-      <div class="founder-tag">
-        <strong>Er. Faiz</strong>
-        <span>Founder & Director</span>
-      </div>
-    </div>
-
-    <div class="reveal">
-      <div class="section-label">Leadership</div>
+  <div class="container founder-wrap reveal">
+    <div class="founder-panel">
+      <div class="founder-overline">Leadership · Faiz & Associates</div>
 
       <h2 class="section-title">
-        Vision Behind<br>
-        Every Space.
+        A Vision Built<br>
+        on Experience.
       </h2>
 
       <div class="gold-line"></div>
@@ -1538,15 +667,17 @@ img{
 
       <div class="founder-name">Er. Faiz</div>
       <div class="founder-role">Founder & Director · Civil Engineer</div>
-    </div>
 
+      <div class="founder-signature">
+        FAIZ & ASSOCIATES · ARCHBUILD
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT DETAILS -->
 <section class="section details-section">
   <div class="container">
-
     <div class="reveal">
       <div class="section-label">Connect With Us</div>
       <h2 class="section-title">Let's Start a Conversation.</h2>
@@ -1557,39 +688,24 @@ img{
     </div>
 
     <div class="details-grid">
-
       <div class="detail-card reveal">
         <div class="detail-icon">☎</div>
         <h3>Phone</h3>
-        <p>
-          Mobile:
-          <a href="tel:+919471537238">+91 94715 37238</a>
-        </p>
-        <p>
-          Office:
-          <a href="tel:+919386991602">+91 93869 91602</a>
-        </p>
+        <p>Mobile: <a href="tel:+919471537238">+91 94715 37238</a></p>
+        <p>Office: <a href="tel:+919386991602">+91 93869 91602</a></p>
       </div>
 
       <div class="detail-card reveal">
         <div class="detail-icon">✉</div>
         <h3>Email</h3>
-        <p>
-          <a href="mailto:faizassociates.rnc@gmail.com">
-            faizassociates.rnc@gmail.com
-          </a>
-        </p>
+        <p><a href="mailto:faizassociates.rnc@gmail.com">faizassociates.rnc@gmail.com</a></p>
       </div>
 
       <div class="detail-card reveal">
         <div class="detail-icon">⌖</div>
         <h3>Office Address</h3>
-        <p>
-          G-8, Coral Tower, Beside Mall De-Core,
-          Lalpur Chowk, Ranchi–834001, Jharkhand.
-        </p>
+        <p>G-8, Coral Tower, Beside Mall De-Core, Lalpur Chowk, Ranchi–834001, Jharkhand.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -1597,27 +713,14 @@ img{
 <!-- MAP -->
 <section class="section map-section">
   <div class="container map-grid">
-
     <div class="reveal">
       <div class="section-label">Find Our Office</div>
-
-      <h2 class="section-title">
-        Visit Us in<br>
-        Ranchi.
-      </h2>
-
+      <h2 class="section-title">Visit Us in<br>Ranchi.</h2>
       <p class="section-description">
         Connect with Faiz & Associates at our office in Lalpur,
         Ranchi. We welcome project discussions and enquiries.
       </p>
-
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=G-8+Coral+Tower+Beside+Mall+De-Core+Lalpur+Chowk+Ranchi+834001"
-        target="_blank"
-        rel="noopener"
-        class="btn btn-gold"
-        style="margin-top:25px;"
-      >
+      <a href="https://www.google.com/maps/search/?api=1&query=G-8+Coral+Tower+Beside+Mall+De-Core+Lalpur+Chowk+Ranchi+834001" target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:25px;">
         Get Directions ↗
       </a>
     </div>
@@ -1628,17 +731,15 @@ img{
         src="https://maps.google.com/maps?q=G-8%20Coral%20Tower%20Beside%20Mall%20De-Core%20Lalpur%20Chowk%20Ranchi%20834001&t=&z=15&ie=UTF8&iwloc=&output=embed"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        title="Faiz and Associates office location"
-      ></iframe>
+        title="Faiz and Associates office location">
+      </iframe>
     </div>
-
   </div>
 </section>
 
 <!-- INSPIRATION -->
 <section class="section inspiration-section">
   <div class="container">
-
     <div class="reveal">
       <div class="section-label">Design Inspiration</div>
       <h2 class="section-title">Ideas That Inspire.</h2>
@@ -1649,40 +750,20 @@ img{
     </div>
 
     <div class="inspiration-grid">
-
       <div class="inspiration-card reveal">
-        <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
-          alt="Modern house architecture inspiration"
-        >
-        <div class="inspiration-caption">
-          <span>Architecture</span>
-          <h3>Modern Living</h3>
-        </div>
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Modern house architecture inspiration">
+        <div class="inspiration-caption"><span>Architecture</span><h3>Modern Living</h3></div>
       </div>
 
       <div class="inspiration-card reveal">
-        <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
-          alt="Contemporary interior inspiration"
-        >
-        <div class="inspiration-caption">
-          <span>Interiors</span>
-          <h3>Refined Spaces</h3>
-        </div>
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Contemporary interior inspiration">
+        <div class="inspiration-caption"><span>Interiors</span><h3>Refined Spaces</h3></div>
       </div>
 
       <div class="inspiration-card reveal">
-        <img
-          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"
-          alt="Contemporary residential design"
-        >
-        <div class="inspiration-caption">
-          <span>Design</span>
-          <h3>Timeless Details</h3>
-        </div>
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Contemporary residential design">
+        <div class="inspiration-caption"><span>Design</span><h3>Timeless Details</h3></div>
       </div>
-
     </div>
 
     <p class="inspiration-note">
@@ -1690,14 +771,12 @@ img{
       references and are not represented as completed projects by
       Faiz & Associates.
     </p>
-
   </div>
 </section>
 
 <!-- PROCESS -->
 <section class="section process-section">
   <div class="container">
-
     <div class="reveal">
       <div class="section-label">Our Approach</div>
       <h2 class="section-title">From Vision to Reality.</h2>
@@ -1708,43 +787,29 @@ img{
     </div>
 
     <div class="process-grid">
-
       <div class="process-item reveal">
         <span>01 / DISCOVER</span>
         <h3>Understand</h3>
-        <p>
-          We begin by understanding your vision, requirements,
-          preferences and project objectives.
-        </p>
+        <p>We begin by understanding your vision, requirements, preferences and project objectives.</p>
       </div>
 
       <div class="process-item reveal">
         <span>02 / PLAN</span>
         <h3>Design</h3>
-        <p>
-          Develop suitable layouts, architectural concepts and
-          planning solutions for your project.
-        </p>
+        <p>Develop suitable layouts, architectural concepts and planning solutions for your project.</p>
       </div>
 
       <div class="process-item reveal">
         <span>03 / DEVELOP</span>
         <h3>Coordinate</h3>
-        <p>
-          Refine the proposed direction and coordinate the
-          requirements for the next stages.
-        </p>
+        <p>Refine the proposed direction and coordinate the requirements for the next stages.</p>
       </div>
 
       <div class="process-item reveal">
         <span>04 / DELIVER</span>
         <h3>Execute</h3>
-        <p>
-          Move towards execution with attention to agreed
-          specifications and project requirements.
-        </p>
+        <p>Move towards execution with attention to agreed specifications and project requirements.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -1752,33 +817,21 @@ img{
 <!-- CTA -->
 <section class="cta-section">
   <div class="container reveal">
-
     <div class="section-label">Have a Project in Mind?</div>
-
-    <h2 class="section-title">
-      Let's Build Something<br>
-      Meaningful Together.
-    </h2>
-
+    <h2 class="section-title">Let's Build Something<br>Meaningful Together.</h2>
     <p>
       Whether you're planning a new home, exploring a design concept
       or looking for construction-related support, let's discuss
       your next project.
     </p>
-
-    <a href="contact.html" class="btn btn-gold">
-      Start Your Project ↗
-    </a>
-
+    <a href="contact.html" class="btn btn-gold">Start Your Project ↗</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-
     <div class="footer-grid">
-
       <div class="footer-brand">
         <div class="footer-logo">ARCHBUILD</div>
         <p>
@@ -1810,32 +863,30 @@ img{
         <h4>Get in Touch</h4>
         <a href="tel:+919471537238">+91 94715 37238</a>
         <a href="tel:+919386991602">+91 93869 91602</a>
-        <a href="mailto:faizassociates.rnc@gmail.com">
-          faizassociates.rnc@gmail.com
-        </a>
-        <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">
-          Instagram @archbuild2016
-        </a>
+        <a href="mailto:faizassociates.rnc@gmail.com">faizassociates.rnc@gmail.com</a>
+        <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">Instagram @archbuild2016</a>
       </div>
-
     </div>
 
     <div class="footer-bottom">
       <span>© <span id="currentYear"></span> ARCHBUILD by Faiz & Associates. All Rights Reserved.</span>
       <span>Designed with Purpose · Built with Vision</span>
     </div>
-
   </div>
 </footer>
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP OFFICIAL ICON -->
 <a
   href="https://wa.me/919471537238"
   class="whatsapp-float"
   target="_blank"
   rel="noopener"
-  aria-label="Chat on WhatsApp"
->✆</a>
+  aria-label="Chat with ARCHBUILD on WhatsApp">
+
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M16.02 3C8.86 3 3.03 8.82 3.03 15.98c0 2.29.6 4.53 1.75 6.51L3 29l6.68-1.75a12.98 12.98 0 0 0 6.33 1.61h.01c7.16 0 12.98-5.82 12.99-12.98A12.9 12.9 0 0 0 25.2 6.7 12.9 12.9 0 0 0 16.02 3zm0 23.67h-.01a10.8 10.8 0 0 1-5.5-1.5l-.39-.23-3.96 1.04 1.06-3.86-.25-.4a10.72 10.72 0 0 1-1.65-5.74c0-5.92 4.82-10.74 10.75-10.74 2.87 0 5.56 1.12 7.59 3.15a10.67 10.67 0 0 1 3.14 7.6c0 5.92-4.82 10.74-10.75 10.74zm5.9-8.05c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.27-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.86-1.61-1.91-1.8-2.23-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.57-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.69s1.16 3.12 1.32 3.34c.16.21 2.28 3.48 5.53 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.54.27-.75.27-1.4.19-1.54-.08-.13-.3-.21-.62-.37z"/>
+  </svg>
+</a>
 
 <script>
 /* CURRENT YEAR */
@@ -1877,9 +928,7 @@ const revealObserver = new IntersectionObserver(function(entries){
       revealObserver.unobserve(entry.target);
     }
   });
-},{
-  threshold:0.12
-});
+},{threshold:0.12});
 
 document.querySelectorAll(".reveal").forEach(function(element){
   revealObserver.observe(element);
