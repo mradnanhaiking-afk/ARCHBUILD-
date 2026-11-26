@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#101C2C">
-<meta name="description" content="ARCHBUILD by Faiz & Associates, Ranchi. Architecture, RMC and RRDA map passing, 3D design, building execution and construction.">
+<meta name="description" content="ARCHBUILD by Faiz & Associates, Ranchi. RMC and RRDA map passing, architecture, design, 3D views, building execution and construction.">
 <title>ARCHBUILD | By Faiz & Associates</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
   --gold:#C6A875;
   --gold2:#E4CCA0;
   --ivory:#F4F0E8;
-  --stone:#E6E0D5;
+  --stone:#E9E4DA;
   --white:#fff;
   --muted:#AAB3BC;
   --dark:#182433;
@@ -34,9 +34,7 @@ body{
   overflow-x:hidden;
 }
 a{text-decoration:none;color:inherit}
-button{font:inherit}
 img{max-width:100%;display:block}
-
 .container{width:min(1180px,88%);margin:auto}
 
 .eyebrow{
@@ -55,11 +53,12 @@ img{max-width:100%;display:block}
   height:1px;
   background:var(--gold);
 }
-h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
 .section-title{
   font-size:clamp(36px,5vw,61px);
   line-height:1.13;
   margin:18px 0;
+  font-family:'Playfair Display',serif;
+  font-weight:400;
 }
 .section-title em{color:#A58A5D}
 .section-copy{
@@ -112,7 +111,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   letter-spacing:1.5px;
   text-transform:uppercase;
 }
-.topbar strong{color:var(--gold2);font-weight:600}
+.topbar strong{color:var(--gold2);font-weight:700}
 
 /* NAVIGATION */
 
@@ -128,20 +127,14 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   justify-content:space-between;
   color:white;
   border-bottom:1px solid rgba(255,255,255,.16);
-  background:rgba(12,25,39,.18);
+  background:rgba(12,25,39,.22);
   backdrop-filter:blur(8px);
 }
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
+.brand{display:flex;align-items:center;gap:12px}
 .brand-mark{
-  width:43px;
-  height:43px;
+  width:43px;height:43px;
   border:1px solid var(--gold);
-  display:grid;
-  place-items:center;
+  display:grid;place-items:center;
   color:var(--gold2);
   font-family:'Playfair Display',serif;
   font-size:25px;
@@ -158,7 +151,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   font-family:'DM Sans',sans-serif;
   color:#c1c8d0;
   font-size:8px;
-  font-weight:500;
+  font-weight:600;
   letter-spacing:2px;
   margin-top:3px;
 }
@@ -168,9 +161,8 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   gap:27px;
   list-style:none;
 }
-.nav-links>li>a,
-.mega-trigger{
-  color:rgba(255,255,255,.86);
+.nav-links>li>a,.mega-trigger{
+  color:rgba(255,255,255,.9);
   font-size:10px;
   letter-spacing:1.2px;
   text-transform:uppercase;
@@ -179,15 +171,14 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   cursor:pointer;
   transition:.3s;
 }
-.nav-links>li>a:hover,
-.mega-trigger:hover{color:var(--gold2)}
+.nav-links>li>a:hover,.mega-trigger:hover{color:var(--gold2)}
 .nav-item{position:relative}
 .mega-trigger{display:flex;align-items:center;gap:7px}
 .mega-menu{
   position:absolute;
   top:35px;
   left:-18px;
-  width:250px;
+  width:255px;
   padding:12px;
   background:var(--navy2);
   border:1px solid rgba(198,168,117,.3);
@@ -247,9 +238,8 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
     linear-gradient(0deg,rgba(7,17,29,.55),transparent 60%),
     url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90') center/cover;
 }
-.hero-content{max-width:780px;position:relative;z-index:2}
+.hero-content{max-width:790px;position:relative;z-index:2}
 .hero .eyebrow{color:var(--gold2);margin-bottom:25px}
-
 .hero-brand{
   display:inline-block;
   margin-bottom:20px;
@@ -258,9 +248,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   letter-spacing:3px;
   text-transform:uppercase;
 }
-
-/* UPDATED PROFESSIONAL HERO TYPOGRAPHY */
-
 .hero h1{
   font-family:'Manrope',sans-serif;
   font-size:clamp(48px,7.5vw,88px);
@@ -276,12 +263,11 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   color:var(--gold2);
   letter-spacing:-3.5px;
 }
-
 .hero-description{
   color:#c0c8d0;
   font-size:14px;
   line-height:1.95;
-  max-width:530px;
+  max-width:550px;
 }
 .hero-actions{
   display:flex;
@@ -294,16 +280,14 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   display:flex;
   align-items:center;
   gap:16px;
-  margin-top:48px;
+  margin-top:45px;
   padding-top:22px;
   border-top:1px solid rgba(255,255,255,.2);
-  max-width:410px;
+  max-width:430px;
 }
 .founder-initials{
-  width:48px;
-  height:48px;
-  display:grid;
-  place-items:center;
+  width:48px;height:48px;
+  display:grid;place-items:center;
   border:1px solid var(--gold);
   color:var(--gold2);
   font-family:'Playfair Display',serif;
@@ -326,8 +310,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
 .hero-bottom{
   position:absolute;
   bottom:32px;
-  left:10%;
-  right:10%;
+  left:10%;right:10%;
   display:flex;
   justify-content:space-between;
   color:#c0c6cc;
@@ -336,22 +319,22 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   text-transform:uppercase;
 }
 
-/* TRUST STRIP */
+/* COMPANY CREDENTIALS */
 
-.trust-strip{
+.credential-strip{
   background:var(--navy);
   color:white;
-  padding:32px 7%;
+  padding:34px 7%;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
-.trust-item{
+.credential-item{
   padding:12px 22px;
   border-right:1px solid #ffffff20;
 }
-.trust-item:last-child{border:0}
-.trust-item strong{
+.credential-item:last-child{border:0}
+.credential-item strong{
   display:block;
   color:var(--gold2);
   font-family:'Playfair Display',serif;
@@ -359,7 +342,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   font-weight:400;
   margin-bottom:7px;
 }
-.trust-item span{
+.credential-item span{
   color:#aeb8c3;
   font-size:9px;
   letter-spacing:1.5px;
@@ -376,11 +359,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   gap:85px;
 }
 .intro-visual{position:relative}
-.intro-visual img{
-  width:100%;
-  height:480px;
-  object-fit:cover;
-}
+.intro-visual img{width:100%;height:480px;object-fit:cover}
 .intro-stamp{
   position:absolute;
   right:-20px;
@@ -388,7 +367,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   background:var(--navy);
   color:white;
   padding:22px 25px;
-  max-width:235px;
+  max-width:245px;
 }
 .intro-stamp strong{
   display:block;
@@ -410,7 +389,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
 /* SERVICES */
 
 .services-section{
-  background:#e9e4da;
+  background:var(--stone);
   padding:110px 0;
 }
 .section-heading-row{
@@ -440,10 +419,8 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
 .service-card:after{
   content:"";
   position:absolute;
-  width:160px;
-  height:160px;
-  right:-80px;
-  bottom:-80px;
+  width:160px;height:160px;
+  right:-80px;bottom:-80px;
   border:1px solid #c6a87545;
   border-radius:50%;
   transition:.4s;
@@ -485,8 +462,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
 .founder-section:after{
   content:"F&A";
   position:absolute;
-  right:3%;
-  bottom:-70px;
+  right:3%;bottom:-70px;
   font-family:'Playfair Display',serif;
   font-size:260px;
   color:#ffffff08;
@@ -512,11 +488,9 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   padding:35px;
 }
 .founder-monogram{
-  width:105px;
-  height:105px;
+  width:105px;height:105px;
   border:1px solid var(--gold);
-  display:grid;
-  place-items:center;
+  display:grid;place-items:center;
   font-family:'Playfair Display',serif;
   color:var(--gold2);
   font-size:39px;
@@ -535,6 +509,8 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   font-size:clamp(39px,5vw,62px);
   line-height:1.15;
   margin:22px 0;
+  font-family:'Playfair Display',serif;
+  font-weight:400;
 }
 .founder-content h2 em{color:var(--gold2)}
 .founder-content p{
@@ -559,37 +535,64 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   text-transform:uppercase;
 }
 
-/* COMPANY PROMISE */
+/* COMPANY DETAILS */
 
-.promise{padding:110px 0}
-.promise-grid{
+.details-section{padding:100px 0}
+.details-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:80px;
+  gap:70px;
   align-items:center;
 }
-.promise-image{
-  min-height:460px;
+.details-panel{
+  background:#e9e4da;
+  padding:40px;
+}
+.details-panel h3{
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  margin-bottom:25px;
+}
+.detail-row{
+  display:flex;
+  gap:15px;
+  padding:17px 0;
+  border-bottom:1px solid #d4cdbf;
+}
+.detail-row:last-child{border:0}
+.detail-icon{
+  width:38px;height:38px;
+  flex:0 0 38px;
+  display:grid;place-items:center;
+  background:var(--navy);
+  color:var(--gold2);
+  font-size:15px;
+}
+.detail-row strong{
+  display:block;
+  font-size:11px;
+  margin-bottom:5px;
+}
+.detail-row p,.detail-row a{
+  display:block;
+  color:#68727c;
+  font-size:11px;
+  line-height:1.8;
+  overflow-wrap:anywhere;
+}
+.detail-row a:hover{color:#9b7e4d}
+.details-visual{
+  min-height:480px;
   background:
     linear-gradient(#101c2c20,#101c2c30),
     url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85') center/cover;
 }
-.promise-list{margin-top:30px}
-.promise-item{
-  display:flex;
-  gap:18px;
-  padding:18px 0;
-  border-bottom:1px solid #d9d2c5;
-}
-.promise-item span{color:#a58a5d;font-size:18px}
-.promise-item h4{font-size:20px;margin-bottom:6px}
-.promise-item p{color:#78818a;font-size:11px;line-height:1.8}
 
-/* VISUAL INSPIRATION */
+/* INSPIRATION */
 
 .inspiration{
   padding:110px 0;
-  background:#e9e4da;
+  background:var(--stone);
 }
 .inspiration-grid{
   display:grid;
@@ -598,23 +601,17 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   gap:15px;
   margin-top:40px;
 }
-.inspiration-image{
-  position:relative;
-  overflow:hidden;
-  background:#d2cabe;
-}
+.inspiration-image{position:relative;overflow:hidden;background:#d2cabe}
 .inspiration-image:first-child{grid-row:span 2}
 .inspiration-image img{
-  width:100%;
-  height:100%;
+  width:100%;height:100%;
   object-fit:cover;
   transition:.7s;
 }
 .inspiration-image:hover img{transform:scale(1.06)}
 .inspiration-label{
   position:absolute;
-  bottom:15px;
-  left:15px;
+  bottom:15px;left:15px;
   background:rgba(16,28,44,.85);
   color:white;
   padding:10px 13px;
@@ -638,15 +635,8 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
   gap:25px;
   margin-top:50px;
 }
-.process-item{
-  border-top:1px solid #c6a875;
-  padding-top:22px;
-}
-.process-item span{
-  color:#a58a5d;
-  font-size:10px;
-  letter-spacing:2px;
-}
+.process-item{border-top:1px solid var(--gold);padding-top:22px}
+.process-item span{color:#a58a5d;font-size:10px;letter-spacing:2px}
 .process-item h3{font-size:24px;margin:18px 0 12px}
 .process-item p{color:#78818a;font-size:11px;line-height:1.9}
 
@@ -662,10 +652,12 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
 }
 .cta .eyebrow{justify-content:center;color:var(--gold2)}
 .cta h2{
+  font-family:'Playfair Display',serif;
   font-size:clamp(39px,6vw,67px);
   max-width:850px;
   margin:25px auto;
   line-height:1.15;
+  font-weight:400;
 }
 .cta h2 em{color:var(--gold2)}
 .cta p{
@@ -678,11 +670,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
 
 /* FOOTER */
 
-footer{
-  background:#091522;
-  color:white;
-  padding:75px 6% 25px;
-}
+footer{background:#091522;color:white;padding:75px 6% 25px}
 .footer-grid{
   display:grid;
   grid-template-columns:1.3fr 1fr 1fr 1.2fr;
@@ -694,7 +682,7 @@ footer{
   font-size:11px;
   line-height:1.9;
   margin-top:18px;
-  max-width:270px;
+  max-width:280px;
 }
 .footer-col h4{
   font-family:'DM Sans',sans-serif;
@@ -704,8 +692,7 @@ footer{
   text-transform:uppercase;
   margin-bottom:22px;
 }
-.footer-col a,
-.footer-col p{
+.footer-col a,.footer-col p{
   display:block;
   color:#aab3bc;
   font-size:11px;
@@ -729,11 +716,9 @@ footer{
 
 .whatsapp{
   position:fixed;
-  right:24px;
-  bottom:24px;
+  right:24px;bottom:24px;
   z-index:99999;
-  width:60px;
-  height:60px;
+  width:60px;height:60px;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -745,7 +730,7 @@ footer{
 .whatsapp:hover{transform:scale(1.08)}
 .whatsapp svg{width:32px;height:32px;display:block}
 
-/* REVEAL */
+/* ANIMATION */
 
 .reveal{
   opacity:0;
@@ -763,7 +748,6 @@ footer{
   .services-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
-
 @media(max-width:800px){
   .topbar{font-size:8px;padding:9px 5%}
   .navbar{padding:18px 6%}
@@ -771,8 +755,7 @@ footer{
   .nav-links{
     display:none;
     position:absolute;
-    top:100%;
-    left:0;
+    top:100%;left:0;
     width:100%;
     padding:15px 6% 25px;
     background:var(--navy);
@@ -796,34 +779,30 @@ footer{
   .nav-item.open .mega-menu{display:block}
   .hero{min-height:760px;padding:160px 7% 100px}
   .hero-bottom{left:7%;right:7%}
-  .intro,.founder-grid,.promise-grid{grid-template-columns:1fr;gap:45px}
+  .intro,.founder-grid,.details-grid{grid-template-columns:1fr;gap:45px}
   .intro-visual img{height:400px}
   .section-heading-row{display:block}
   .section-heading-row .section-copy{margin-top:18px}
-  .trust-strip{padding:25px 5%}
+  .credential-strip{padding:25px 5%}
   .process-grid{grid-template-columns:repeat(2,1fr)}
   .inspiration-grid{grid-template-rows:250px 200px}
 }
-
 @media(max-width:520px){
   .topbar{justify-content:center;text-align:center}
   .topbar span:last-child{display:none}
   .brand-name{font-size:17px;letter-spacing:2px}
   .brand-mark{width:37px;height:37px}
   .hero{min-height:730px;padding:155px 6% 100px}
-  .hero h1{
-    font-size:clamp(43px,11vw,54px);
-    letter-spacing:-2.5px;
-  }
+  .hero h1{font-size:clamp(43px,11vw,54px);letter-spacing:-2.5px}
   .hero h1 em{letter-spacing:-2.5px}
   .hero-description{font-size:12px}
   .hero-founder{margin-top:35px}
   .hero-bottom{font-size:7px}
   .hero-bottom span:last-child{display:none}
-  .trust-strip{grid-template-columns:1fr;gap:0}
-  .trust-item{border-right:0;border-bottom:1px solid #ffffff20;padding:18px 10px}
-  .trust-item:last-child{border:0}
-  .intro,.promise,.process-section{padding:80px 0}
+  .credential-strip{grid-template-columns:1fr;gap:0}
+  .credential-item{border-right:0;border-bottom:1px solid #ffffff20;padding:18px 10px}
+  .credential-item:last-child{border:0}
+  .intro,.details-section,.process-section{padding:80px 0}
   .intro-visual img{height:320px}
   .intro-stamp{right:-8px}
   .services-section,.founder-section,.inspiration{padding:80px 0}
@@ -831,7 +810,8 @@ footer{
   .service-card{min-height:250px}
   .founder-card{min-height:300px}
   .founder-content h2{font-size:43px}
-  .promise-image{min-height:330px}
+  .details-panel{padding:25px 20px}
+  .details-visual{min-height:330px}
   .inspiration-grid{
     grid-template-columns:1fr;
     grid-template-rows:300px 220px 220px 220px 220px;
@@ -842,7 +822,6 @@ footer{
   .footer-bottom{flex-direction:column}
   .cta{padding:80px 6%}
 }
-
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*:before,*:after{transition:none!important}
@@ -853,8 +832,8 @@ footer{
 <body>
 
 <div class="topbar">
-  <span><strong>ARCHBUILD</strong> &nbsp; By Faiz & Associates</span>
-  <span>Turning Dreams into Reality · Ranchi</span>
+  <span><strong>ARCHBUILD</strong> &nbsp; BY FAIZ & ASSOCIATES</span>
+  <span>TURNING DREAMS INTO REALITY · RANCHI</span>
 </div>
 
 <nav class="navbar">
@@ -886,7 +865,7 @@ footer{
         <a href="services.html">All Services</a>
         <a href="architecture.html">Architecture & Design</a>
         <a href="interior.html">Interior Design</a>
-        <a href="planning.html">Map Passing & Planning</a>
+        <a href="planning.html">RMC & RRDA Map Passing</a>
         <a href="construction.html">Building Execution & Construction</a>
       </div>
     </li>
@@ -900,11 +879,12 @@ footer{
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero">
   <div class="hero-content reveal">
 
     <div class="eyebrow">Architecture · Design · Construction</div>
-
     <div class="hero-brand">ARCHBUILD — BY FAIZ & ASSOCIATES</div>
 
     <h1>
@@ -913,9 +893,10 @@ footer{
     </h1>
 
     <p class="hero-description">
-      From map passing and architectural design to 3D visualization,
-      building execution and construction — we bring your vision
-      closer to reality through thoughtful planning and design.
+      From RMC and RRDA map passing to architectural design,
+      3D views, building execution and construction —
+      we bring your vision closer to reality through
+      thoughtful planning and design.
     </p>
 
     <div class="hero-actions">
@@ -930,7 +911,6 @@ footer{
         <span>Founder & Director · Civil Engineer</span>
       </div>
     </div>
-
   </div>
 
   <div class="hero-bottom">
@@ -939,20 +919,24 @@ footer{
   </div>
 </section>
 
-<section class="trust-strip">
-  <div class="trust-item">
-    <strong>RMC</strong>
-    <span>Registration mentioned on company card</span>
+<!-- COMPANY CREDENTIALS -->
+
+<section class="credential-strip">
+  <div class="credential-item">
+    <strong>RMC Registered</strong>
+    <span>As stated on company profile</span>
   </div>
-  <div class="trust-item">
-    <strong>RRDA</strong>
-    <span>Registration mentioned on company card</span>
+  <div class="credential-item">
+    <strong>RRDA Registered</strong>
+    <span>As stated on company profile</span>
   </div>
-  <div class="trust-item">
-    <strong>Ranchi</strong>
-    <span>Based in Jharkhand, India</span>
+  <div class="credential-item">
+    <strong>Faiz & Associates</strong>
+    <span>ARCHBUILD · Ranchi, Jharkhand</span>
   </div>
 </section>
+
+<!-- INTRODUCTION -->
 
 <section class="container intro">
   <div class="intro-visual reveal">
@@ -977,8 +961,8 @@ footer{
 
     <p class="section-copy">
       ARCHBUILD is the digital identity of Faiz & Associates,
-      presenting its work across architecture, design, map
-      passing, building execution and construction.
+      presenting its services across architecture, design,
+      map passing, building execution and construction.
     </p>
 
     <p class="section-copy" style="margin-top:14px">
@@ -991,16 +975,20 @@ footer{
   </div>
 </section>
 
+<!-- SERVICES -->
+
 <section class="services-section">
   <div class="container">
 
     <div class="section-heading-row reveal">
       <div>
         <div class="eyebrow">Our Expertise</div>
-        <h2 class="section-title">Services shaped around<br><em>your vision.</em></h2>
+        <h2 class="section-title">
+          Services shaped around<br><em>your vision.</em>
+        </h2>
       </div>
       <p class="section-copy">
-        Explore the services presented by Faiz & Associates,
+        Explore the services offered by Faiz & Associates,
         from planning and design to execution and construction.
       </p>
     </div>
@@ -1011,7 +999,7 @@ footer{
         <span class="service-number">01 / MAP PASSING</span>
         <div>
           <h3>RMC & RRDA Map Passing</h3>
-          <p>Map passing services as listed on the Faiz & Associates company card.</p>
+          <p>Map passing services for project planning and relevant approval requirements.</p>
         </div>
         <span class="service-arrow">↗</span>
       </a>
@@ -1038,7 +1026,7 @@ footer{
         <span class="service-number">04 / EXECUTION</span>
         <div>
           <h3>Building Execution</h3>
-          <p>Building execution services listed in the company's service profile.</p>
+          <p>Building execution services based on project scope and requirements.</p>
         </div>
         <span class="service-arrow">↗</span>
       </a>
@@ -1047,7 +1035,7 @@ footer{
         <span class="service-number">05 / CONSTRUCTION</span>
         <div>
           <h3>Construction</h3>
-          <p>Construction services with attention to project requirements and execution.</p>
+          <p>Construction services with attention to project planning and execution.</p>
         </div>
         <span class="service-arrow">↗</span>
       </a>
@@ -1056,7 +1044,7 @@ footer{
         <span class="service-number">06 / INTERIORS</span>
         <div>
           <h3>Interior Design</h3>
-          <p>Explore interior design ideas, material direction and thoughtful spatial details.</p>
+          <p>Interior design ideas, material direction and thoughtful spatial details.</p>
         </div>
         <span class="service-arrow">↗</span>
       </a>
@@ -1064,6 +1052,8 @@ footer{
     </div>
   </div>
 </section>
+
+<!-- FOUNDER -->
 
 <section class="founder-section">
   <div class="container founder-grid">
@@ -1084,15 +1074,15 @@ footer{
 
       <p>
         Er. Faiz is a Civil Engineer and the Founder & Director
-        associated with Faiz & Associates. His professional
-        profile includes RMC and RRDA registration as stated
-        on the company's business card.
+        of Faiz & Associates. The company profile identifies
+        the firm as RMC and RRDA Registered.
       </p>
 
       <p>
-        The focus is on understanding each project's needs
-        and bringing planning, design and execution considerations
-        together.
+        With services spanning map passing, architecture,
+        design, 3D views, building execution and construction,
+        the focus is on bringing project requirements and
+        design thinking together.
       </p>
 
       <div class="credentials">
@@ -1109,55 +1099,75 @@ footer{
   </div>
 </section>
 
-<section class="container promise">
-  <div class="promise-grid">
+<!-- COMPANY CONTACT DETAILS -->
+
+<section class="details-section">
+  <div class="container details-grid">
 
     <div class="reveal">
-      <div class="eyebrow">Our Approach</div>
+      <div class="eyebrow">Find Us</div>
       <h2 class="section-title">
-        Every project deserves<br><em>a thoughtful beginning.</em>
+        Let's talk about<br><em>your next project.</em>
       </h2>
-
       <p class="section-copy">
-        Good planning connects the original idea with the
-        practical requirements of a project. We believe in
-        a considered process where clarity, purpose and
-        design work together.
+        Connect with Faiz & Associates for enquiries related
+        to map passing, architecture, design, 3D views,
+        building execution and construction.
       </p>
 
-      <div class="promise-list">
+      <a href="contact.html" class="btn-gold" style="margin-top:25px">
+        Contact Our Team ↗
+      </a>
+    </div>
 
-        <div class="promise-item">
-          <span>✳</span>
-          <div>
-            <h4>Understand the Vision</h4>
-            <p>Begin with the requirements, purpose and context of the project.</p>
-          </div>
+    <div class="details-panel reveal">
+      <h3>Faiz & Associates</h3>
+
+      <div class="detail-row">
+        <span class="detail-icon">☎</span>
+        <div>
+          <strong>Mobile</strong>
+          <a href="tel:+919471537238">+91 94715 37238</a>
         </div>
+      </div>
 
-        <div class="promise-item">
-          <span>✳</span>
-          <div>
-            <h4>Plan with Clarity</h4>
-            <p>Consider layouts, design direction and project needs.</p>
-          </div>
+      <div class="detail-row">
+        <span class="detail-icon">⌕</span>
+        <div>
+          <strong>Office</strong>
+          <a href="tel:+919386991602">+91 93869 91602</a>
         </div>
+      </div>
 
-        <div class="promise-item">
-          <span>✳</span>
-          <div>
-            <h4>Move Towards Execution</h4>
-            <p>Bring planning and design considerations into the next stages.</p>
-          </div>
+      <div class="detail-row">
+        <span class="detail-icon">✉</span>
+        <div>
+          <strong>Email</strong>
+          <a href="mailto:faizassociates.rnc@gmail.com">faizassociates.rnc@gmail.com</a>
         </div>
+      </div>
 
+      <div class="detail-row">
+        <span class="detail-icon">⌖</span>
+        <div>
+          <strong>Office Address</strong>
+          <p>G-8, Coral Tower, Beside Mall De-Core, Lalpur Chowk, Ranchi–834001</p>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-icon">◎</span>
+        <div>
+          <strong>Instagram</strong>
+          <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">@archbuild2016 ↗</a>
+        </div>
       </div>
     </div>
 
-    <div class="promise-image reveal"></div>
-
   </div>
 </section>
+
+<!-- VISUAL INSPIRATION -->
 
 <section class="inspiration">
   <div class="container">
@@ -1206,6 +1216,8 @@ footer{
   </div>
 </section>
 
+<!-- PROCESS -->
+
 <section class="container process-section">
 
   <div class="reveal">
@@ -1234,7 +1246,7 @@ footer{
     <div class="process-item reveal">
       <span>03 — DEVELOP</span>
       <h3>Coordinate</h3>
-      <p>Refine the design and consider the practical requirements.</p>
+      <p>Refine the design and consider practical requirements.</p>
     </div>
 
     <div class="process-item reveal">
@@ -1245,6 +1257,8 @@ footer{
 
   </div>
 </section>
+
+<!-- CTA -->
 
 <section class="cta reveal">
   <div class="eyebrow">Start a Conversation</div>
@@ -1263,6 +1277,8 @@ footer{
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
   <div class="footer-grid">
 
@@ -1277,8 +1293,8 @@ footer{
 
       <p>
         Faiz & Associates — Turning Dreams into Reality.
-        Architecture, map passing, design, building execution
-        and construction.
+        RMC and RRDA map passing, architecture, design,
+        3D views, building execution and construction.
       </p>
     </div>
 
@@ -1305,7 +1321,7 @@ footer{
       <a href="tel:+919471537238">Mobile: +91 94715 37238</a>
       <a href="tel:+919386991602">Office: +91 93869 91602</a>
       <a href="mailto:faizassociates.rnc@gmail.com">faizassociates.rnc@gmail.com</a>
-      <a href="https://wa.me/919471537238" target="_blank" rel="noopener">WhatsApp ↗</a>
+      <p>G-8, Coral Tower, Beside Mall De-Core, Lalpur Chowk, Ranchi–834001</p>
       <a href="https://www.instagram.com/archbuild2016/" target="_blank" rel="noopener">Instagram ↗</a>
     </div>
 
@@ -1316,6 +1332,8 @@ footer{
     <span>TURNING DREAMS INTO REALITY.</span>
   </div>
 </footer>
+
+<!-- WHATSAPP -->
 
 <a class="whatsapp"
    href="https://wa.me/919471537238"
