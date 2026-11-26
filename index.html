@@ -588,6 +588,93 @@ img{max-width:100%;display:block}
     url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85') center/cover;
 }
 
+/* GOOGLE MAP */
+
+.map-section{
+  background:var(--navy);
+  padding:100px 6%;
+  color:white;
+}
+.map-heading{
+  max-width:1180px;
+  margin:0 auto 38px;
+}
+.map-heading .eyebrow{color:var(--gold2)}
+.map-heading h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(38px,5vw,60px);
+  font-weight:400;
+  margin:20px 0 12px;
+}
+.map-heading h2 em{color:var(--gold2)}
+.map-heading p{
+  color:#aeb8c3;
+  font-size:12px;
+  line-height:1.8;
+  max-width:540px;
+}
+.map-layout{
+  max-width:1180px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:.8fr 1.5fr;
+  background:var(--navy2);
+  border:1px solid #C6A87555;
+  box-shadow:0 20px 55px #0003;
+}
+.map-info{
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.map-info h3{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  font-weight:400;
+  color:var(--gold2);
+  margin-bottom:20px;
+}
+.map-info p{
+  color:#b9c3ce;
+  font-size:12px;
+  line-height:2;
+  margin-bottom:25px;
+}
+.map-info .map-label{
+  color:var(--gold2);
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.map-directions{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:fit-content;
+  padding:16px 21px;
+  background:var(--gold);
+  color:var(--navy);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  transition:.3s;
+}
+.map-directions:hover{
+  background:var(--gold2);
+  transform:translateY(-3px);
+}
+.map-frame{
+  min-height:430px;
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+  filter:grayscale(25%);
+}
+
 /* INSPIRATION */
 
 .inspiration{
@@ -786,6 +873,8 @@ footer{background:#091522;color:white;padding:75px 6% 25px}
   .credential-strip{padding:25px 5%}
   .process-grid{grid-template-columns:repeat(2,1fr)}
   .inspiration-grid{grid-template-rows:250px 200px}
+  .map-layout{grid-template-columns:1fr}
+  .map-frame{min-height:360px}
 }
 @media(max-width:520px){
   .topbar{justify-content:center;text-align:center}
@@ -812,6 +901,9 @@ footer{background:#091522;color:white;padding:75px 6% 25px}
   .founder-content h2{font-size:43px}
   .details-panel{padding:25px 20px}
   .details-visual{min-height:330px}
+  .map-section{padding:75px 6%}
+  .map-info{padding:28px 24px}
+  .map-frame{min-height:320px}
   .inspiration-grid{
     grid-template-columns:1fr;
     grid-template-rows:300px 220px 220px 220px 220px;
@@ -883,7 +975,6 @@ footer{background:#091522;color:white;padding:75px 6% 25px}
 
 <section class="hero">
   <div class="hero-content reveal">
-
     <div class="eyebrow">Architecture · Design · Construction</div>
     <div class="hero-brand">ARCHBUILD — BY FAIZ & ASSOCIATES</div>
 
@@ -923,16 +1014,16 @@ footer{background:#091522;color:white;padding:75px 6% 25px}
 
 <section class="credential-strip">
   <div class="credential-item">
-    <strong>RMC Registered</strong>
-    <span>As stated on company profile</span>
+    <strong>RMC & RRDA Registered</strong>
+    <span>Map Passing Services</span>
   </div>
   <div class="credential-item">
-    <strong>RRDA Registered</strong>
-    <span>As stated on company profile</span>
+    <strong>Architecture & Design</strong>
+    <span>3D Views · Planning</span>
   </div>
   <div class="credential-item">
-    <strong>Faiz & Associates</strong>
-    <span>ARCHBUILD · Ranchi, Jharkhand</span>
+    <strong>Building Execution</strong>
+    <span>Construction · Faiz & Associates</span>
   </div>
 </section>
 
@@ -1164,6 +1255,49 @@ footer{background:#091522;color:white;padding:75px 6% 25px}
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- GOOGLE MAP LOCATION -->
+
+<section class="map-section">
+  <div class="map-heading">
+    <div class="eyebrow">Our Location · Ranchi</div>
+    <h2>Find us on <em>the map.</em></h2>
+    <p>
+      Visit the office of Faiz & Associates at Lalpur Chowk,
+      Ranchi. Use Google Maps to plan your route.
+    </p>
+  </div>
+
+  <div class="map-layout">
+    <div class="map-info">
+      <div class="map-label">Visit Our Office</div>
+      <h3>Faiz & Associates</h3>
+
+      <p>
+        G-8, Coral Tower,<br>
+        Beside Mall De-Core,<br>
+        Lalpur Chowk,<br>
+        Ranchi, Jharkhand – 834001
+      </p>
+
+      <a
+        class="map-directions"
+        href="https://www.google.com/maps/dir/?api=1&destination=G-8%2C%20Coral%20Tower%2C%20Beside%20Mall%20De-Core%2C%20Lalpur%20Chowk%2C%20Ranchi%2C%20Jharkhand%20834001"
+        target="_blank"
+        rel="noopener noreferrer">
+        Get Directions ↗
+      </a>
+    </div>
+
+    <iframe
+      class="map-frame"
+      src="https://maps.google.com/maps?q=G-8%2C%20Coral%20Tower%2C%20Beside%20Mall%20De-Core%2C%20Lalpur%20Chowk%2C%20Ranchi%2C%20Jharkhand%20834001&t=&z=16&ie=UTF8&iwloc=&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Faiz and Associates office location">
+    </iframe>
   </div>
 </section>
 
